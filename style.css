@@ -283,7 +283,7 @@ nav.scrolled{background:rgba(10,11,15,0.97);border-color:rgba(107,140,186,0.1)}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
 .cert-card{border:1px solid var(--border);overflow:hidden;position:relative;cursor:pointer;transition:border-color 0.3s;text-decoration:none;display:block}
 .cert-card:hover{border-color:var(--blue)}
-.cert-card img{width:100%;display:block;transition:opacity 0.3s}
+.cert-card img{width:100%;height:auto;display:block;transition:opacity 0.3s}
 .cert-card:hover img{opacity:0.85}
 .cert-card-label{
   padding:0.7rem 1rem;
