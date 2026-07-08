@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#fff;font-family:Calibri,Arial,sans-serif;color:#000;padding:96px 100px;line-height:1.4;font-size:13px}
+  h1{font-size:16px;font-weight:700;margin-bottom:4px;text-align:center}
+  h2{font-size:14px;font-weight:700;margin:24px 0 8px}
+  p{margin-bottom:10px;text-align:justify}
+  .center{text-align:center;color:#333;margin-bottom:3px;font-size:12px}
+  hr{border:none;border-top:1px solid #000;margin:14px 0}
+  .ref{margin-bottom:6px;font-size:12px}
+</style>
+</head>
+<body>
+<h1>How Humans Perceive Humanoid Robot Movement</h1>
+<p class="center">HSE 323 — Arizona State University</p>
+<hr>
+
+<p>When people look at robotics, especially humanoid robotics, they very easily take "more human-like" as a sign of success. If it looks more human, people often think it is more advanced, more successful, or simply better designed. But the original point, or the real point, of robotics is not to look human. The point of robotics is to complete tasks and, more importantly, to serve humans.</p>
+
+<p>No matter if it is in living scenarios, companion robotics, service robotics, or industrial scenarios, the core is the same: robots are interacting with humans. So the key is not only movement, and it is not only function. The key is interaction. And once the key becomes interaction, then the key becomes understanding, prediction, and trust. People need to understand what the robot is doing, predict what it will do next, and decide whether they can trust it. If people do not feel comfortable when they use or interact with a robot, then even if the robot completes the task, the interaction is still not successful.</p>
+
+<p>That is why robotics design, especially humanoid robotics design, always pays attention to user experience, human factors, and human perception. Because for robotics, moving is not enough. A robot can move, but that does not mean people understand it. A robot can complete an action, but that does not mean people trust it. If a robot is meant to work with humans, then people need to understand what it is doing, and people need to feel comfortable with it.</p>
+
+<p>And this is also why humanoid robotics keeps trying to become more human-like. Even though uncanny valley was already proposed a long time ago, people are still trying to design robots that look more and more human. The reason is simple. Humans are most familiar with themselves. Even if you are not a psychologist, not an anatomist, not a human factors researcher, and not a roboticist, you are still familiar enough with your own body and with other humans around you. You may not be able to describe exactly how each part of the body moves, or what the exact movement limit is, but when you see movement, you immediately know whether it feels human or not. And more than that, people are also naturally very good at predicting human movement. That is why making robots more human-like can help people understand them more easily.</p>
+
+<p>But the problem also starts here. Robots are still machines. Their systems are built for function, and their systems are fundamentally different from humans. Robots are electrically driven. Humans are biologically driven. Humans move with muscles, joints, tendons, and body coordination. Robots move with motors, actuators, controllers, and mechanical constraints. So even if a robot looks human, it still cannot move exactly like a human. And this creates the problem. When something looks human, people expect it to move like a human. But when it moves in a way that does not follow human movement logic, people begin to feel strange, uncomfortable, uncertain, and sometimes even scared.</p>
+
+<p>And this problem shows up especially clearly in robot arms and hands. Humans use their arms and hands constantly, and humans also watch arms and hands constantly. Upper-limb movement is visually present all the time. People do not spend that much time watching other people's feet, but people spend a lot of time watching hands — hands reaching, turning, pointing, touching, holding, and grasping. So people are extremely familiar with hand and arm movement, including trajectory, speed, timing, and gesture. That is why even a very small unusual thing — like a trajectory that is too straight, movement that is too stiff, or motion that starts too suddenly — can immediately feel wrong.</p>
+
+<p>So this paper is not mainly about whether robots can complete movement. This paper is about why some robot movements feel natural, while others feel strange. More specifically, this paper focuses on humanoid robot upper-limb movement, including the shoulder joint, elbow joint, wrist joint, palm, fingers, and grasping motion. It asks what kinds of movement make people feel uncomfortable, why those movements feel uncomfortable from the perspective of human perception, and how robot movement can be redesigned based on the way humans naturally perceive motion.</p>
+
+<h2>How Humans Understand Movement</h2>
+
+<p>Before talking about what kinds of robot movement make people feel uncomfortable, there is one more basic question first: how do humans understand movement?</p>
+
+<p>When people see something move, it does not have to be human, and it does not even have to look human. People do not simply see that its position changed. They immediately begin to judge what it is, whether it is alive, what it is trying to do, and whether it will affect them. So human perception of movement is not passive observation. It is a very active and very sensitive judgment system.</p>
+
+<p>Humans are naturally very sensitive to movement because movement itself carries meaning. When something moves, people do not only see motion. They read intention from motion. This is why theory of mind matters here. Humans do not only observe movement. Humans naturally try to interpret movement as intention. Even simple motion can be read as chasing, avoiding, hesitating, approaching, or threatening. This is important because it means robot movement is never just motion. Once something moves in front of a person, that movement is already being interpreted.</p>
+
+<p>This is also why biological motion is so important. Humans are extremely sensitive to biological motion. Even if people only see a few moving points in darkness, they can still tell whether it is a person walking, running, reaching, or turning. This shows that humans do not need full form to understand movement. Humans can read movement patterns directly.</p>
+
+<p>And this is why movement matters so much in robotics. People are not only watching whether the robot completes an action. They are already reading meaning from how it moves.</p>
+
+<p>Human motion perception is also not one simple system. Lu and Sperling (2001) explained that human motion perception works through multiple systems at the same time, including brightness-based motion, texture and contrast-based motion, and attention-based motion tracking. This matters because when people watch a robot move, they are not only tracking position. They are also reading edges, material, speed, rhythm, and visual salience all at once.</p>
+
+<p>So before people decide whether a robot is efficient, intelligent, or useful, they have already decided whether its movement feels natural.</p>
+
+<h2>Problem 1: The Body Part Looks Human, But Does Not Feel Human</h2>
+
+<p>The first problem is when a robotic body part looks human, but does not feel human. For example, it has a palm, five fingers, finger joints, and maybe even skin-colored soft material. It looks like a hand. But when people get closer, they notice the surface is too smooth, too shiny, too cold, too hard, or too rubber-like. Then the problem starts. It looks like a hand, but it does not feel like a real hand.</p>
+
+<p>This is what Poliakoff et al. (2018) discussed in their mismatch hypothesis. They showed that when an artificial body part gives some cues that look human, but other cues do not match human expectation, people can feel uneasy. It is not exactly fear. It is more like something feels wrong. It feels strange. It feels uncomfortable. People may not be able to explain it immediately, but they can feel that the signals do not match.</p>
+
+<p>And this is also why a fully mechanical industrial arm usually does not create the same reaction. It is clearly a machine. People do not expect it to feel human. So people judge it like a machine. But once something has human shape, people begin to judge it with human standards.</p>
+
+<h2>Problem 2: Looks Human, But Does Not Move Human</h2>
+
+<p>The second problem is more obvious. It already gives people the expectation that it is human-like, but when it moves, it does not move like a human.</p>
+
+<p>This is where people start feeling uncomfortable very quickly. Once a robot has a human face, human arms, human hands, and human body proportions, people naturally begin to match it with human movement patterns. They expect it to move in a way that at least feels close to human movement logic. But when it does not, people immediately feel something is wrong.</p>
+
+<p>Wu et al. (2024) showed exactly this point. More anthropomorphic robots can attract more attention, but they can also create more discomfort and uncanny feeling when their appearance and behavior do not match. The more human-like the robot looks, the more human-like people expect it to move.</p>
+
+<p>A human does not simply raise an arm in a straight constant-speed line. Before movement starts, there is usually preparation. The eyes move first. The head may slightly turn. The shoulder adjusts. Then the shoulder joint leads the upper arm, the elbow follows to extend or bend, the wrist adjusts orientation, and the fingers prepare for the target. Human movement is not one joint moving. It is coordinated movement.</p>
+
+<p>But many humanoid robots do not move like this. They start directly. The arm rises in a straight line at constant speed. There is no preparation, no natural coordination, and no gradual transition. So people do not feel like they are watching a human-like arm move. They feel like they are watching a machine execute a command.</p>
+
+<p>People may not know anatomy, but people know what human joints are supposed to do. They know how a shoulder should turn, how an elbow should bend, how a wrist should rotate, and how fingers should close. People know this because they use their own bodies every day.</p>
+
+<p>A normal human arm does not move by one joint acting alone. The shoulder sets direction, the elbow adjusts reach, the wrist sets orientation, and the fingers prepare for contact. These parts work together. So if a humanoid robot reaches by pushing the forearm straight forward first, then suddenly rotating the wrist, then suddenly closing all fingers at once, people feel it is stiff. It looks like a hand, but it moves like a tool.</p>
+
+<p>This is especially obvious in the wrist. Human wrists are flexible, but they still have natural limits. A human wrist does not suddenly rotate 180 or 360 degrees at high speed. If a humanoid robot does that, even if it is mechanically useful, people immediately feel that something is wrong. Not because they are analyzing the mechanism, but because their body already knows that movement is not normal.</p>
+
+<p>The same is true for fingers. Human grasping has order. The hand approaches, the palm adjusts, the fingers prepare, then the thumb and fingers gradually close. But many robot hands close all fingers at once, like a clamp. The action may work, but it does not feel human.</p>
+
+<p>Zaraki et al. (2017) also support this point. They showed that in human–robot interaction, people do not only watch whether the robot completes the action. They also continuously read posture, gesture, direction, distance, and movement as social signals. So once a robot is built in human form, its movement is no longer only mechanical. It is already social.</p>
+
+<h2>Problem 3: Movement Is Not Continuous</h2>
+
+<p>The last problem is continuity. A lot of robot movement feels wrong not because the robot fails, but because the movement is not continuous. It starts too suddenly, stops too suddenly, changes speed too abruptly, or different joints move out of sync.</p>
+
+<p>Human motion perception depends on continuity. Humans naturally connect what they saw one moment ago with what they see the next moment. They automatically judge whether it is the same object and the same continuous action. So when movement is broken, people immediately feel it.</p>
+
+<p>This is also why humans can understand movement from just a few points of light, and why humans can even read intention from moving triangles and dots. Humans are extremely sensitive to motion patterns and naturally assign continuity and intention to movement. So when robot movement is not continuous, people do not see one smooth action. They see broken steps: shoulder moves, pause, elbow moves, pause, wrist turns, fingers close. It feels less like a body and more like a program running step by step.</p>
+
+<p>From an engineering view, the robot may still complete the task. But from a human view, the movement feels unnatural, uncomfortable, and harder to trust.</p>
+
+<h2>Conclusion</h2>
+
+<p>When humanoid robotics make people feel strange, sometimes it is not because they are not advanced enough, not flexible enough, or not human-like enough. The key problem is often much simpler: they move the wrong way.</p>
+
+<p>They may look human, but the material does not feel human. They may look human, but the movement does not feel human. They may complete the action, but the movement logic, speed, coordination, and continuity do not match what humans are familiar with. So the key is not only whether the robot can move, and not only whether it can complete the task. If a robot is meant to interact with humans, especially as a humanoid robot, then movement must match human perception.</p>
+
+<p>That is the core point of this whole paper. The key is matching. Not only function, but matching. Not only movement, but movement that matches how humans naturally see, predict, and understand motion.</p>
+
+<h2>References</h2>
+<p class="ref">Lu, Z.-L., &amp; Sperling, G. (2001). Three-systems theory of human visual motion perception: Review and update. Journal of the Optical Society of America A, 18(9), 2331–2370.</p>
+<p class="ref">Poliakoff, E., O'Kane, S., Carefoot, O., Kyberd, P., &amp; Gowen, E. (2018). Investigating the uncanny valley for prosthetic hands. Prosthetics and Orthotics International, 42(1), 21–27.</p>
+<p class="ref">Wu, J., Du, X., Liu, Y., Tang, W., &amp; Xue, C. (2024). How the degree of anthropomorphism of human-like robots affects users' perceptual and emotional processing: Evidence from an EEG study. Sensors, 24(15), 4809.</p>
+<p class="ref">Zaraki, A., et al. (2017). Design and evaluation of a unique social perception system for human–robot interaction. IEEE Transactions on Cognitive and Developmental Systems, 9(4), 341–355.</p>
+</body>
+</html>

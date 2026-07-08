@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#fff;font-family:Calibri,Arial,sans-serif;color:#000;padding:96px 100px;line-height:1.4;font-size:13px}
+  h1{font-size:16px;font-weight:700;margin-bottom:4px;text-align:center}
+  h2{font-size:14px;font-weight:700;margin:24px 0 8px}
+  h3{font-size:13px;font-weight:700;margin:16px 0 6px}
+  p{margin-bottom:10px}
+  .center{text-align:center;color:#333;margin-bottom:3px;font-size:12px}
+  hr{border:none;border-top:1px solid #000;margin:20px 0}
+</style>
+</head>
+<body>
+<h1>Familiarization Assignment: Honeywell Lecture Report</h1>
+<p class="center">HSE 225 — Arizona State University</p>
+<hr>
+
+<h2>Major Challenges Encountered</h2>
+<p>Aircraft already have a lot of data. They collect information about aircraft systems, flight conditions, life support, and more. And the aircraft itself is already partly automated. But compared to all of that, there is much less data about the pilot. That is the core problem this project is trying to solve. Because the pilot's physical condition, breathing, heart rate, cognitive state, and workload all directly affect their decisions, and their decisions affect the entire flight. So, the question is: how do we make the pilot's own condition something that can also be seen, measured, and understood?</p>
+<p>The team built a wearable biosensing garment, essentially a smart shirt or sports bra with embedded sensors that can measure ECG, heart rate, breathing, breathing depth, and movement. But getting there was not simple. They ran into three major challenges along the way.</p>
+
+<h2>Challenge 1: Would it be part of the workflow?</h2>
+<p>The first thing the team did was not run an experiment. The first thing they did was ask pilots whether they would be willing to wear the device. Would it interfere with the harness, the G-suit, the parachute, or the life support system? Who would manage the data? Who would hand out the device and download the data afterward? This matters because a product cannot exist on its own. It always must work together with real people, real tasks, and real environments. If it does not fit into the actual workflow, then even if the experiment works perfectly, it will still be very hard to use in the real world. That is why this step came first.</p>
+
+<h2>Challenge 2: Does It Actually Measure Accurately?</h2>
+<p>The second challenge was whether the device could collect reliable data. Just because a shirt has sensors does not mean the data is correct. Pilots are not sitting still. They are in high-G conditions, thermal chambers, centrifuges, and real flight environments. So, the team compared the data from the wearable against standard medical sensors traditional ECG and breathing monitors to see how well they matched. The overall results were good. But some sensors performed less reliably in certain conditions. That is an important finding, because it shows that not every instrument produces accurate data in every situation, and proving that the data is trustworthy is itself a major challenge.</p>
+
+<h2>Challenge 3: Can the Data Actually Tell Us Something?</h2>
+<p>The third challenge was whether this data could tell us if something was wrong with the pilot. The team did not start by immediately trying to detect danger. Instead, they first defined what different breathing patterns look like what is normal breathing, what is shallow breathing, what is hyperventilation, and what is breath holding. Only after building that standard did they use it to interpret pilot state. This is an important logic. You cannot define the result first and then force the data to match it. You need a standard first, and then you use that standard to understand what the data is saying.</p>
+
+<h2>HSI Pillars Covered</h2>
+<h3>Human Factors Engineering</h3>
+<p>The whole project is built around whether the device fits how pilots work. Not just whether it collects data, but whether it can exist inside the pilot's real environment without getting in the way. That is human factors engineering, does it fit the human, not just the task.</p>
+
+<h3>Training</h3>
+<p>Pilots need to learn how to wear it, maintain it, and understand what the alerts mean. That is a real training requirement.</p>
+
+<h3>Health Hazards</h3>
+<p>The point of this project is to monitor the pilot's physical condition like breathing, heart rate, signs of hypoxia or fatigue and catch a problem before it affects the flight. So, system safety and health hazard monitoring are basically what the shirt is for.</p>
+
+<h3>Human Requirements</h3>
+<p>First, it must be comfortable and not interfere with existing gear. Pilots already have a harness, G-suit, oxygen system. If this shirt causes any conflict with those, it simply will not get used.</p>
+<p>Second, the whole data process needs to fit into the existing workflow. Who gives out the device, who downloads it afterward if that is unclear or adds too many steps, it will not work in practice.</p>
+<p>And the most important one I think: the pilot still must be the one making decisions. Right now, this system can send an alert, but it cannot tell you exactly what is wrong or what to do. The final call stays with the human. I think that boundary is important and it is also an HSI requirement.</p>
+
+<h2>How This Relates to HSI Practices</h2>
+<p>What I think is most important about this lecture is not just what the team built. It is how they approached building it.</p>
+<p>They did not start with technology. They started with the people. Before they ran any experiments, they asked whether pilots would use the device and whether it could fit into the real environment. That is the most important step, and it is also the step that a lot of projects skip. A product cannot just work in a lab. It must work in the real world, with real people, in real conditions. If it cannot enter the actual workflow, then it does not matter how well the technology performs.</p>
+<p>Then the next step was proving whether the product is useful, not just technically, but from the human side. Data is not automatically valuable. Just because a shirt can collect physiological signals does not mean those signals are telling us something real. The team had to validate the data against medical-grade sensors and prove the readings were reliable under real flight conditions.</p>
+<p>And then the most important logic of all, if you want to use data to explain human state, you cannot define the result first and then force the data to match. You need to build a standard first define what different signals mean and then use that standard to interpret the data. That is what the team did when they defined different breathing patterns before trying to assess pilot condition. It is human centered. And that is why I think this project is one of the clearest examples of HSI in practice.</p>
+</body>
+</html>

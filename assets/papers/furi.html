@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#fff;font-family:Calibri,Arial,sans-serif;color:#000;padding:96px 100px;line-height:1.4;font-size:13px}
+  h1{font-size:16px;font-weight:700;margin-bottom:4px;text-align:center}
+  h2{font-size:14px;font-weight:700;margin:24px 0 8px}
+  h3{font-size:13px;font-weight:700;margin:16px 0 6px}
+  p{margin-bottom:10px}
+  ol,ul{margin:10px 0 12px 28px}
+  li{margin-bottom:8px}
+  .center{text-align:center;color:#333;margin-bottom:4px;font-size:18px}
+  hr{border:none;border-top:1px solid #000;margin:20px 0}
+  .tl{display:flex;gap:20px;margin-bottom:6px}
+  .tl-w{min-width:90px;font-weight:700}
+  .ref{margin-bottom:8px;font-size:18px}
+</style>
+</head>
+<body>
+<h1>Match and Mismatch Between Perceived Safety and System Assessment in Autonomous Driving</h1>
+<p class="center">Xiaoxi Wang — FURI Research Proposal</p>
+<p class="center">BELIV Lab · Arizona State University</p>
+<hr>
+
+<h2>1. Research Question and Hypotheses</h2>
+<p>What factors drive matches and mismatches between human perceived safety and autonomous vehicle safety assessments, and what insights can these alignments and gaps provide for AV system design?</p>
+<p><strong>Hypotheses:</strong></p>
+<ol>
+  <li>When a real safety hazard exists, humans can accurately perceive and judge the risk, while the autonomous vehicle system may fail to detect it. Humans may identify risks through specific environmental cues, visual information, or contextual reasoning that the current system may not capture.</li>
+  <li>When a real safety hazard exists, the autonomous system can correctly identify the risk, but humans may fail to perceive it, misjudge it, or experience attention blind spots. This situation may result from limitations in human perception or may be caused by insufficient or unclear information delivery through vehicles' HMI.</li>
+  <li>When no actual safety hazard exists, humans can correctly judge the situation as safe, while the system may falsely detect a risk. Humans may rule out false dangers by integrating comprehensive contextual information, which the system may learn from to reduce false alarms and unnecessary disturbance to users.</li>
+</ol>
+
+<h2>2. Literature Review</h2>
+<p>From an engineering perspective, existing research has proposed different safety evaluation methods for autonomous driving. Wishart et al. (2025) proposed a scenario-level evaluation method based on dynamic driving tasks, allowing the system to generate quantifiable safety metrics across different driving scenarios. Wishart et al. (2023) further proposed a safety case framework for automated vehicles from the perspectives of system design and scenario-based testing. Together, these studies provide an important engineering baseline for evaluating autonomous driving safety.</p>
+<p>From a human perspective, existing research shows that users' risk perception and trust in autonomous driving systems can be examined through behavioral responses, physiological signals, and multimodal data. He et al. (2022) showed that human judgments of traffic risk can be predicted through visual features. Based on this, in addition to traditional interviews and surveys, multimodal methods such as eye-tracking, electrodermal activity, real-time voice responses, and button-based feedback recording (Deng et al., 2024) can help researchers better understand user states and cognitive load.</p>
+<p>A key issue in autonomous driving research is that engineering safety does not always align with passengers' perceived safety. Current autonomous systems mainly rely on objective indicators such as following distance, speed, acceleration, and obstacle detection, but these measures may not fully reflect passengers' subjective experience and physiological responses during the ride. As Endsley (2017) pointed out, even as systems become increasingly automated, humans cannot simply be removed; instead, they take on the roles of supervisors, monitors, and interveners. This study aims to combine system assessment, user perception, and actual safety conditions to examine the degree of alignment among these three aspects, helping improve the system's risk detection ability while also enhancing users' satisfaction.</p>
+
+<h2>3. Research Plan and Methods</h2>
+<p>This study uses driving simulation experiments to collect data on safety judgments made by human passengers and autonomous vehicle (AV) systems in the same scenarios.</p>
+
+<h3>3.1 Engineering Safety Assessment</h3>
+<p>Based on existing engineering safety assessment methods, autonomous driving scenarios will be used to analyze system safety. For each scenario, the AV system will generate safety assessment results, and objective indicators such as following distance, relative speed, obstacle detection, and overall vehicle condition will be recorded.</p>
+
+<h3>3.2 Passenger Subjective Experience and Multimodal Data Collection</h3>
+<p>This study also focuses on passengers' subjective safety experience in the same scenarios. While participants experience the ride as passengers, multimodal data will be collected. Eye-tracking will record visual attention, gaze shifts, and pupil changes. A skin conductance device will capture changes in tension levels. The experiment will also be video recorded to document behavioral responses and facial expressions. Some participants will use a real-time feedback button to indicate when they feel unsafe, and selected participants will provide real-time voice recordings.</p>
+
+<h3>3.3 Scenario Alignment and Matching Analysis</h3>
+<p>After data collection, physiological signals, behavioral observations, and subjective feedback will be aligned with the vehicle's safety assessment outputs and actual driving events. Matching and mismatching patterns among system judgments, passenger perceptions, and real driving conditions will then be examined.</p>
+
+<h3>3.4 Mismatch Analysis and Integrated Evaluation Approach</h3>
+<p>Based on the alignment results, this study will further examine the causes of matching and mismatching cases. It will explore which scenario characteristics, system behaviors, or passenger response patterns are more likely to lead to agreement or disagreement between system assessment and human perception. Based on these findings, an integrated evaluation method is proposed that considers both engineering safety and human-perceived safety, supporting future improvements in human factors evaluation, safety standards, and in-vehicle information design.</p>
+
+<h2>4. Fulton Research Theme</h2>
+<p>This study belongs to the Data research theme within the Fulton Schools. This study integrates multimodal data and system outputs to explore how these data can be analyzed and utilized to understand differences between users and systems. This study reflects the application of data-driven approaches in intelligent systems and human factors engineering and aligns with the Data theme in terms of data analysis and decision support.</p>
+
+<h2>Timeline</h2>
+<div class="tl"><span class="tl-w">Week 1–3</span><span>Literature review and equipment learning</span></div>
+<div class="tl"><span class="tl-w">Week 4–7</span><span>Experiment design and pilot study</span></div>
+<div class="tl"><span class="tl-w">Week 8–10</span><span>Data collection</span></div>
+<div class="tl"><span class="tl-w">Week 11–12</span><span>Data analysis</span></div>
+<div class="tl"><span class="tl-w">Week 13–14</span><span>Result organization</span></div>
+<div class="tl"><span class="tl-w">Week 15</span><span>Final report</span></div>
+
+<h2>Budget</h2>
+<p>Experimental equipment and materials: $250 &nbsp;·&nbsp; Participant compensation: $80 &nbsp;·&nbsp; Other materials: $70 &nbsp;·&nbsp; <strong>Total: $400</strong></p>
+
+<h2>Personal Statement</h2>
+<p>I am currently pursuing a degree in Human Systems Engineering at Arizona State University, where I have developed a strong interest in automotive driving, autonomous systems, and human-computer interaction. I have always believed that human factors and technology should not be separated but should work together. No matter how advanced a product is, it is ultimately designed for people. Therefore, how people understand a system, how they feel about it, and whether they trust it are all essential. In my view, technology should not only function safely from an engineering perspective but also communicate with users clearly, understandably, and trustworthy.</p>
+<p>My interest in autonomous driving comes from its close connection to everyday life. Transportation affects almost everyone, and driving is a high-frequency activity for most people. Autonomous driving has the potential to change how people live, but not everyone fully accepts or uses it yet. I believe one important reason is that engineering safety alone is not enough. Even if a system performs well according to technical standards, users may still feel uncertain or uncomfortable if they do not understand it.</p>
+<p>During my studies, I have not limited myself to theoretical knowledge. In addition to learning topics such as psychology, cognition, and human-centered design, I have also placed strong emphasis on practice and hands-on experience. I am interested in learning how to collect more accurate data, how to measure human responses in a more scientific way, and how to understand the relationship between objective data and subjective experience.</p>
+<p>These experiences have led me to realize that the safety of autonomous systems depends not only on the technology itself, but also on how users interpret and respond to the system. I believe the relationship between humans and technology is not simply 1 + 1 = 2, but 1 + 1 > 2. When they are well integrated, the result can be more effective and more meaningful.</p>
+
+<h2>References</h2>
+<p class="ref">Wishart et al. (2025). Dynamic driving task assessment scores for scenarios navigated by an OEM ADS-equipped vehicle. SAE Technical Paper.</p>
+<p class="ref">Wishart et al. (2023). A proposed safety case framework for automated vehicles. IEEE International Automated Vehicle Validation Conference.</p>
+<p class="ref">He, X., et al. (2022). Modeling perceived risk and trust in automated driving. Transportation Research Part F.</p>
+<p class="ref">Deng, Z., et al. (2024). Voice-based detection of trust in human–automation interaction. International Journal of Human-Computer Studies.</p>
+<p class="ref">Endsley, M. R. (2017). From here to autonomy. Human Factors, 59(1), 5–27.</p>
+</body>
+</html>

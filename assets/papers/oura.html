@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#fff;font-family:Calibri,Arial,sans-serif;color:#000;padding:96px 100px;line-height:1.4;font-size:13px}
+  h1{font-size:16px;font-weight:700;margin-bottom:4px;text-align:center}
+  h2{font-size:14px;font-weight:700;margin:24px 0 8px}
+  h3{font-size:13px;font-weight:700;margin:16px 0 6px}
+  p{margin-bottom:10px;text-align:justify}
+  .center{text-align:center;color:#333;margin-bottom:3px;font-size:12px}
+  hr{border:none;border-top:1px solid #000;margin:14px 0}
+  .ref{margin-bottom:6px;font-size:12px}
+</style>
+</head>
+<body>
+<h1>HSI Requirements Generation and Evaluation of a Product</h1>
+<p class="center">Oura Ring</p>
+<p class="center">HSE 225 — Arizona State University</p>
+<hr>
+
+<h2>Part 1: Introduction</h2>
+
+<h3>1.1 Goal Definition</h3>
+<p>Oura Ring is a smart health monitoring wearable designed to help users track their physiological data through continuous sensing. The device collects data in a visualized format through a companion mobile application, allowing users to monitor health metrics, receive early warnings of potential health risks, and make improvements to their daily habits and overall wellbeing. The device provides tracking across more than 50 health indicators, including sleep quality, heart rate, body temperature, blood oxygen saturation, daily activity levels, stress levels, cardiovascular health, and respiratory rate.</p>
+
+<h3>1.2 User Description</h3>
+<p>Oura Ring is primarily designed for everyday consumers, who make up more than 95% of its user base. A small portion of users come from commercial applications, including corporate wellness programs, healthcare institutions, and military organizations, accounting for approximately 5% of total usage. The US military is currently Oura's largest enterprise client, with tens of thousands of service members using the ring for fatigue monitoring, though the company has noted this contract represents a relatively small contribution to overall revenue.</p>
+<p>Oura Ring's core user group consists of individuals between the ages of 25 and 44 who are highly educated, have disposable income, live in urban areas, and have a strong awareness of their personal health. These users are typically early adopters of wearable technology.</p>
+<p>In terms of gender distribution, male users outnumbered female users during the early years of the product from 2015 to 2023, with the primary user base being technology enthusiasts and fitness-focused individuals. Following the introduction of women's health features including menstrual cycle prediction in late 2022 and pregnancy insights in 2024, the female user base grew rapidly. By June 2024, female users surpassed male users for the first time, with women accounting for 59% and men accounting for 41% of the user base.</p>
+
+<h3>1.3 Product Description</h3>
+<p>Oura Ring is a smart health monitoring wearable ring developed by Finnish health technology company Oura Health Oy, founded in 2013. The device continuously collects physiological data through built-in sensors and presents health indicators in a visual format through a companion mobile application, helping users monitor and improve their health.</p>
+<p>Oura Ring has undergone three major upgrades since its launch in 2015 and is currently in its fourth generation. Generation 1, released in 2015, focused on sleep stage analysis, readiness scoring, and activity tracking. Generation 2, released in 2018, improved sleep tracking accuracy, added a body temperature sensor and step tracking, and introduced the Heritage and Horizon design styles. Generation 3, released in 2021, added 24/7 continuous heart rate monitoring, blood oxygen saturation tracking, more precise temperature sensing, and women's menstrual cycle prediction. The outer shell was titanium with an epoxy resin interior lining. Generation 4, released in October 2024, introduced Smart Sensing 2.0 technology, increasing signal pathways from 8 to 18 and LEDs from 4 to 10. Sensors are now fully recessed with no protrusions. New features include Cardiovascular Age and VO2 Max estimation. The size range expanded from sizes 6 through 13 to sizes 4 through 15. The design was upgraded to a full titanium construction, replacing the previous titanium exterior and epoxy resin interior.</p>
+<p>Product Specifications (Generation 4): Dimensions: Width 7.9 mm, thickness 2.88 mm, weight 3.3 to 5.2 grams depending on size. Available in sizes 4 through 15 in six finishes: Black, Silver, Stealth, Brushed Silver, Gold, and Rose Gold. Sensors: PPG optical sensors using green light for heart rate measurement and red and infrared light for blood oxygen measurement, with 10 LEDs and 18 signal pathways; negative temperature coefficient body temperature sensor; three-axis accelerometer; gyroscope. Tracked metrics, over 50 in total. Battery life: 5 to 8 days. Water resistance: 100 meters. Companion app: Oura App, compatible with iOS and Android. Pricing: Standard version starts at $349, up to $499. Subscription fee is $5.99 per month or $69.99 per year.</p>
+
+<h2>Part 2: Requirements Definition</h2>
+<p>This section covers six HSI pillars: Human Factors Engineering, Personnel, Training, Health Hazard, System Safety, and Survivability. A total of 11 requirements are defined below.</p>
+
+<h3>Human Factors Engineering</h3>
+<p><strong>Requirement 1: Wearability and Physical Comfort</strong></p>
+<p>Oura Ring requires users to wear it continuously throughout the day and night, including during sleep, exercise, and everyday activities. The finger is one of the most frequently used parts of the human body, and any discomfort can directly affect normal daily behavior. Continuous wear is essential for ensuring uninterrupted data collection and effective health monitoring. This requirement evaluates four dimensions: weight, comfort, presence, and impact on daily activities.</p>
+<p>Threshold: The Oura Ring shall meet the following four criteria: weight shall not exceed 6 grams; after 24 hours of continuous wear, the System Usability Scale comfort score shall be no lower than 68 out of 100; at least 78% of users shall report no longer being noticeably aware of the ring after 2 hours of wear; at least 78% of users shall report that the ring does not interfere with their daily activities.</p>
+<p>Objective: The Oura Ring should meet the following targets: weight should not exceed 5.2 grams; after 7 days of continuous wear, the SUS comfort score should be no lower than 80 out of 100; at least 90% of users should report being able to completely ignore the presence of the ring; at least 90% of users should report that the ring has no effect on their daily activities.</p>
+<p>Rationale: Oura Ring 4 official specifications list weight as 3.3 to 5.2 grams, making 6 grams a reasonable upper limit and 5.2 grams the official maximum. A SUS score of 68 represents the industry average benchmark based on Jeff Sauro's analysis of over 500 studies, and a score of 80 represents the excellent threshold at which users tend to recommend a product. The 78% user satisfaction rate is based on the average task completion rate identified across 1,100 tasks in the same study.</p>
+
+<p><strong>Requirement 2: Application Interface Usability</strong></p>
+<p>Oura Ring consists of two components: the physical ring, which collects data, and the smartphone app, which displays data and enables user interaction. Users can only access all their health data through the app. The app must allow users to get started quickly, with all features easy to locate and the overall navigation intuitive. This is essential to maximize the health monitoring value of the product.</p>
+<p>Threshold: New users shall be able to complete device pairing, account setup, and viewing of their first health report within 20 minutes without consulting a manual. Task completion rate shall be no lower than 78%. The overall app SUS score shall be no lower than 68 out of 100.</p>
+<p>Objective: Users should be able to complete the above tasks within 10 minutes with a task completion rate of no less than 90%. The overall app SUS score should be no lower than 80 out of 100.</p>
+
+<p><strong>Requirement 3: Size Accommodation Range</strong></p>
+<p>Finger sizes vary significantly across individuals, and the range of available sizes directly determines how broad a user population the product can serve. Special attention should be given to users with smaller fingers, users with larger fingers such as those with obesity, and users with physical disabilities, to ensure the widest possible user base can wear the device. An ill-fitting ring causes sensor contact problems that directly affect data accuracy.</p>
+<p>Threshold: The Oura Ring shall offer at least 10 size options covering the 5th to 95th percentile finger circumference range of the adult population. An official sizing tool shall be provided to help users confirm their correct size before purchase.</p>
+<p>Objective: The Oura Ring should offer 12 or more size options covering the 1st to 99th percentile finger circumference range of the adult population.</p>
+
+<h3>Personnel</h3>
+<p><strong>Requirement 4: Multi-User Group Adaptability</strong></p>
+<p>Oura Ring serves users across a wide range of ages, occupations, and technical skill levels. Different occupational groups have different needs from the device. For example, physical laborers require greater durability, older users need a simpler interface, and users with lower technical ability need more guided support. Both the device and the app must adapt to the actual usage needs of these different groups. Importantly, since not all 50-plus tracked metrics are equally relevant to every user, the app should allow for personalized customization.</p>
+<p>Threshold: The Oura Ring shall support normal use by individuals aged 18 to 75. The app interface shall comply with WCAG 2.1 Level AA accessibility standards, including adjustable font sizes and screen reader compatibility.</p>
+<p>Objective: The app should comply with WCAG 2.1 Level AAA accessibility standards and offer specialized guidance for different occupational groups as well as a simplified interface mode and meaningful personalization options.</p>
+
+<h3>Training</h3>
+<p><strong>Requirement 5: Device Setup and Subscription Management</strong></p>
+<p>While putting on the ring itself is straightforward, users must complete Bluetooth pairing between the ring and the smartphone app, set up a paid subscription, learn how to cancel the subscription if desired, and understand basic troubleshooting steps. Without clear guidance, users may be unable to use the product properly or may face unexpected charges. Real-world user feedback indicates that subscription management is one of the most frequently reported problem areas.</p>
+<p>Threshold: The app shall provide a complete onboarding tutorial covering device pairing, subscription activation, subscription cancellation, and basic troubleshooting. The task completion rate for users completing the full flow without external assistance shall be no lower than 78%.</p>
+<p>Objective: Video tutorials and live support options should be available. Task completion rate should be no lower than 90%, and the full setup flow should take no longer than 15 minutes.</p>
+
+<p><strong>Requirement 6: Data Literacy and Interpretation Support</strong></p>
+<p>Oura Ring tracks more than 50 health indicators, which is far too complex for most everyday users to interpret on their own. The app must translate raw data into understandable results and provide specific, actionable recommendations, reducing the burden on users to analyze the data themselves.</p>
+<p>Threshold: The app shall provide clear explanations for each health metric and display both raw data and analyzed results with accompanying health recommendations. Users without a medical background shall achieve a comprehension accuracy rate of no lower than 78% for core metrics.</p>
+<p>Objective: The app should provide personalized, actionable recommendations based on each user's own data, and user comprehension accuracy should reach no lower than 90%.</p>
+
+<h3>Health Hazard</h3>
+<p><strong>Requirement 7: Skin Contact Safety</strong></p>
+<p>Oura Ring is in direct and continuous contact with the skin over extended periods of time. The ring's materials may cause allergic reactions, skin irritation, or dermatitis. Ensuring that all skin-contacting materials are safe for users is critical, with particular attention to users who are sensitive to metals.</p>
+<p>Threshold: The Oura Ring shall pass ISO 10993-1 biocompatibility testing standards, including skin irritation and sensitization testing under ISO 10993-10. The ring shall contain no known skin-sensitizing metals and shall meet FDA biocompatibility requirements for skin-contact devices.</p>
+
+<p><strong>Requirement 8: Electromagnetic Radiation Safety</strong></p>
+<p>Oura Ring contains a Bluetooth Low Energy module. Prolonged use close to the skin generates electromagnetic radiation exposure. Because the ring is worn on the finger rather than the wrist, it sits in especially close contact with body tissue, making strict control of radiation levels important for long-term user health.</p>
+<p>Threshold: The Oura Ring shall obtain FCC certification with a Specific Absorption Rate not exceeding 1.6 W per kilogram as required under US FCC regulations. The ring shall also obtain EU CE certification and comply with the ICNIRP International Non-Ionizing Radiation Protection Guidelines.</p>
+
+<h3>System Safety</h3>
+<p><strong>Requirement 9: Device Temperature Control</strong></p>
+<p>Oura Ring contains a lithium-ion battery that generates heat during operation. In December 2025, multiple users reported incidents of overheating and emitting smoke, with at least one user sustaining a blister from the heat on their finger. For a device worn in direct and continuous contact with the skin, strict temperature control is essential to prevent thermal injuries.</p>
+<p>Threshold: Under all normal operating conditions, the outer surface temperature of the Oura Ring shall not exceed 43 degrees Celsius, in compliance with IEC 62368-1 consumer electronics thermal safety standards. When the device detects an abnormal rise in temperature, the app shall alert the user within 5 minutes.</p>
+
+<p><strong>Requirement 10: Data Collection Accuracy and Reliability</strong></p>
+<p>Oura Ring collects physiological data through its sensors, and data accuracy directly affects the value of health monitoring. In conditions such as heavy sweating, ring rotation, or improper wear, accuracy may decrease. The system must first guarantee a baseline level of detection accuracy and must also be able to assess data reliability through cross-referencing multiple metrics.</p>
+<p>Threshold: Under normal wearing conditions, heart rate detection accuracy shall be no lower than 95%, body temperature detection accuracy shall be no lower than 90%, and sleep stage classification accuracy shall be no lower than 75%. When the system detects reduced data reliability such as poor sensor contact, the app shall notify the user to check their wearing position within 5 minutes.</p>
+
+<h3>Survivability</h3>
+<p><strong>Requirement 11: Operation in Extreme Environments</strong></p>
+<p>Oura Ring users may wear the device in a wide range of environmental conditions, including extreme cold outdoors in winter, high heat environments such as saunas, heavy sweating during intense physical activity, and water exposure during swimming or showering. The device must maintain normal operation and reliable data collection across all these scenarios.</p>
+<p>Threshold: The Oura Ring shall operate normally across a temperature range of negative 10 to 54 degrees Celsius. Water resistance shall be rated to at least 100 meters. Under heavy sweating conditions, the device shall detect any changes in data reliability and notify the user accordingly.</p>
+
+<h2>Part 3: Evaluation Documentation</h2>
+
+<h3>Requirement 1 Evaluation: Wearability and Physical Comfort</h3>
+<p>Evaluation is conducted at three levels. First, a sufficient sample of finger three-dimensional modeling data is collected to analyze how the ring distributes pressure across different finger shapes, identifying areas at risk of compression. Second, the typical hand movement behavior patterns of users are studied. Third, users complete a standardized SUS comfort questionnaire.</p>
+<p>Evaluation Result: Oura Ring 4 official data lists the weight range as 3.3 to 5.2 grams, meeting the threshold of 6 grams. User reviews indicate that most users pass an initial adjustment period of approximately 3 to 5 days before the ring becomes unnoticeable. On the Best Buy platform, the ring received a comfort score of 4.7 out of 5 across 3,685 reviews, with 93% of users willing to recommend it to a friend. Conclusion: Threshold met.</p>
+
+<h3>Requirement 2 Evaluation: Application Interface Usability</h3>
+<p>Evaluation Result: The Oura App interface is clean, and user feedback is generally positive. New users are typically able to complete the basic setup within 10 to 15 minutes, roughly meeting the threshold. However, a significant usability failure exists in subscription management. User reports and a class action lawsuit filed in late 2025 show that the cancellation option is buried in the web-based account portal rather than being accessible within the app itself, leading to unintended ongoing charges. Conclusion: Basic interface usability meets the threshold, but subscription management does not.</p>
+
+<h3>Requirement 3 Evaluation: Size Accommodation Range</h3>
+<p>Evaluation Result: Oura Ring 4 offers sizes 4 through 15, totaling 12 options, which already meets the objective value. The company provides a free sizing kit to help users confirm the correct size before purchasing. Some users have reported needing to exchange sizes after receiving their ring. Conclusion: Objective met.</p>
+
+<h3>Requirement 4 Evaluation: Multi-User Group Adaptability</h3>
+<p>Evaluation Result: The Oura App supports system-level font scaling on iOS and Android but does not offer an independent in-app font size control. Basic screen reader compatibility exists, though some chart elements lack alternative text descriptions. Personalization options are available but limited in depth. Conclusion: Partially meets the threshold. Full WCAG 2.1 Level AA compliance needs improvement.</p>
+
+<h3>Requirement 5 Evaluation: Device Setup and Subscription Management</h3>
+<p>Evaluation Result: The device pairing flow is straightforward, and most users complete it without significant issues. However, subscription management is a major shortcoming. The free trial period requires a credit card to be linked, and automatic billing begins after the trial ends. The cancellation option is accessible only through the web-based account portal, not through the app itself, leading many users to be charged without realizing they needed to cancel. A large volume of user complaints on various platforms led to a class action in late 2025. Conclusion: Device pairing meets the requirement. Subscription management does not.</p>
+
+<h3>Requirement 6 Evaluation: Data Literacy and Interpretation Support</h3>
+<p>Evaluation Result: The Oura App converts raw data into scored summaries such as Sleep Score, Readiness Score, and Activity Score, which significantly lowers the barrier to understanding. However, some technical metrics such as the meaning and normal range of HRV values remain difficult for users without a medical background to interpret. The personalization depth is limited. Conclusion: Roughly meets the threshold. Further simplification of specialized metrics is needed.</p>
+
+<h3>Requirement 7 Evaluation: Skin Contact Safety</h3>
+<p>Evaluation Result: Oura Ring 4 uses full titanium construction. Titanium is a widely recognized biocompatible material used in medical implants. The company states that the product has passed biocompatibility testing and contains no known sensitizing metals. Adverse skin reactions in user reviews are rare. Conclusion: Threshold met.</p>
+
+<h3>Requirement 8 Evaluation: Electromagnetic Radiation Safety</h3>
+<p>Evaluation Result: Oura Ring holds both FCC and EU CE certification. The device uses Bluetooth Low Energy, which operates at very low power levels, meaning actual radiation exposure is well below regulatory limits. Conclusion: Threshold and objective both met.</p>
+
+<h3>Requirement 9 Evaluation: Device Temperature Control</h3>
+<p>Evaluation Result: Under normal use conditions, the ring's outer surface temperature remains close to body temperature and has not been observed to exceed the safety threshold. However, overheating incidents reported by users in December 2025 demonstrate that in rare cases, lithium battery thermal runaway can occur, causing the device temperature to rise dangerously. Oura classified these as isolated incidents and launched an investigation. The proactive alert mechanism is not yet fully developed. Conclusion: Normal use meets the threshold, but a safety risk exists in extreme cases.</p>
+
+<h3>Requirement 10 Evaluation: Data Collection Accuracy and Reliability</h3>
+<p>Evaluation Result: Oura's published accuracy figures are heart rate 99%, body temperature 92%, sleep staging 79%, all of which meet the objective values. However, data accuracy decreases under conditions such as heavy sweating or ring rotation, and the system currently lacks a proactive mechanism to notify users when data may be unreliable. Additionally, plaintiffs in the 2025 class alleged SpO2 readings differing by 4 to 6 percentage points from medical devices. Conclusion: Meets objectives under normal conditions, but the reliability alert mechanism needs strengthening.</p>
+
+<h3>Requirement 11 Evaluation: Operation in Extreme Environments</h3>
+<p>Evaluation Result: Official specifications confirm an operating temperature range of negative 10 to 54 degrees Celsius and water resistance to 100 meters, meeting the threshold. Data accuracy decreases under heavy sweating conditions, and the device currently lacks a proactive mechanism to identify and alert users to this situation. Conclusion: Threshold met. Reliability alert under sweating conditions needs improvement.</p>
+
+<h3>3.2 Conclusion</h3>
+<p>Oura Ring performs well across its core requirements. Based on 3,685 real user reviews on Best Buy, the ring received a rating of 4.7 out of 5, with 93% of users willing to recommend it. Positive feedback consistently highlights accurate sleep tracking, comfortable and lightweight wear, long battery life, a discreet appearance like a regular ring, and useful health insights. Negative feedback centers on the ring feeling slightly bulky, subscription payment difficulties, and occasional sizing challenges.</p>
+<p>From a broader perspective, Oura Ring is currently in a phase of rapid growth. Revenue exceeded $500 million in 2024, more than doubling year over year, and the user base also doubled. There are still several technical and design improvements that have not yet been fully achieved. The system lacks a proactive mechanism to alert users when data accuracy has decreased due to sweating, ring displacement, or improper wear. Subscription management transparency and the cancellation flow have generated widespread user frustration and led to legal action. Overall assessment: Good for everyday consumers who are willing to engage with the product. The subscription-related barriers reduce the product's accessibility and pull the overall assessment toward Neutral.</p>
+
+<h3>Recommendations and Analysis</h3>
+<p>Recommendation 1: Implement a proactive data reliability alert system. Oura Ring currently has no mechanism to inform users when data accuracy has decreased due to sweat, ring displacement, or poor sensor contact. Users may make health decisions based on data they believe to be accurate, but which is in fact compromised. It is recommended that the system uses real-time cross-metric analysis to assess data quality and alert users within the app to check their wearing position when sensor contact issues are detected. This improvement requires additional algorithm development investment and will introduce some additional battery consumption. Given the potential risk of users being misled by inaccurate health data, this investment is worthwhile and would meaningfully improve user trust in the product.</p>
+<p>Recommendation 2: Improve subscription design to lower user barriers. The current subscription model has several transparency problems. The free trial requires a linked payment card, and billing begins automatically after the trial ends. The cancellation option is only accessible through the web account portal rather than within the app itself. Subscription terms are not prominently displayed at the point of purchase. These issues have generated large volumes of user complaints and led to class action litigation in late 2025. Recommended improvements include displaying subscription terms prominently during the purchase flow, adding a direct and easily accessible cancellation option within the app, and offering a free basic feature tier so users can experience the product's value before committing to a paid subscription. Oura Ring is a product that only delivers its full value through long-term continuous use. Once users establish a habit of wearing the ring and accumulate a personal health data history, they are unlikely to abandon the product easily, because all that historical data and personalized baseline information would be lost. The switching cost is high. Lowering the initial barrier is therefore more likely to produce long-term loyal users than to increase churn.</p>
+</body>
+</html>

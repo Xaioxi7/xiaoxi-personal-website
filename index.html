@@ -1,0 +1,1514 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiaoxi Wang — Human Factors Engineer & UX Researcher</title>
+<meta name="description" content="Portfolio of Xiaoxi Wang, a Human Systems Engineering student at ASU working across human factors research, HCI, UX research, and robotics-adjacent engineering.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xiaoxi Wang — Human Factors Engineer & UX Researcher">
+<meta property="og:description" content="Portfolio of Xiaoxi Wang, a Human Systems Engineering student at ASU working across human factors research, HCI, UX research, and robotics-adjacent engineering.">
+<meta property="og:image" content="assets/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Xiaoxi Wang — Human Factors Engineer & UX Researcher">
+<meta name="twitter:description" content="Portfolio of Xiaoxi Wang, a Human Systems Engineering student at ASU working across human factors research, HCI, UX research, and robotics-adjacent engineering.">
+<meta name="twitter:image" content="assets/portrait.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="toast" id="toast"></div>
+<div class="page-overlay" id="pageOverlay"></div>
+
+<!-- Transcript lightbox -->
+<div class="lb-overlay" id="transcriptLb" onclick="closeLb(event)">
+  <div class="lb-box" onclick="event.stopPropagation()">
+    <div class="lb-bar">
+      <span class="lb-title">Academic Record — Xiaoxi Wang</span>
+      <button class="lb-close" onclick="closeLbBtn()">×</button>
+    </div>
+    <div class="lb-body">
+      <div class="lb-uni">Arizona State University</div>
+      <div class="lb-degree">B.S. Human Systems Engineering</div>
+      <div class="lb-divider"></div>
+      <div class="lb-gpa-block">
+        <div class="lb-gpa-num">3.86</div>
+        <div class="lb-gpa-sub">Cumulative GPA</div>
+      </div>
+      <div class="lb-badge">Dean's List</div>
+      <div class="lb-divider"></div>
+      <a class="lb-pdf-btn" href="assets/transcript.pdf" target="_blank">View Full Transcript PDF &nbsp;↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="curR"></div>
+<div class="cur-glow" id="curGlow"></div>
+
+
+<nav id="mainNav">
+  <a class="nav-logo" href="#" onclick="transitionTo('home');return false">
+    <div class="logo-wrap"><img src="assets/logo.png" alt="XW" width="491" height="491"></div>
+    <div class="nav-text-block">
+      <span class="nav-name">Xiaoxi Wang</span>
+      <span class="nav-sub">Human Systems Engineering</span>
+    </div>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#" onclick="transitionTo('home');return false" class="nav-a" data-page="home">Work</a>
+    <a href="#" onclick="transitionTo('about');return false" class="nav-a" data-page="about">About</a>
+    <a href="#" onclick="goContact();return false" class="nav-a">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="transitionTo('home');closeMobile();return false">Work</a>
+  <a href="#" onclick="transitionTo('about');closeMobile();return false">About</a>
+  <a href="#" onclick="goContact();closeMobile();return false">Contact</a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <section class="hero">
+    <div class="scan-line"></div>
+    <div class="scan-line-r"></div>
+
+    <div class="hero-main">
+      <div class="hero-left">
+        <div class="hero-name-wrap">
+          <img src="assets/name3.svg" alt="Xiaoxi Wang" class="name-large">
+          <div class="hero-typing-wrap">
+            <span class="hero-typing-pre">Specializing in </span><span class="hero-typing" id="heroTyping"></span><span class="typing-cursor">|</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      </div>
+    </div>
+
+    <div class="hero-strip">
+      <div class="ticker-inner">
+        <span><span class="dot">◆</span>Human Factors Engineering&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>HCI Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>UX Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Robotic Systems&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Physiological Sensing&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Autonomous Vehicles&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span><span class="dot">◆</span>Human Factors Engineering&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>HCI Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>UX Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Robotic Systems&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Physiological Sensing&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Autonomous Vehicles&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work-sec">
+    <div class="work-head">
+      <span class="work-label">Selected Work</span>
+      <div class="work-head-r">
+        <div class="filter-pills">
+          <button class="fpill active" data-filter="all">All</button>
+          <button class="fpill" data-filter="research">Research</button>
+          <button class="fpill" data-filter="engineering">Engineering</button>
+          <button class="fpill" data-filter="architecture">Architecture</button>
+          <button class="fpill" data-filter="studio">Studio</button>
+        </div>
+        <span class="work-count" id="workCount">07 projects</span>
+      </div>
+    </div>
+    <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('robotic');return false">
+      <div class="proj-img"><img src="assets/robot-wide.jpg" alt="Robotic Instrument" width="1200" height="800" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Class Project · AME 494</span>
+        <div>
+          <h3 class="proj-title">Wire-Driven<br>Robotic Instrument</h3>
+          <p class="proj-desc">A five-finger mechanical hand that plucks guitar strings — 3D-printed joints, stainless steel wire, and servo control tuned to the pentatonic scale.</p>
+          <div class="proj-tags">
+            <span class="ptag">Mechanical Design</span>
+            <span class="ptag">Arduino</span>
+            <span class="ptag">3D Printing</span>
+            <span class="ptag">Wire-Driven</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Autonomous Driving HCI Research -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('av-research');return false">
+      <div class="proj-abs proj-abs--paper">
+        <div class="paper-doc-wrap"><div class="paper-doc-inner">
+          <h1>Match and Mismatch Between Perceived Safety and System Assessment in Autonomous Driving</h1>
+          <p class="pdoc-meta">Xiaoxi Wang — FURI Research Proposal</p>
+          <p class="pdoc-meta">BELIV Lab · Arizona State University</p>
+          <hr>
+          <h2>1. Research Question and Hypotheses</h2>
+          <p>What factors drive matches and mismatches between human perceived safety and autonomous vehicle safety assessments, and what insights can these alignments and gaps provide for AV system design?</p>
+          <p><strong>Hypotheses:</strong></p>
+          <ol>
+            <li>When a real safety hazard exists, humans can accurately perceive and judge the risk, while the autonomous vehicle system may fail to detect it. Humans may identify risks through specific environmental cues, visual information, or contextual reasoning that the current system may not capture.</li>
+            <li>When a real safety hazard exists, the autonomous system can correctly identify the risk, but humans may fail to perceive it, misjudge it, or experience attention blind spots. This situation may result from limitations in human perception or may be caused by insufficient or unclear information delivery through vehicles' HMI.</li>
+            <li>When no actual safety hazard exists, humans can correctly judge the situation as safe, while the system may falsely detect a risk. Humans may rule out false dangers by integrating comprehensive contextual information, which the system may learn from to reduce false alarms and unnecessary disturbance to users.</li>
+          </ol>
+          <h2>2. Literature Review</h2>
+          <p>From an engineering perspective, existing research has proposed different safety evaluation methods for autonomous driving. Wishart et al. (2025) proposed a scenario-level evaluation method based on dynamic driving tasks, allowing the system to generate quantifiable safety metrics across different driving scenarios. Wishart et al. (2023) further proposed a safety case framework for automated vehicles from the perspectives of system design and scenario-based testing. Together, these studies provide an important engineering baseline for evaluating autonomous driving safety.</p>
+          <p>From a human perspective, existing research shows that users' risk perception and trust in autonomous driving systems can be examined through behavioral responses, physiological signals, and multimodal data. He et al. (2022) showed that human judgments of traffic risk can be predicted through visual features. Based on this, in addition to traditional interviews and surveys, multimodal methods such as eye-tracking, electrodermal activity, real-time voice responses, and button-based feedback recording (Deng et al., 2024) can help researchers better understand user states and cognitive load.</p>
+          <p>A key issue in autonomous driving research is that engineering safety does not always align with passengers' perceived safety. Current autonomous systems mainly rely on objective indicators such as following distance, speed, acceleration, and obstacle detection, but these measures may not fully reflect passengers' subjective experience and physiological responses during the ride. As Endsley (2017) pointed out, even as systems become increasingly automated, humans cannot simply be removed; instead, they take on the roles of supervisors, monitors, and interveners.</p>
+          <h2>3. Research Plan and Methods</h2>
+          <p>This study uses driving simulation experiments to collect data on safety judgments made by human passengers and autonomous vehicle (AV) systems in the same scenarios.</p>
+          <h3>3.1 Engineering Safety Assessment</h3>
+          <p>Based on existing engineering safety assessment methods, autonomous driving scenarios will be used to analyze system safety. For each scenario, the AV system will generate safety assessment results, and objective indicators such as following distance, relative speed, obstacle detection, and overall vehicle condition will be recorded.</p>
+          <h3>3.2 Passenger Subjective Experience and Multimodal Data Collection</h3>
+          <p>While participants experience the ride as passengers, multimodal data will be collected. Eye-tracking will record visual attention, gaze shifts, and pupil changes. A skin conductance device will capture changes in tension levels. The experiment will also be video recorded to document behavioral responses and facial expressions. Some participants will use a real-time feedback button to indicate when they feel unsafe.</p>
+          <h3>3.3 Scenario Alignment and Matching Analysis</h3>
+          <p>After data collection, physiological signals, behavioral observations, and subjective feedback will be aligned with the vehicle's safety assessment outputs and actual driving events. Matching and mismatching patterns among system judgments, passenger perceptions, and real driving conditions will then be examined.</p>
+          <h3>3.4 Mismatch Analysis and Integrated Evaluation Approach</h3>
+          <p>Based on the alignment results, this study will further examine the causes of matching and mismatching cases. It will explore which scenario characteristics, system behaviors, or passenger response patterns are more likely to lead to agreement or disagreement between system assessment and human perception.</p>
+          <h2>4. Fulton Research Theme</h2>
+          <p>This study belongs to the Data research theme within the Fulton Schools. This study integrates multimodal data and system outputs to explore how these data can be analyzed and utilized to understand differences between users and systems. This study reflects the application of data-driven approaches in intelligent systems and human factors engineering.</p>
+          <h2>Timeline</h2>
+          <ul>
+            <li><strong>Week 1–3</strong> — Literature review and equipment learning</li>
+            <li><strong>Week 4–7</strong> — Experiment design and pilot study</li>
+            <li><strong>Week 8–10</strong> — Data collection</li>
+            <li><strong>Week 11–12</strong> — Data analysis</li>
+            <li><strong>Week 13–14</strong> — Result organization</li>
+            <li><strong>Week 15</strong> — Final report</li>
+          </ul>
+          <h2>Budget</h2>
+          <p>Experimental equipment and materials: $250 &nbsp;·&nbsp; Participant compensation: $80 &nbsp;·&nbsp; Other materials: $70 &nbsp;·&nbsp; <strong>Total: $400</strong></p>
+          <h2>Personal Statement</h2>
+          <p>I am currently pursuing a degree in Human Systems Engineering at Arizona State University, where I have developed a strong interest in automotive driving, autonomous systems, and human-computer interaction. I have always believed that human factors and technology should not be separated but should work together. No matter how advanced a product is, it is ultimately designed for people. Therefore, how people understand a system, how they feel about it, and whether they trust it are all essential.</p>
+          <p>My interest in autonomous driving comes from its close connection to everyday life. Transportation affects almost everyone, and driving is a high-frequency activity for most people. Autonomous driving has the potential to change how people live, but not everyone fully accepts or uses it yet. I believe one important reason is that engineering safety alone is not enough. Even if a system performs well according to technical standards, users may still feel uncertain or uncomfortable if they do not understand it.</p>
+          <h2>References</h2>
+          <p class="pdoc-ref">Wishart et al. (2025). Dynamic driving task assessment scores for scenarios navigated by an OEM ADS-equipped vehicle. SAE Technical Paper.</p>
+          <p class="pdoc-ref">Wishart et al. (2023). A proposed safety case framework for automated vehicles. IEEE International Automated Vehicle Validation Conference.</p>
+          <p class="pdoc-ref">He, X., et al. (2022). Modeling perceived risk and trust in automated driving. Transportation Research Part F.</p>
+          <p class="pdoc-ref">Deng, Z., et al. (2024). Voice-based detection of trust in human–automation interaction. International Journal of Human-Computer Studies.</p>
+          <p class="pdoc-ref">Endsley, M. R. (2017). From here to autonomy. Human Factors, 59(1), 5–27.</p>
+        </div></div>
+        <div class="paper-scroll-cap"></div>
+        <div class="paper-frame-hint">scroll to read</div>
+      </div>
+      <div class="proj-info">
+        <span class="proj-num">Research Proposal · FURI</span>
+        <div>
+          <h3 class="proj-title">Autonomous Driving<br>HCI Research</h3>
+          <p class="proj-desc">Studying passenger experience in autonomous vehicles at BELIV Lab — using eye tracking, GSR, and ECG to measure trust and perceived safety in L2/L3 automation contexts.</p>
+          <div class="proj-tags">
+            <span class="ptag">Eye Tracking</span>
+            <span class="ptag">GSR · ECG</span>
+            <span class="ptag">FURI</span>
+            <span class="ptag">BELIV Lab</span>
+          </div>
+        </div>
+        <span class="proj-arrow">Research →</span>
+      </div>
+    </a>
+
+    <!-- Pilot Physiological Monitoring -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('pilot-monitoring');return false">
+      <div class="proj-abs proj-abs--paper">
+        <div class="paper-doc-wrap"><div class="paper-doc-inner">
+          <h1>Familiarization Assignment: Honeywell Lecture Report</h1>
+          <p class="pdoc-meta">HSE 225 — Arizona State University</p>
+          <hr>
+          <h2>Major Challenges Encountered</h2>
+          <p>Aircraft already have a lot of data. They collect information about aircraft systems, flight conditions, life support, and more. And the aircraft itself is already partly automated. But compared to all of that, there is much less data about the pilot. That is the core problem this project is trying to solve. Because the pilot's physical condition, breathing, heart rate, cognitive state, and workload all directly affect their decisions, and their decisions affect the entire flight. So, the question is: how do we make the pilot's own condition something that can also be seen, measured, and understood?</p>
+          <p>The team built a wearable biosensing garment, essentially a smart shirt or sports bra with embedded sensors that can measure ECG, heart rate, breathing, breathing depth, and movement. But getting there was not simple. They ran into three major challenges along the way.</p>
+          <h2>Challenge 1: Would it be part of the workflow?</h2>
+          <p>The first thing the team did was not run an experiment. The first thing they did was ask pilots whether they would be willing to wear the device. Would it interfere with the harness, the G-suit, the parachute, or the life support system? Who would manage the data? Who would hand out the device and download the data afterward? This matters because a product cannot exist on its own. It always must work together with real people, real tasks, and real environments. If it does not fit into the actual workflow, then even if the experiment works perfectly, it will still be very hard to use in the real world. That is why this step came first.</p>
+          <h2>Challenge 2: Does It Actually Measure Accurately?</h2>
+          <p>The second challenge was whether the device could collect reliable data. Just because a shirt has sensors does not mean the data is correct. Pilots are not sitting still. They are in high-G conditions, thermal chambers, centrifuges, and real flight environments. So, the team compared the data from the wearable against standard medical sensors — traditional ECG and breathing monitors — to see how well they matched. The overall results were good. But some sensors performed less reliably in certain conditions. That is an important finding, because it shows that not every instrument produces accurate data in every situation, and proving that the data is trustworthy is itself a major challenge.</p>
+          <h2>Challenge 3: Can the Data Actually Tell Us Something?</h2>
+          <p>The third challenge was whether this data could tell us if something was wrong with the pilot. The team did not start by immediately trying to detect danger. Instead, they first defined what different breathing patterns look like — what is normal breathing, what is shallow breathing, what is hyperventilation, and what is breath holding. Only after building that standard did they use it to interpret pilot state. This is an important logic. You cannot define the result first and then force the data to match it. You need a standard first, and then you use that standard to understand what the data is saying.</p>
+          <h2>HSI Pillars Covered</h2>
+          <h3>Human Factors Engineering</h3>
+          <p>The whole project is built around whether the device fits how pilots work. Not just whether it collects data, but whether it can exist inside the pilot's real environment without getting in the way. That is human factors engineering — does it fit the human, not just the task.</p>
+          <h3>Training</h3>
+          <p>Pilots need to learn how to wear it, maintain it, and understand what the alerts mean. That is a real training requirement.</p>
+          <h3>Health Hazards</h3>
+          <p>The point of this project is to monitor the pilot's physical condition — like breathing, heart rate, signs of hypoxia or fatigue — and catch a problem before it affects the flight. So, system safety and health hazard monitoring are basically what the shirt is for.</p>
+          <h3>Human Requirements</h3>
+          <p>First, it must be comfortable and not interfere with existing gear. Pilots already have a harness, G-suit, oxygen system. If this shirt causes any conflict with those, it simply will not get used.</p>
+          <p>Second, the whole data process needs to fit into the existing workflow. Who gives out the device, who downloads it afterward — if that is unclear or adds too many steps, it will not work in practice.</p>
+          <p>And the most important one: the pilot still must be the one making decisions. Right now, this system can send an alert, but it cannot tell you exactly what is wrong or what to do. The final call stays with the human.</p>
+          <h2>How This Relates to HSI Practices</h2>
+          <p>What I think is most important about this lecture is not just what the team built. It is how they approached building it.</p>
+          <p>They did not start with technology. They started with the people. Before they ran any experiments, they asked whether pilots would use the device and whether it could fit into the real environment. That is the most important step, and it is also the step that a lot of projects skip. A product cannot just work in a lab. It must work in the real world, with real people, in real conditions.</p>
+          <p>Then the next step was proving whether the product is useful, not just technically, but from the human side. Data is not automatically valuable. Just because a shirt can collect physiological signals does not mean those signals are telling us something real. The team had to validate the data against medical-grade sensors and prove the readings were reliable under real flight conditions.</p>
+          <p>And then the most important logic of all — if you want to use data to explain human state, you cannot define the result first and then force the data to match. You need to build a standard first — define what different signals mean — and then use that standard to interpret the data. That is what the team did when they defined different breathing patterns before trying to assess pilot condition. It is human centered. And that is why I think this project is one of the clearest examples of HSI in practice.</p>
+        </div></div>
+        <div class="paper-scroll-cap"></div>
+        <div class="paper-frame-hint">scroll to read</div>
+      </div>
+      <div class="proj-info">
+        <span class="proj-num">Class Paper · HSE 225</span>
+        <div>
+          <h3 class="proj-title">Pilot Physiological<br>Monitoring</h3>
+          <p class="proj-desc">Analysis of a Honeywell biosensing garment for military pilots — evaluating ECG, heart rate, and breathing data accuracy under high-G conditions and workflow integration challenges.</p>
+          <div class="proj-tags">
+            <span class="ptag">Biosensing</span>
+            <span class="ptag">ECG</span>
+            <span class="ptag">Aviation Safety</span>
+            <span class="ptag">HSI</span>
+          </div>
+        </div>
+        <span class="proj-arrow">Research →</span>
+      </div>
+    </a>
+
+    <!-- Oura Ring HSI Evaluation -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('oura-hsi');return false">
+      <div class="proj-abs proj-abs--paper">
+        <div class="paper-doc-wrap"><div class="paper-doc-inner">
+          <h1>HSI Requirements Generation and Evaluation of a Product</h1>
+          <p class="pdoc-meta">Oura Ring</p>
+          <p class="pdoc-meta">HSE 225 — Arizona State University</p>
+          <hr>
+          <h2>Part 1: Introduction</h2>
+          <h3>1.1 Goal Definition</h3>
+          <p>Oura Ring is a smart health monitoring wearable designed to help users track their physiological data through continuous sensing. The device collects data in a visualized format through a companion mobile application, allowing users to monitor health metrics, receive early warnings of potential health risks, and make improvements to their daily habits and overall wellbeing. The device provides tracking across more than 50 health indicators, including sleep quality, heart rate, body temperature, blood oxygen saturation, daily activity levels, stress levels, cardiovascular health, and respiratory rate.</p>
+          <h3>1.2 User Description</h3>
+          <p>Oura Ring is primarily designed for everyday consumers, who make up more than 95% of its user base. A small portion of users come from commercial applications, including corporate wellness programs, healthcare institutions, and military organizations, accounting for approximately 5% of total usage. The US military is currently Oura's largest enterprise client, with tens of thousands of service members using the ring for fatigue monitoring.</p>
+          <p>Oura Ring's core user group consists of individuals between the ages of 25 and 44 who are highly educated, have disposable income, live in urban areas, and have a strong awareness of their personal health. By June 2024, female users surpassed male users for the first time, with women accounting for 59% and men accounting for 41% of the user base.</p>
+          <h2>Part 2: Requirements Definition</h2>
+          <p>This section covers six HSI pillars: Human Factors Engineering, Personnel, Training, Health Hazard, System Safety, and Survivability. A total of 11 requirements are defined below.</p>
+          <h3>Human Factors Engineering</h3>
+          <p><strong>Requirement 1: Wearability and Physical Comfort</strong></p>
+          <p>Oura Ring requires users to wear it continuously throughout the day and night, including during sleep, exercise, and everyday activities. The finger is one of the most frequently used parts of the human body, and any discomfort can directly affect normal daily behavior. Continuous wear is essential for ensuring uninterrupted data collection and effective health monitoring.</p>
+          <p>Threshold: The Oura Ring shall meet the following four criteria: weight shall not exceed 6 grams; after 24 hours of continuous wear, the System Usability Scale comfort score shall be no lower than 68 out of 100; at least 78% of users shall report no longer being noticeably aware of the ring after 2 hours of wear; at least 78% of users shall report that the ring does not interfere with their daily activities.</p>
+          <p>Objective: The Oura Ring should meet the following targets: weight should not exceed 5.2 grams; after 7 days of continuous wear, the SUS comfort score should be no lower than 80 out of 100; at least 90% of users should report being able to completely ignore the presence of the ring.</p>
+          <p><strong>Requirement 2: Application Interface Usability</strong></p>
+          <p>Users can only access all their health data through the app. The app must allow users to get started quickly, with all features easy to locate and the overall navigation intuitive.</p>
+          <p>Threshold: New users shall be able to complete device pairing, account setup, and viewing of their first health report within 20 minutes without consulting a manual. Task completion rate shall be no lower than 78%. The overall app SUS score shall be no lower than 68 out of 100.</p>
+          <p><strong>Requirement 3: Size Accommodation Range</strong></p>
+          <p>Finger sizes vary significantly across individuals, and the range of available sizes directly determines how broad a user population the product can serve.</p>
+          <p>Threshold: The Oura Ring shall offer at least 10 size options covering the 5th to 95th percentile finger circumference range of the adult population.</p>
+          <h3>Personnel</h3>
+          <p><strong>Requirement 4: Multi-User Group Adaptability</strong></p>
+          <p>Oura Ring serves users across a wide range of ages, occupations, and technical skill levels. Both the device and the app must adapt to the actual usage needs of these different groups.</p>
+          <p>Threshold: The Oura Ring shall support normal use by individuals aged 18 to 75. The app interface shall comply with WCAG 2.1 Level AA accessibility standards.</p>
+          <h3>Health Hazard</h3>
+          <p><strong>Requirement 7: Skin Contact Safety</strong></p>
+          <p>Oura Ring is in direct and continuous contact with the skin over extended periods of time. The ring's materials may cause allergic reactions, skin irritation, or dermatitis.</p>
+          <p>Threshold: The Oura Ring shall pass ISO 10993-1 biocompatibility testing standards, including skin irritation and sensitization testing under ISO 10993-10.</p>
+          <h3>System Safety</h3>
+          <p><strong>Requirement 9: Device Temperature Control</strong></p>
+          <p>Oura Ring contains a lithium-ion battery that generates heat during operation. In December 2025, multiple users reported incidents of overheating and emitting smoke, with at least one user sustaining a blister from the heat on their finger.</p>
+          <p>Threshold: Under all normal operating conditions, the outer surface temperature of the Oura Ring shall not exceed 43 degrees Celsius, in compliance with IEC 62368-1 consumer electronics thermal safety standards.</p>
+          <h2>Part 3: Evaluation Documentation</h2>
+          <h3>Requirement 1 Evaluation: Wearability and Physical Comfort</h3>
+          <p>Evaluation Result: Oura Ring 4 official data lists the weight range as 3.3 to 5.2 grams, meeting the threshold of 6 grams. User reviews indicate that most users pass an initial adjustment period of approximately 3 to 5 days before the ring becomes unnoticeable. On the Best Buy platform, the ring received a comfort score of 4.7 out of 5 across 3,685 reviews, with 93% of users willing to recommend it to a friend. Conclusion: Threshold met.</p>
+          <h3>Requirement 2 Evaluation: Application Interface Usability</h3>
+          <p>Evaluation Result: The Oura App interface is clean, and user feedback is generally positive. New users are typically able to complete the basic setup within 10 to 15 minutes, roughly meeting the threshold. However, a significant usability failure exists in subscription management — the cancellation option is buried in the web-based account portal rather than being accessible within the app itself, leading to unintended ongoing charges. Conclusion: Basic interface usability meets the threshold, but subscription management does not.</p>
+          <h3>Requirement 9 Evaluation: Device Temperature Control</h3>
+          <p>Evaluation Result: Under normal use conditions, the ring's outer surface temperature remains close to body temperature and has not been observed to exceed the safety threshold. However, overheating incidents reported by users in December 2025 demonstrate that in rare cases, lithium battery thermal runaway can occur. Oura classified these as isolated incidents and launched an investigation. Conclusion: Normal use meets the threshold, but a safety risk exists in extreme cases.</p>
+          <h3>3.2 Conclusion</h3>
+          <p>Oura Ring performs well across its core requirements. Based on 3,685 real user reviews on Best Buy, the ring received a rating of 4.7 out of 5, with 93% of users willing to recommend it. Positive feedback consistently highlights accurate sleep tracking, comfortable and lightweight wear, long battery life, a discreet appearance like a regular ring, and useful health insights. Negative feedback centers on the ring feeling slightly bulky, subscription payment difficulties, and occasional sizing challenges.</p>
+          <h3>Recommendations</h3>
+          <p>Recommendation 1: Implement a proactive data reliability alert system. Oura Ring currently has no mechanism to inform users when data accuracy has decreased due to sweat, ring displacement, or poor sensor contact. Users may make health decisions based on data they believe to be accurate, but which is in fact compromised.</p>
+          <p>Recommendation 2: Improve subscription design to lower user barriers. The current subscription model has several transparency problems. The free trial requires a linked payment card, and billing begins automatically after the trial ends. The cancellation option is only accessible through the web account portal rather than within the app itself. These issues have generated large volumes of user complaints and led to class action litigation in late 2025.</p>
+        </div></div>
+        <div class="paper-scroll-cap"></div>
+        <div class="paper-frame-hint">scroll to read</div>
+      </div>
+      <div class="proj-info">
+        <span class="proj-num">Class Paper · HSE 225</span>
+        <div>
+          <h3 class="proj-title">Oura Ring —<br>HSI Evaluation</h3>
+          <p class="proj-desc">Full Human Systems Integration analysis of the Oura Ring across four product generations — evaluating 50+ health metrics, user demographics, military applications, and sensor architecture.</p>
+          <div class="proj-tags">
+            <span class="ptag">HSI</span>
+            <span class="ptag">Wearable Tech</span>
+            <span class="ptag">Physiological Sensing</span>
+            <span class="ptag">User Research</span>
+          </div>
+        </div>
+        <span class="proj-arrow">Research →</span>
+      </div>
+    </a>
+
+    <!-- Humanoid Robot Perception -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('robot-perception');return false">
+      <div class="proj-abs proj-abs--paper">
+        <div class="paper-doc-wrap"><div class="paper-doc-inner">
+          <h1>How Humans Perceive Humanoid Robot Movement</h1>
+          <p class="pdoc-meta">HSE 323 — Arizona State University</p>
+          <hr>
+          <p>When people look at robotics, especially humanoid robotics, they very easily take "more human-like" as a sign of success. If it looks more human, people often think it is more advanced, more successful, or simply better designed. But the original point, or the real point, of robotics is not to look human. The point of robotics is to complete tasks and, more importantly, to serve humans.</p>
+          <p>No matter if it is in living scenarios, companion robotics, service robotics, or industrial scenarios, the core is the same: robots are interacting with humans. So the key is not only movement, and it is not only function. The key is interaction. And once the key becomes interaction, then the key becomes understanding, prediction, and trust. People need to understand what the robot is doing, predict what it will do next, and decide whether they can trust it.</p>
+          <p>That is why robotics design, especially humanoid robotics design, always pays attention to user experience, human factors, and human perception. Because for robotics, moving is not enough. A robot can move, but that does not mean people understand it. A robot can complete an action, but that does not mean people trust it.</p>
+          <p>And this is also why humanoid robotics keeps trying to become more human-like. Even though uncanny valley was already proposed a long time ago, people are still trying to design robots that look more and more human. The reason is simple. Humans are most familiar with themselves. You may not be able to describe exactly how each part of the body moves, or what the exact movement limit is, but when you see movement, you immediately know whether it feels human or not.</p>
+          <p>But robots are still machines. Their systems are built for function, and their systems are fundamentally different from humans. Robots are electrically driven. Humans are biologically driven. Humans move with muscles, joints, tendons, and body coordination. Robots move with motors, actuators, controllers, and mechanical constraints. So even if a robot looks human, it still cannot move exactly like a human. And this creates the problem. When something looks human, people expect it to move like a human.</p>
+          <p>And this problem shows up especially clearly in robot arms and hands. Humans use their arms and hands constantly, and humans also watch arms and hands constantly. Upper-limb movement is visually present all the time. People spend a lot of time watching hands — hands reaching, turning, pointing, touching, holding, and grasping. So people are extremely familiar with hand and arm movement, including trajectory, speed, timing, and gesture. That is why even a very small unusual thing — like a trajectory that is too straight, movement that is too stiff, or motion that starts too suddenly — can immediately feel wrong.</p>
+          <h2>How Humans Understand Movement</h2>
+          <p>When people see something move, they immediately begin to judge what it is, whether it is alive, what it is trying to do, and whether it will affect them. So human perception of movement is not passive observation. It is a very active and very sensitive judgment system.</p>
+          <p>Humans are naturally very sensitive to movement because movement itself carries meaning. Humans do not only observe movement. Humans naturally try to interpret movement as intention. Even simple motion can be read as chasing, avoiding, hesitating, approaching, or threatening. This is important because it means robot movement is never just motion. Once something moves in front of a person, that movement is already being interpreted.</p>
+          <p>This is also why biological motion is so important. Humans are extremely sensitive to biological motion. Even if people only see a few moving points in darkness, they can still tell whether it is a person walking, running, reaching, or turning. This shows that humans do not need full form to understand movement. Humans can read movement patterns directly.</p>
+          <h2>Problem 1: The Body Part Looks Human, But Does Not Feel Human</h2>
+          <p>The first problem is when a robotic body part looks human, but does not feel human. For example, it has a palm, five fingers, finger joints, and maybe even skin-colored soft material. It looks like a hand. But when people get closer, they notice the surface is too smooth, too shiny, too cold, too hard, or too rubber-like.</p>
+          <p>This is what Poliakoff et al. (2018) discussed in their mismatch hypothesis. They showed that when an artificial body part gives some cues that look human, but other cues do not match human expectation, people can feel uneasy. It is not exactly fear. It is more like something feels wrong. And this is also why a fully mechanical industrial arm usually does not create the same reaction. It is clearly a machine. People do not expect it to feel human.</p>
+          <h2>Problem 2: Looks Human, But Does Not Move Human</h2>
+          <p>The second problem is more obvious. It already gives people the expectation that it is human-like, but when it moves, it does not move like a human.</p>
+          <p>Wu et al. (2024) showed exactly this point. More anthropomorphic robots can attract more attention, but they can also create more discomfort and uncanny feeling when their appearance and behavior do not match. A human does not simply raise an arm in a straight constant-speed line. Before movement starts, there is usually preparation. The eyes move first. The head may slightly turn. The shoulder adjusts. Then the shoulder joint leads the upper arm, the elbow follows to extend or bend, the wrist adjusts orientation, and the fingers prepare for the target. Human movement is not one joint moving. It is coordinated movement.</p>
+          <p>But many humanoid robots do not move like this. They start directly. The arm rises in a straight line at constant speed. There is no preparation, no natural coordination, and no gradual transition. So people do not feel like they are watching a human-like arm move. They feel like they are watching a machine execute a command.</p>
+          <h2>Problem 3: Movement Is Not Continuous</h2>
+          <p>The last problem is continuity. A lot of robot movement feels wrong not because the robot fails, but because the movement is not continuous. It starts too suddenly, stops too suddenly, changes speed too abruptly, or different joints move out of sync.</p>
+          <p>Human motion perception depends on continuity. Humans naturally connect what they saw one moment ago with what they see the next moment. So when movement is broken, people immediately feel it. From an engineering view, the robot may still complete the task. But from a human view, the movement feels unnatural, uncomfortable, and harder to trust.</p>
+          <h2>Conclusion</h2>
+          <p>When humanoid robotics make people feel strange, sometimes it is not because they are not advanced enough, not flexible enough, or not human-like enough. The key problem is often much simpler: they move the wrong way. The key is not only whether the robot can move, and not only whether it can complete the task. If a robot is meant to interact with humans, then movement must match human perception. Not only function, but matching. Not only movement, but movement that matches how humans naturally see, predict, and understand motion.</p>
+          <h2>References</h2>
+          <p class="pdoc-ref">Lu, Z.-L., &amp; Sperling, G. (2001). Three-systems theory of human visual motion perception: Review and update. Journal of the Optical Society of America A, 18(9), 2331–2370.</p>
+          <p class="pdoc-ref">Poliakoff, E., O'Kane, S., Carefoot, O., Kyberd, P., &amp; Gowen, E. (2018). Investigating the uncanny valley for prosthetic hands. Prosthetics and Orthotics International, 42(1), 21–27.</p>
+          <p class="pdoc-ref">Wu, J., Du, X., Liu, Y., Tang, W., &amp; Xue, C. (2024). How the degree of anthropomorphism of human-like robots affects users' perceptual and emotional processing: Evidence from an EEG study. Sensors, 24(15), 4809.</p>
+          <p class="pdoc-ref">Zaraki, A., et al. (2017). Design and evaluation of a unique social perception system for human–robot interaction. IEEE Transactions on Cognitive and Developmental Systems, 9(4), 341–355.</p>
+        </div></div>
+        <div class="paper-scroll-cap"></div>
+        <div class="paper-frame-hint">scroll to read</div>
+      </div>
+      <div class="proj-info">
+        <span class="proj-num">Class Paper · HSE 323</span>
+        <div>
+          <h3 class="proj-title">Humanoid Robot<br>Perception</h3>
+          <p class="proj-desc">Research paper examining why some robot upper-limb movements feel natural while others feel uncanny — exploring trust, predictability, and the gap between biological and mechanical motion.</p>
+          <div class="proj-tags">
+            <span class="ptag">HRI</span>
+            <span class="ptag">Uncanny Valley</span>
+            <span class="ptag">Trust</span>
+            <span class="ptag">Motion Perception</span>
+          </div>
+        </div>
+        <span class="proj-arrow">Research →</span>
+      </div>
+    </a>
+
+    <!-- AI Vision Assist Smart Glasses -->
+    <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('ai-glasses');return false">
+      <div class="proj-img"><img src="assets/glasses-front.jpg" alt="AI Vision Assist Smart Glasses" width="650" height="430" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Class Project · Accessibility Tech</span>
+        <div>
+          <h3 class="proj-title">AI Vision Assist<br>Smart Glasses</h3>
+          <p class="proj-desc">A Raspberry Pi-based wearable pairing ultrasonic obstacle detection with a camera and the ChatGPT API — translating the world into spoken guidance for visually impaired users.</p>
+          <div class="proj-tags">
+            <span class="ptag">Raspberry Pi</span>
+            <span class="ptag">ChatGPT API</span>
+            <span class="ptag">Ultrasonic Sensing</span>
+            <span class="ptag">Accessibility</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Hug Hug -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-hughug');return false">
+      <div class="proj-img"><img src="assets/arch-hughug-1.jpg" alt="Hug Hug" width="1525" height="571" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Personal Work · Jun – Jul 2023</span>
+        <div>
+          <h3 class="proj-title">Hug Hug</h3>
+          <p class="proj-desc">A sculptural study of the embrace — translating the invisible particle-motion of a hug into a woven 3D-printing-pen and wire structure built from spliced, multi-angle line groups.</p>
+          <div class="proj-tags">
+            <span class="ptag">Form-Finding</span>
+            <span class="ptag">3D Printing Pen</span>
+            <span class="ptag">Wire Structure</span>
+            <span class="ptag">Model-Making</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- City Villa -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-cityvilla');return false">
+      <div class="proj-img"><img src="assets/arch-cityvilla-3.jpg" alt="City Villa" width="1800" height="1275" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Personal Work · Jul – Sep 2023</span>
+        <div>
+          <h3 class="proj-title">City Villa</h3>
+          <p class="proj-desc">A speculative high-rise stacking private villa units — each keeping its own courtyard — vertically into the city center, so residents don't have to trade urban life for suburban land.</p>
+          <div class="proj-tags">
+            <span class="ptag">Housing Research</span>
+            <span class="ptag">Massing</span>
+            <span class="ptag">Model-Making</span>
+            <span class="ptag">Rendering</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Mind Healing Restaurant Design -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-restaurant');return false">
+      <div class="proj-img"><img src="assets/arch-restaurant-1.jpg" alt="Mind Healing Restaurant Design" width="1800" height="1695" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Personal Work · Oct – Dec 2023</span>
+        <div>
+          <h3 class="proj-title">Mind Healing<br>Restaurant Design</h3>
+          <p class="proj-desc">A recovery space for students in continuous work cycles — an undulating roof and a choreography of sound, cold, and light designed to redirect mental fatigue toward rest.</p>
+          <div class="proj-tags">
+            <span class="ptag">Research-Driven Design</span>
+            <span class="ptag">Sensory Design</span>
+            <span class="ptag">Rendering</span>
+            <span class="ptag">Hospitality</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Deep Fear Inspires Space -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-fear');return false">
+      <div class="proj-img"><img src="assets/arch-fear-1.jpg" alt="Deep Fear Inspires Space" width="1146" height="683" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Personal Work · Jan – Feb 2024</span>
+        <div>
+          <h3 class="proj-title">Deep Fear<br>Inspires Space</h3>
+          <p class="proj-desc">An experiential installation built on virtual-focus photography theory — a black-cardboard, red-yarn model that strips away the visitor's sense of belonging to manufacture the unknown.</p>
+          <div class="proj-tags">
+            <span class="ptag">Photography Analysis</span>
+            <span class="ptag">Model-Making</span>
+            <span class="ptag">Spatial Narrative</span>
+            <span class="ptag">Installation</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Studio & Visual Work -->
+    <a class="proj-card" data-category="studio" href="#" onclick="transitionTo('studio-work');return false">
+      <div class="proj-img"><img src="assets/other-illustration-collage.jpg" alt="Studio & Visual Work" width="981" height="1290" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Personal Work · 2023</span>
+        <div>
+          <h3 class="proj-title">Studio &<br>Visual Work</h3>
+          <p class="proj-desc">Editorial poster design and digital illustration made outside of any studio brief — the same composition and storytelling instincts behind the architecture work.</p>
+          <div class="proj-tags">
+            <span class="ptag">Graphic Design</span>
+            <span class="ptag">Poster Layout</span>
+            <span class="ptag">Typography</span>
+            <span class="ptag">Digital Illustration</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Work →</span>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- Stats bar -->
+  <section class="stats-bar" id="statsBar">
+    <div class="stat-item" onclick="openTranscript()">
+      <div class="stat-number">3.86</div>
+      <div class="stat-label">GPA — Dean's List &nbsp;·&nbsp; View Transcript</div>
+    </div>
+  </section>
+
+  <section class="contact-wrap" id="contact-sec">
+    <div>
+      <h2 class="contact-h">Let's<br><em>connect.</em></h2>
+      <p class="contact-p">Open to internships in Human Factors, HCI Research, UX Research, and robotics-adjacent roles. Based in Phoenix, AZ.</p>
+    </div>
+    <div class="c-links">
+      <a href="mailto:XiaoxiW7@outlook.com" class="c-link" data-copy="XiaoxiW7@outlook.com">
+        <span class="c-lbl">Email</span><span class="c-val">XiaoxiW7@outlook.com</span><span class="c-arr c-copy-hint">Copy →</span>
+      </a>
+      <a href="https://www.linkedin.com/in/xiaoxi-wang-2566583a0/" target="_blank" class="c-link">
+        <span class="c-lbl">LinkedIn</span><span class="c-val">Xiaoxi Wang</span><span class="c-arr">→</span>
+      </a>
+      <a href="tel:2135785667" class="c-link" data-copy="(213) 578-5667">
+        <span class="c-lbl">Phone</span><span class="c-val">(213) 578-5667</span><span class="c-arr c-copy-hint">Copy →</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-l">
+      <div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div>
+      <span class="ft-n">Xiaoxi Wang</span>
+    </div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL -->
+<div id="robotic" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Build</p>
+      <h1 class="dh-title">Wire-Driven<br>Robotic Instrument</h1>
+      <p class="dh-desc">A five-finger wire-driven mechanical hand that plucks guitar strings. Each finger has two articulated joints controlled by an independent servo via stainless steel wire.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Jan – Apr</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Physical Build</p></div>
+        <div><p class="dm-k">Tools</p><p class="dm-v">Arduino · Fusion 360</p></div>
+        <div><p class="dm-k">Institution</p><p class="dm-v">ASU</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/robot-wide.jpg" alt="Robotic finger" width="1200" height="800" loading="lazy"></div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Photography — click to expand</span>
+    <div class="photo-grid">
+      <div class="pc tall"><img src="assets/robot-detail.jpg" alt="Final assembly" class="lightbox-trigger" width="1200" height="800" loading="lazy"><div class="pc-cap">Final assembly</div></div>
+      <div class="pc"><img src="assets/robot-process1.jpg" alt="3D parts" class="lightbox-trigger" width="506" height="900" loading="lazy"><div class="pc-cap">3D print iterations</div></div>
+      <div class="pc"><img src="assets/robot-process2.jpg" alt="Wiring" class="lightbox-trigger" width="506" height="900" loading="lazy"><div class="pc-cap">Servo + Arduino</div></div>
+      <div class="pc"><img src="assets/robot-servo.jpg" alt="System" class="lightbox-trigger" width="1200" height="675" loading="lazy"><div class="pc-cap">Complete system</div></div>
+      <div class="pc"><img src="assets/robot-final.jpg" alt="Underside" class="lightbox-trigger" width="1200" height="900" loading="lazy"><div class="pc-cap">Servo chassis</div></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Fingers</span><span class="sv">5 independent</span></div>
+      <div class="sr"><span class="sk2">Joints per finger</span><span class="sv">2 articulated</span></div>
+      <div class="sr"><span class="sk2">Actuation</span><span class="sv">Wire-driven via stainless steel</span></div>
+      <div class="sr"><span class="sk2">Servos</span><span class="sv">5 × independent servo motors</span></div>
+      <div class="sr"><span class="sk2">Controller</span><span class="sv">Arduino</span></div>
+      <div class="sr"><span class="sk2">Fabrication</span><span class="sv">FDM 3D printing + laser-cut plywood</span></div>
+      <div class="sr"><span class="sk2">Strings</span><span class="sv">5 × guitar strings, pentatonic tuning</span></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Build Process</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">01</div><p class="st">Joint Design</p><p class="sd">Modeled two-joint segments in Fusion 360. Multiple iterations for correct range of motion.</p></div>
+      <div class="step"><div class="sn">02</div><p class="st">Wire Routing</p><p class="sd">Steel wire through each joint, anchored at fingertip, routed to servo horns below.</p></div>
+      <div class="step"><div class="sn">03</div><p class="st">Servo Mount</p><p class="sd">Laser-cut plywood chassis holds five servos, each controlling one finger independently.</p></div>
+      <div class="step"><div class="sn">04</div><p class="st">String Tuning</p><p class="sd">Five strings tuned to pentatonic scale. Nut height calibrated to finger strike arc.</p></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Pentatonic Tuning — Five Strings, Five Fingers</span>
+    <div class="penta-grid">
+      <div class="pn"><span class="pnn">Gōng</span><span class="pnz">宫</span><span class="pno">Do · Root</span></div>
+      <div class="pn"><span class="pnn">Shāng</span><span class="pnz">商</span><span class="pno">Re · 2nd</span></div>
+      <div class="pn"><span class="pnn">Jué</span><span class="pnz">角</span><span class="pno">Mi · 3rd</span></div>
+      <div class="pn"><span class="pnn">Zhǐ</span><span class="pnz">徵</span><span class="pno">Sol · 5th</span></div>
+      <div class="pn"><span class="pnn">Yǔ</span><span class="pnz">羽</span><span class="pno">La · 6th</span></div>
+    </div>
+  </div>
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+  <div class="about-split">
+    <div class="about-photo">
+      <img src="assets/portrait.jpg" alt="Xiaoxi Wang" width="900" height="1140" loading="lazy">
+    </div>
+    <div class="about-content">
+      <span class="at-tag">About</span>
+      <h1 class="at-h">Human Factors<br>Engineer &<br><em>Builder</em></h1>
+      <p class="at-p">I'm a <strong>Human Systems Engineering (Human Factors / Human-Computer Interaction) student</strong> with a background spanning architecture, UX, and hands-on prototyping.</p>
+      <p class="at-p">At the <strong>BELIV Lab at ASU</strong>, I support autonomous driving passenger experience research — working with eye tracking, GSR, and ECG data to understand perceived safety in AV contexts.</p>
+      <p class="at-p">Currently interning as a <strong>UX Research & Program Intern at Phoenix Arts and Advocacy</strong>, auditing website UX and Google Ads performance to improve conversion and Google Ad Grant compliance.</p>
+      <div class="sk-sec">
+        <span class="sk-lbl">Skills</span>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <span class="skg-name">Research & Analysis</span>
+            <div class="skg-tags">
+              <span class="ptag">Human Factors Research</span>
+              <span class="ptag">UX Research & Usability Testing</span>
+              <span class="ptag">ANOVA</span>
+              <span class="ptag">Regression</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skg-name">Physiological Sensing</span>
+            <div class="skg-tags">
+              <span class="ptag">Pupil Labs Neon</span>
+              <span class="ptag">Shimmer GSR+/ECG</span>
+              <span class="ptag">Tobii</span>
+              <span class="ptag">Tekscan</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skg-name">Build & Fabrication</span>
+            <div class="skg-tags">
+              <span class="ptag">Arduino</span>
+              <span class="ptag">Raspberry Pi</span>
+              <span class="ptag">Fusion 360</span>
+              <span class="ptag">3D Printing</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skg-name">Design Tools</span>
+            <div class="skg-tags">
+              <span class="ptag">Figma</span>
+              <span class="ptag">Photoshop</span>
+              <span class="ptag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline-wrap" id="timelineWrap">
+    <div class="timeline-header">
+      <span class="dsec-lbl">Experience</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">Jan 2026 – Present</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div class="tl-body">
+          <span class="tl-tag">Research</span>
+          <h3 class="tl-title">Research Assistant — BELIV Lab</h3>
+          <p class="tl-where">Arizona State University · Mesa, AZ</p>
+          <p class="tl-text">Trained on the Shimmer GSR/EDA sensor and Pupil Labs Neon eye tracker to guide participants through pilot road tests, and authored a research proposal on the match and mismatch between passengers' perceived safety and objective driving safety in automated vehicles.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2026 – Aug 2026</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div class="tl-body">
+          <span class="tl-tag">Industry</span>
+          <h3 class="tl-title">UX Research & Program Intern — Phoenix Arts and Advocacy</h3>
+          <p class="tl-where">Remote · CPT</p>
+          <p class="tl-text">Led a full UX audit across 6 pages of the organization's website, mapping the ad-click-to-conversion flow and identifying 8 prioritized issues affecting conversion and Google Ad Grant compliance, then partnered with a graphic designer to ship the fixes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="timeline-wrap">
+    <div class="timeline-header">
+      <span class="dsec-lbl">Education</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">Sep 2024 – Jun 2025</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div class="tl-body">
+          <span class="tl-tag">Education</span>
+          <h3 class="tl-title">B.F.A. Architecture</h3>
+          <p class="tl-where">Savannah College of Art and Design (SCAD)</p>
+          <p class="tl-text">Studio-based coursework in spatial composition, form-finding, and model-making, producing a portfolio of speculative housing, hospitality, and experiential-space designs, before transferring to Arizona State University.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2025 – Expected May 2027</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div class="tl-body">
+          <span class="tl-tag">Education</span>
+          <h3 class="tl-title">B.S. Human Systems Engineering</h3>
+          <p class="tl-where">Arizona State University · Dean's List · GPA 3.86</p>
+          <p class="tl-text">Transferred from SCAD's architecture program. Human Factors / Human-Computer Interaction concentration — coursework in Statistics for Human Systems Research, Applied Biology of Human Behavior, Human Systems Integration, and Human-Computer Interaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificates -->
+  <div class="certs-wrap">
+    <div class="timeline-header certs-header">
+      <span class="dsec-lbl">Certificates</span>
+    </div>
+    <div class="certs-grid">
+      <a class="cert-card" href="assets/cert1.jpg" target="_blank">
+        <img src="assets/cert1.jpg" alt="Certificate" width="1795" height="1385" loading="lazy">
+        <div class="cert-card-label">View Certificate ↗</div>
+      </a>
+      <a class="cert-card" href="assets/cert2.png" target="_blank">
+        <img src="assets/cert2.png" alt="Certificate" width="600" height="600" loading="lazy">
+        <div class="cert-card-label">View Certificate ↗</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- AV RESEARCH -->
+<div id="av-research" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · HCI Research</p>
+      <h1 class="dh-title">Autonomous Driving<br>HCI Research</h1>
+      <p class="dh-desc">At BELIV Lab, I study how passengers experience Level 2 and Level 3 autonomous vehicles — measuring trust, perceived safety, and cognitive state using eye tracking and physiological sensing.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Lab</p><p class="dm-v">BELIV Lab · ASU</p></div>
+        <div><p class="dm-k">Status</p><p class="dm-v">Ongoing · FURI Grant</p></div>
+        <div><p class="dm-k">Tools</p><p class="dm-v">Pupil Labs · Shimmer GSR+/ECG</p></div>
+        <div><p class="dm-k">Methods</p><p class="dm-v">Eye Tracking · Physiological Sensing</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Research Focus</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">01</div><p class="st">Trust Calibration</p><p class="sd">How passengers calibrate trust in L2/L3 systems over repeated interactions — measuring physiological markers of over-trust and under-trust.</p></div>
+      <div class="step"><div class="sn">02</div><p class="st">Perceived Safety</p><p class="sd">Using GSR and ECG to capture real-time emotional arousal responses to AV handoff events and near-miss scenarios.</p></div>
+      <div class="step"><div class="sn">03</div><p class="st">Eye Tracking</p><p class="sd">Gaze fixation patterns during autonomous operation — where passengers look when they're not in control and what that reveals about situational awareness.</p></div>
+      <div class="step"><div class="sn">04</div><p class="st">Data Integration</p><p class="sd">Combining multimodal signals (gaze, GSR, ECG) into composite workload and comfort indices using statistical modeling.</p></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Instruments</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Eye Tracker</span><span class="sv">Pupil Labs Neon — scene + gaze overlay</span></div>
+      <div class="sr"><span class="sk2">GSR</span><span class="sv">Shimmer GSR+ — electrodermal activity</span></div>
+      <div class="sr"><span class="sk2">ECG</span><span class="sv">Shimmer ECG — heart rate + HRV</span></div>
+      <div class="sr"><span class="sk2">Pressure</span><span class="sv">Tekscan — grip force on handover</span></div>
+      <div class="sr"><span class="sk2">Analysis</span><span class="sv">ANOVA · Linear Regression · Mixed-Effects Models</span></div>
+      <div class="sr"><span class="sk2">Funding</span><span class="sv">FURI Grant — Arizona State University</span></div>
+    </div>
+  </div>
+  <footer><div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div><span class="ft-r">Engineering the Human Experience</span></footer>
+</div>
+
+<!-- PILOT MONITORING -->
+<div id="pilot-monitoring" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Research Analysis</p>
+      <h1 class="dh-title">Pilot Physiological<br>Monitoring</h1>
+      <p class="dh-desc">Analysis of a Honeywell wearable biosensing garment designed for military pilots — a smart shirt embedding ECG, heart rate, and breathing sensors to monitor pilot state during flight.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Course</p><p class="dm-v">HSE 225 · ASU</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Research Analysis</p></div>
+        <div><p class="dm-k">Subject</p><p class="dm-v">Honeywell Biosensing Garment</p></div>
+        <div><p class="dm-k">Framework</p><p class="dm-v">Human Systems Integration</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Three Core Challenges</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">01</div><p class="st">Workflow Fit</p><p class="sd">Would pilots actually wear it? The device must integrate with harness, G-suit, oxygen system, and parachute without conflict — form follows operational reality.</p></div>
+      <div class="step"><div class="sn">02</div><p class="st">Data Accuracy</p><p class="sd">Validating sensor readings against clinical-grade ECG under high-G centrifuge conditions. Not all sensors perform equally in every environment.</p></div>
+      <div class="step"><div class="sn">03</div><p class="st">Signal Meaning</p><p class="sd">Defining baseline breathing patterns first — normal, shallow, hyperventilation, breath-hold — before using the data to detect pilot impairment.</p></div>
+      <div class="step"><div class="sn">04</div><p class="st">HSI Coverage</p><p class="sd">Evaluated against all four HSI pillars: Human Factors Engineering, Training requirements, Health Hazard monitoring, and Human Requirements compatibility.</p></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">System Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Form Factor</span><span class="sv">Wearable garment — shirt or sports bra with embedded sensors</span></div>
+      <div class="sr"><span class="sk2">Sensors</span><span class="sv">ECG · Heart Rate · Breathing Rate · Breathing Depth · Movement</span></div>
+      <div class="sr"><span class="sk2">Validation</span><span class="sv">Compared against standard medical-grade ECG and breathing monitors</span></div>
+      <div class="sr"><span class="sk2">Test Conditions</span><span class="sv">High-G centrifuge · Thermal chamber · Real flight environments</span></div>
+      <div class="sr"><span class="sk2">Framework</span><span class="sv">Human Systems Integration (HSI) — 4 pillars</span></div>
+      <div class="sr"><span class="sk2">Client</span><span class="sv">Military aviation — Honeywell Aerospace</span></div>
+    </div>
+  </div>
+  <div class="paper-outer">
+    <div class="paper-header">
+      <span class="paper-eyebrow">Full Paper — HSE 225</span>
+      <h2 class="paper-title">Familiarization Assignment:<br>Honeywell Lecture Report</h2>
+      <div class="paper-meta">
+        <span>Course · HSE 225</span>
+        <span>Institution · Arizona State University</span>
+        <span>Type · Analysis Report</span>
+      </div>
+    </div>
+    <div class="paper-body">
+    <div class="paper-sec">
+      <h2 class="paper-h">Major Challenges Encountered</h2>
+      <p class="paper-p">Aircraft already have a lot of data. They collect information about aircraft systems, flight conditions, life support, and more. And the aircraft itself is already partly automated. But compared to all of that, there is much less data about the pilot. That is the core problem this project is trying to solve. Because the pilot's physical condition, breathing, heart rate, cognitive state, and workload all directly affect their decisions, and their decisions affect the entire flight. So, the question is: how do we make the pilot's own condition something that can also be seen, measured, and understood?</p>
+      <p class="paper-p">The team built a wearable biosensing garment, essentially a smart shirt or sports bra with embedded sensors that can measure ECG, heart rate, breathing, breathing depth, and movement. But getting there was not simple. They ran into three major challenges along the way.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Challenge 1: Would it be part of the workflow?</h2>
+      <p class="paper-p">The first thing the team did was not run an experiment. The first thing they did was ask pilots whether they would be willing to wear the device. Would it interfere with the harness, the G-suit, the parachute, or the life support system? Who would manage the data? Who would hand out the device and download the data afterward? This matters because a product cannot exist on its own. It always must work together with real people, real tasks, and real environments. If it does not fit into the actual workflow, then even if the experiment works perfectly, it will still be very hard to use in the real world. That is why this step came first.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Challenge 2: Does It Actually Measure Accurately?</h2>
+      <p class="paper-p">The second challenge was whether the device could collect reliable data. Just because a shirt has sensors does not mean the data is correct. Pilots are not sitting still. They are in high-G conditions, thermal chambers, centrifuges, and real flight environments. So, the team compared the data from the wearable against standard medical sensors traditional ECG and breathing monitors to see how well they matched. The overall results were good. But some sensors performed less reliably in certain conditions. That is an important finding, because it shows that not every instrument produces accurate data in every situation, and proving that the data is trustworthy is itself a major challenge.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Challenge 3: Can the Data Actually Tell Us Something?</h2>
+      <p class="paper-p">The third challenge was whether this data could tell us if something was wrong with the pilot. The team did not start by immediately trying to detect danger. Instead, they first defined what different breathing patterns look like what is normal breathing, what is shallow breathing, what is hyperventilation, and what is breath holding. Only after building that standard did they use it to interpret pilot state. This is an important logic. You cannot define the result first and then force the data to match it. You need a standard first, and then you use that standard to understand what the data is saying.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">HSI Pillars Covered</h2>
+      <span class="paper-sub">Human Factors Engineering</span>
+      <p class="paper-p">The whole project is built around whether the device fits how pilots work. Not just whether it collects data, but whether it can exist inside the pilot's real environment without getting in the way. That is human factors engineering, does it fit the human, not just the task.</p>
+      <span class="paper-sub">Training</span>
+      <p class="paper-p">Pilots need to learn how to wear it, maintain it, and understand what the alerts mean. That is a real training requirement.</p>
+      <span class="paper-sub">Health Hazards</span>
+      <p class="paper-p">The point of this project is to monitor the pilot's physical condition like breathing, heart rate, signs of hypoxia or fatigue and catch a problem before it affects the flight. So, system safety and health hazard monitoring are basically what the shirt is for.</p>
+      <span class="paper-sub">Human Requirements</span>
+      <p class="paper-p">First, it must be comfortable and not interfere with existing gear. Pilots already have a harness, G-suit, oxygen system. If this shirt causes any conflict with those, it simply will not get used.</p>
+      <p class="paper-p">Second, the whole data process needs to fit into the existing workflow. Who gives out the device, who downloads it afterward if that is unclear or adds too many steps, it will not work in practice.</p>
+      <p class="paper-p">And the most important one I think: the pilot still must be the one making decisions. Right now, this system can send an alert, but it cannot tell you exactly what is wrong or what to do. The final call stays with the human. I think that boundary is important and it is also an HSI requirement.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">How This Relates to HSI Practices</h2>
+      <p class="paper-p">What I think is most important about this lecture is not just what the team built. It is how they approached building it.</p>
+      <p class="paper-p">They did not start with technology. They started with the people. Before they ran any experiments, they asked whether pilots would use the device and whether it could fit into the real environment. That is the most important step, and it is also the step that a lot of projects skip. A product cannot just work in a lab. It must work in the real world, with real people, in real conditions. If it cannot enter the actual workflow, then it does not matter how well the technology performs.</p>
+      <p class="paper-p">Then the next step was proving whether the product is useful, not just technically, but from the human side. Data is not automatically valuable. Just because a shirt can collect physiological signals does not mean those signals are telling us something real. The team had to validate the data against medical-grade sensors and prove the readings were reliable under real flight conditions.</p>
+      <p class="paper-p">And then the most important logic of all, if you want to use data to explain human state, you cannot define the result first and then force the data to match. You need to build a standard first define what different signals mean and then use that standard to interpret the data. That is what the team did when they defined different breathing patterns before trying to assess pilot condition. It is human centered. And that is why I think this project is one of the clearest examples of HSI in practice.</p>
+    </div>
+    </div>
+  </div>
+  <footer><div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div><span class="ft-r">Engineering the Human Experience</span></footer>
+</div>
+
+<!-- OURA HSI -->
+<div id="oura-hsi" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · HSI Evaluation</p>
+      <h1 class="dh-title">Oura Ring —<br>HSI Evaluation</h1>
+      <p class="dh-desc">A full Human Systems Integration requirements analysis of the Oura Ring smart health monitor — tracing four product generations, user demographics, 50+ tracked metrics, and military deployment at scale.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Course</p><p class="dm-v">HSE 225 · ASU</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">HSI Requirements Analysis</p></div>
+        <div><p class="dm-k">Product</p><p class="dm-v">Oura Ring Gen 1 – Gen 4</p></div>
+        <div><p class="dm-k">Framework</p><p class="dm-v">Human Systems Integration</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Product Evolution</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">G1</div><p class="st">2015 — Foundation</p><p class="sd">Sleep stage analysis, readiness scoring, and activity tracking. Established the core health monitoring framework.</p></div>
+      <div class="step"><div class="sn">G2</div><p class="st">2018 — Sensing</p><p class="sd">Added body temperature sensor, step tracking, and improved sleep accuracy. Introduced Heritage and Horizon designs.</p></div>
+      <div class="step"><div class="sn">G3</div><p class="st">2021 — Continuous</p><p class="sd">24/7 heart rate monitoring, SpO2, precise temperature, and women's health features. Titanium + epoxy shell.</p></div>
+      <div class="step"><div class="sn">G4</div><p class="st">2024 — Smart Sensing 2.0</p><p class="sd">18 signal pathways, 10 LEDs, fully recessed sensors. Cardiovascular Age, VO2 Max. Full titanium construction.</p></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">HSI Requirements Overview</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Primary Users</span><span class="sv">Ages 25–44 · Health-conscious · Urban · Early adopters</span></div>
+      <div class="sr"><span class="sk2">Gender Shift</span><span class="sv">59% female / 41% male by June 2024 — driven by women's health features</span></div>
+      <div class="sr"><span class="sk2">Enterprise Use</span><span class="sv">US Military — tens of thousands of service members for fatigue monitoring</span></div>
+      <div class="sr"><span class="sk2">Health Metrics</span><span class="sv">50+ indicators: sleep, HRV, SpO2, temperature, stress, cardiovascular, respiratory</span></div>
+      <div class="sr"><span class="sk2">Form Factor</span><span class="sv">7.9 mm wide · 2.88 mm thick · 3.3–5.2 g · Sizes 4–15 · 6 finishes</span></div>
+      <div class="sr"><span class="sk2">Sensors</span><span class="sv">PPG (green/red/IR) · NTC temperature · 3-axis accelerometer · gyroscope</span></div>
+    </div>
+  </div>
+  <div class="paper-outer">
+    <div class="paper-header">
+      <span class="paper-eyebrow">Full Paper — HSE 225</span>
+      <h2 class="paper-title">HSI Requirements Generation<br>and Evaluation of a Product</h2>
+      <div class="paper-meta">
+        <span>Course · HSE 225</span>
+        <span>Institution · Arizona State University</span>
+        <span>Type · HSI Requirements Analysis</span>
+        <span>Subject · Oura Ring Gen 1–4</span>
+      </div>
+    </div>
+    <div class="paper-body">
+    <div class="paper-sec">
+      <h2 class="paper-h">Part 1 — Introduction</h2>
+      <span class="paper-sub">1.1 Goal Definition</span>
+      <p class="paper-p">Oura Ring is a smart health monitoring wearable designed to help users track their physiological data through continuous sensing. The device collects data in a visualized format through a companion mobile application, allowing users to monitor health metrics, receive early warnings of potential health risks, and make improvements to their daily habits and overall wellbeing. The device provides tracking across more than 50 health indicators, including sleep quality, heart rate, body temperature, blood oxygen saturation, daily activity levels, stress levels, cardiovascular health, and respiratory rate.</p>
+      <span class="paper-sub">1.2 User Description</span>
+      <p class="paper-p">Oura Ring is primarily designed for everyday consumers, who make up more than 95% of its user base. A small portion of users come from commercial applications, including corporate wellness programs, healthcare institutions, and military organizations, accounting for approximately 5% of total usage. The US military is currently Oura's largest enterprise client, with tens of thousands of service members using the ring for fatigue monitoring.</p>
+      <p class="paper-p">Oura Ring's core user group consists of individuals between the ages of 25 and 44 who are highly educated, have disposable income, live in urban areas, and have a strong awareness of their personal health. These users are typically early adopters of wearable technology. Following the introduction of women's health features including menstrual cycle prediction in late 2022 and pregnancy insights in 2024, the female user base grew rapidly. By June 2024, female users surpassed male users for the first time, with women accounting for 59% and men accounting for 41% of the user base.</p>
+      <span class="paper-sub">1.3 Product Description</span>
+      <p class="paper-p">Oura Ring has undergone three major upgrades since its launch in 2015 and is currently in its fourth generation. Generation 1 (2015) focused on sleep stage analysis, readiness scoring, and activity tracking. Generation 2 (2018) improved sleep tracking accuracy, added a body temperature sensor and step tracking, and introduced the Heritage and Horizon design styles. Generation 3 (2021) added 24/7 continuous heart rate monitoring, blood oxygen saturation tracking, more precise temperature sensing, and women's menstrual cycle prediction. Generation 4 (October 2024) introduced Smart Sensing 2.0 technology, increasing signal pathways from 8 to 18 and LEDs from 4 to 10. New features include Cardiovascular Age and VO2 Max estimation. The design was upgraded to full titanium construction.</p>
+      <p class="paper-p">Generation 4 specifications: Width 7.9 mm, thickness 2.88 mm, weight 3.3 to 5.2 grams. Available in sizes 4 through 15 in six finishes. Battery life 5 to 8 days. Water resistance 100 meters. Pricing starts at $349 with a $5.99/month subscription.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Part 2 — Requirements Definition</h2>
+      <div class="paper-req">
+        <span class="paper-req-title">HFE — Requirement 1: Wearability and Physical Comfort</span>
+        <p class="paper-p">Oura Ring requires users to wear it continuously throughout the day and night, including during sleep, exercise, and everyday activities. This requirement evaluates four dimensions: weight, comfort, presence, and impact on daily activities.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Weight shall not exceed 6 grams. After 24 hours of continuous wear, SUS comfort score shall be no lower than 68/100. At least 78% of users shall report no longer noticing the ring after 2 hours of wear.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Weight should not exceed 5.2 grams. SUS score after 7 days ≥ 80. At least 90% of users should be able to completely ignore the ring's presence.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">HFE — Requirement 2: Application Interface Usability</span>
+        <p class="paper-p">Users can only access all their health data through the app. The app must allow users to get started quickly, with all features easy to locate and overall navigation intuitive.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> New users shall complete device pairing, account setup, and viewing their first health report within 20 minutes without a manual. Task completion rate ≥ 78%. App SUS score ≥ 68.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Complete above tasks within 10 minutes. Task completion ≥ 90%. SUS ≥ 80.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">HFE — Requirement 3: Size Accommodation Range</span>
+        <p class="paper-p">Finger sizes vary significantly across individuals, and the range of available sizes directly determines how broad a user population the product can serve. An ill-fitting ring causes sensor contact problems that directly affect data accuracy.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Shall offer at least 10 size options covering the 5th to 95th percentile finger circumference range. An official sizing tool shall be provided.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> 12 or more sizes covering 1st to 99th percentile. Oura Ring 4 offers sizes 4–15 (12 options), meeting the objective.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">Personnel — Requirement 4: Multi-User Group Adaptability</span>
+        <p class="paper-p">Oura Ring serves users across a wide range of ages, occupations, and technical skill levels. The app should allow for personalized customization — female users may want to prioritize cycle-related data while male users would not need that section. Displaying everything to everyone creates unnecessary information overload.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Shall support normal use by individuals aged 18 to 75. App interface shall comply with WCAG 2.1 Level AA accessibility standards.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> WCAG 2.1 Level AAA compliance with specialized guidance for different occupational groups and meaningful personalization.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">Training — Requirement 5: Device Setup and Subscription Management</span>
+        <p class="paper-p">Users must complete Bluetooth pairing, set up a paid subscription, learn how to cancel the subscription if desired, and understand basic troubleshooting. Real-world user feedback indicates that subscription management is one of the most frequently reported problem areas.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> App shall provide a complete onboarding tutorial covering pairing, subscription activation, cancellation, and troubleshooting. Task completion ≥ 78%.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Video tutorials and live support. Task completion ≥ 90%, full setup ≤ 15 minutes.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">Training — Requirement 6: Data Literacy and Interpretation Support</span>
+        <p class="paper-p">Oura Ring tracks more than 50 health indicators, which is far too complex for most everyday users to interpret on their own. Misinterpretation of health data can lead to poor health decisions.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> App shall provide clear explanations for each metric. Users without medical background shall achieve comprehension accuracy ≥ 78% for core metrics.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Personalized, actionable recommendations based on each user's own data. Comprehension accuracy ≥ 90%.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">Health Hazard — Requirement 7: Skin Contact Safety</span>
+        <p class="paper-p">Oura Ring is in direct and continuous contact with the skin over extended periods of time. The ring's materials may cause allergic reactions, skin irritation, or dermatitis, with particular attention to metal-sensitive users.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Shall pass ISO 10993-1 biocompatibility testing, including skin irritation and sensitization testing under ISO 10993-10. Shall contain no known skin-sensitizing metals.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Validated through independent third-party dermatological clinical testing confirming no accumulative adverse skin reactions after 90 days of continuous wear.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">Health Hazard — Requirement 8: Electromagnetic Radiation Safety</span>
+        <p class="paper-p">Oura Ring contains a Bluetooth Low Energy module. Because the ring is worn on the finger rather than the wrist, it sits in especially close contact with body tissue.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Shall obtain FCC certification with SAR not exceeding 1.6 W/kg. Shall also obtain EU CE certification and comply with ICNIRP guidelines.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> SAR below 0.8 W/kg, verified by an independent third-party laboratory with publicly accessible results.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">System Safety — Requirement 9: Device Temperature Control</span>
+        <p class="paper-p">In December 2025, multiple users reported incidents of overheating and emitting smoke, with at least one user sustaining a blister. For a device worn in direct and continuous contact with skin, strict temperature control is essential.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Outer surface temperature shall not exceed 43°C under all normal operating conditions (IEC 62368-1). App shall alert user within 5 minutes of abnormal temperature rise.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Outer surface temperature should not exceed 40°C. Device should automatically reduce power consumption and log the event for review.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">System Safety — Requirement 10: Data Collection Accuracy and Reliability</span>
+        <p class="paper-p">In conditions such as heavy sweating, ring rotation, or improper wear, accuracy may decrease. The system must assess data reliability and proactively inform the user when reliability falls below acceptable levels.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Heart rate accuracy ≥ 95%, body temperature ≥ 90%, sleep stage classification ≥ 75%. App shall notify user to check wearing position within 5 minutes of detected reliability drop.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Heart rate ≥ 99%, temperature ≥ 92%, sleep staging ≥ 79%. System should distinguish data anomalies caused by physiology vs. device issues.</p>
+      </div>
+      <div class="paper-req">
+        <span class="paper-req-title">Survivability — Requirement 11: Operation in Extreme Environments</span>
+        <p class="paper-p">Users may wear the device in extreme cold outdoors, high heat environments such as saunas, heavy sweating during intense physical activity, and water exposure during swimming or showering.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Threshold:</strong> Operate normally across −10 to 54°C. Water resistance rated to at least 100 meters. Under heavy sweating, detect changes in data reliability and notify the user.</p>
+        <p class="paper-p"><strong style="color:var(--white);font-weight:400">Objective:</strong> Data accuracy across full temperature range should remain ≥ 90% of performance under normal conditions. Continuous operation at depths up to 30 meters underwater.</p>
+      </div>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Part 3 — Evaluation &amp; Conclusion</h2>
+      <span class="paper-sub">Summary of Findings</span>
+      <p class="paper-p">Based on 3,685 real user reviews on Best Buy, the ring received a rating of 4.7 out of 5, with 93% of users willing to recommend it. Positive feedback consistently highlights accurate sleep tracking, comfortable and lightweight wear, long battery life, a discreet appearance, and useful health insights. Negative feedback centers on the ring feeling slightly bulky, subscription payment difficulties, and occasional sizing challenges.</p>
+      <p class="paper-p">Revenue exceeded $500 million in 2024, more than doubling year over year. This growth was driven primarily by sustained investment in women's health features and successive hardware improvements reducing weight and expanding the size range.</p>
+      <span class="paper-sub">Key Shortcomings</span>
+      <p class="paper-p">The system lacks a proactive mechanism to alert users when data accuracy has decreased due to sweating, ring displacement, or improper wear. Exercise heart rate tracking is still less accurate than dedicated sports watches. Subscription management transparency and the cancellation flow generated widespread user frustration and led to class action litigation in late 2025, alleging violations of consumer automatic renewal disclosure regulations.</p>
+      <span class="paper-sub">Recommendation 1: Proactive Data Reliability Alert</span>
+      <p class="paper-p">It is recommended that the system uses real-time cross-metric analysis to assess data quality and alert users within the app to check their wearing position when sensor contact issues are detected. This improvement requires additional algorithm development investment and will introduce some additional battery consumption. Given the potential risk of users being misled by inaccurate health data, this investment is worthwhile and would meaningfully improve user trust in the product.</p>
+      <span class="paper-sub">Recommendation 2: Subscription Design Transparency</span>
+      <p class="paper-p">Recommended improvements include displaying subscription terms prominently during the purchase flow, adding a direct and easily accessible cancellation option within the app, and offering a free basic feature tier so users can experience the product's value before committing to a paid subscription. Oura Ring is a product that only delivers its full value through long-term continuous use. Once users establish a habit and accumulate personal health data history, they are unlikely to abandon the product. Lowering the initial barrier is therefore more likely to produce long-term loyal users than to increase churn.</p>
+    </div>
+    </div>
+  </div>
+  <footer><div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div><span class="ft-r">Engineering the Human Experience</span></footer>
+</div>
+
+<!-- ROBOT PERCEPTION -->
+<div id="robot-perception" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Research Paper</p>
+      <h1 class="dh-title">Humanoid Robot<br>Perception</h1>
+      <p class="dh-desc">A research paper examining why some humanoid robot upper-limb movements feel natural while others feel uncanny — and what that means for the design of robots that work alongside humans.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Course</p><p class="dm-v">HSE 225 · ASU</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Research Paper</p></div>
+        <div><p class="dm-k">Focus</p><p class="dm-v">Upper-Limb Motion · HRI</p></div>
+        <div><p class="dm-k">Concepts</p><p class="dm-v">Uncanny Valley · Trust · Perception</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Key Arguments</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">01</div><p class="st">The Real Goal</p><p class="sd">Robots exist to serve humans, not to look human. But interaction requires understanding, prediction, and trust — which is where human-likeness becomes strategically useful.</p></div>
+      <div class="step"><div class="sn">02</div><p class="st">Why Hands Matter</p><p class="sd">People watch hands constantly — reaching, turning, grasping. Upper-limb movement is the most visually scrutinized motion. Even tiny anomalies in trajectory or timing feel immediately wrong.</p></div>
+      <div class="step"><div class="sn">03</div><p class="st">The Mismatch</p><p class="sd">Biological motion is muscle, tendon, and coordination. Mechanical motion is motors, actuators, and constraints. When a robot looks human, we expect human motion — and notice the gap.</p></div>
+      <div class="step"><div class="sn">04</div><p class="st">Trust Equation</p><p class="sd">Successful interaction = Understanding + Prediction + Comfort. A robot can complete a task perfectly and still fail if the person around it doesn't feel safe or can't anticipate its next move.</p></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Research Dimensions</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Joint Focus</span><span class="sv">Shoulder · Elbow · Wrist · Hand / Finger motion</span></div>
+      <div class="sr"><span class="sk2">Key Concept</span><span class="sv">Uncanny Valley — discomfort when robot appearance exceeds motion naturalness</span></div>
+      <div class="sr"><span class="sk2">Motion Factors</span><span class="sv">Trajectory smoothness · Speed profile · Timing · Gesture legibility</span></div>
+      <div class="sr"><span class="sk2">Trust Markers</span><span class="sv">Predictability · Motion coherence · Intent legibility · Comfort level</span></div>
+      <div class="sr"><span class="sk2">Application</span><span class="sv">Companion robots · Service robots · Industrial cobots · HRI design</span></div>
+      <div class="sr"><span class="sk2">Scope</span><span class="sv">Humanoid upper-limb — excludes lower body and non-humanoid platforms</span></div>
+    </div>
+  </div>
+  <div class="paper-outer">
+    <div class="paper-header">
+      <span class="paper-eyebrow">Full Paper — HSE 225</span>
+      <h2 class="paper-title">How Humans Perceive<br>Humanoid Robot Movement</h2>
+      <div class="paper-meta">
+        <span>Course · HSE 225</span>
+        <span>Institution · Arizona State University</span>
+        <span>Type · Research Paper</span>
+        <span>Focus · Upper-Limb HRI</span>
+      </div>
+    </div>
+    <div class="paper-body">
+    <div class="paper-sec">
+      <h2 class="paper-h">Introduction — The Key Question</h2>
+      <p class="paper-p">When people look at robotics, especially humanoid robotics, they very easily take "more human-like" as a sign of success. If it looks more human, people often think it is more advanced, more successful, or simply better designed. But the original point of robotics is not to look human. The point of robotics is to complete tasks and, more importantly, to serve humans. No matter if it is in living scenarios, companion robotics, service robotics, or industrial scenarios, the core is the same: robots are interacting with humans.</p>
+      <p class="paper-p">So the key is not only movement, and it is not only function. The key is interaction. And once the key becomes interaction, then the key becomes understanding, prediction, and trust. People need to understand what the robot is doing, predict what it will do next, and decide whether they can trust it. If people do not feel comfortable when they use or interact with a robot, then even if the robot completes the task, the interaction is still not successful.</p>
+      <p class="paper-p">This paper is not mainly about whether robots can complete movement. This paper is about why some robot movements feel natural, while others feel strange. More specifically, this paper focuses on humanoid robot upper-limb movement, including the shoulder joint, elbow joint, wrist joint, palm, fingers, and grasping motion.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Why Human-Likeness Matters — and Why It Creates Problems</h2>
+      <p class="paper-p">Humans are most familiar with themselves. Even if you are not a psychologist, not an anatomist, not a human factors researcher, and not a roboticist, you are still familiar enough with your own body and with other humans around you. You may not be able to describe exactly how each part of the body moves, or what the exact movement limit is, but when you see movement, you immediately know whether it feels human or not. People are also naturally very good at predicting human movement. That is why making robots more human-like can help people understand them more easily.</p>
+      <p class="paper-p">But the problem also starts here. Robots are still machines. Their systems are built for function, and their systems are fundamentally different from humans. Robots are electrically driven. Humans are biologically driven. Humans move with muscles, joints, tendons, and body coordination. Robots move with motors, actuators, controllers, and mechanical constraints. So even if a robot looks human, it still cannot move exactly like a human. When something looks human, people expect it to move like a human. But when it moves in a way that does not follow human movement logic, people begin to feel strange, uncomfortable, uncertain, and sometimes even scared.</p>
+      <p class="paper-p">This problem shows up especially clearly in robot arms and hands. Humans use their arms and hands constantly, and humans also watch arms and hands constantly. Upper-limb movement is visually present all the time. People do not spend that much time watching other people's feet, but people spend a lot of time watching hands — hands reaching, turning, pointing, touching, holding, and grasping. So people are extremely familiar with hand and arm movement, including trajectory, speed, timing, and gesture. That is why even a very small unusual thing — like a trajectory that is too straight, movement that is too stiff, or motion that starts too suddenly — can immediately feel wrong.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">How Humans Perceive Movement</h2>
+      <p class="paper-p">When people see something move, it does not have to be human, and it does not even have to look human. People do not simply see that its position changed. They immediately begin to judge what it is, whether it is alive, what it is trying to do, and whether it will affect them. So human perception of movement is not passive observation. It is a very active and very sensitive judgment system.</p>
+      <p class="paper-p">Humans are naturally very sensitive to movement because movement itself carries meaning. When something moves, people do not only see motion. They read intention from motion. This is why theory of mind matters here — humans naturally try to interpret movement as intention. Even simple motion can be read as chasing, avoiding, hesitating, approaching, or threatening.</p>
+      <p class="paper-p">This is also why biological motion is so important. Humans are extremely sensitive to biological motion. Even if people only see a few moving points in darkness, they can still tell whether it is a person walking, running, reaching, or turning. This shows that humans do not need full form to understand movement. Humans can read movement patterns directly.</p>
+      <p class="paper-p">Lu and Sperling (2001) explained that human motion perception works through multiple systems at the same time, including brightness-based motion, texture and contrast-based motion, and attention-based motion tracking. This matters because when people watch a robot move, they are not only tracking position. They are also reading edges, material, speed, rhythm, and visual salience all at once. So before people decide whether a robot is efficient, intelligent, or useful, they have already decided whether its movement feels natural.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Problem 1 — When It Looks Human but Doesn't Feel Human</h2>
+      <p class="paper-p">The first problem is when a robotic body part looks human, but does not feel human. For example, it has a palm, five fingers, finger joints, and maybe even skin-colored soft material. It looks like a hand. But when people get closer, they notice the surface is too smooth, too shiny, too cold, too hard, or too rubber-like. Then the problem starts. It looks like a hand, but it does not feel like a real hand.</p>
+      <p class="paper-p">This is what Poliakoff et al. (2018) discussed in their mismatch hypothesis. They showed that when an artificial body part gives some cues that look human, but other cues do not match human expectation, people can feel uneasy. It is not exactly fear. It is more like something feels wrong. People may not be able to explain it immediately, but they can feel that the signals do not match.</p>
+      <p class="paper-p">This is also why a fully mechanical industrial arm usually does not create the same reaction. It is clearly a machine. People do not expect it to feel human. So people judge it like a machine. But once something has human shape, people begin to judge it with human standards.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Problem 2 — When Appearance and Motion Don't Match</h2>
+      <p class="paper-p">The second problem is more obvious. Once a robot has a human face, human arms, human hands, and human body proportions, people naturally begin to match it with human movement patterns. They expect it to move in a way that at least feels close to human movement logic. But when it does not, people immediately feel something is wrong.</p>
+      <p class="paper-p">Wu et al. (2024) showed exactly this point. More anthropomorphic robots can attract more attention, but they can also create more discomfort and uncanny feeling when their appearance and behavior do not match. The more human-like the robot looks, the more human-like people expect it to move.</p>
+      <p class="paper-p">A human does not simply raise an arm in a straight constant-speed line. Before movement starts, there is usually preparation. The eyes move first. The head may slightly turn. The shoulder adjusts. Then the shoulder joint leads the upper arm, the elbow follows to extend or bend, the wrist adjusts orientation, and the fingers prepare for the target. Human movement is not one joint moving. It is coordinated movement.</p>
+      <p class="paper-p">But many humanoid robots do not move like this. They start directly. The arm rises in a straight line at constant speed. There is no preparation, no natural coordination, and no gradual transition. So people do not feel like they are watching a human-like arm move. They feel like they are watching a machine execute a command.</p>
+      <p class="paper-p">This is especially obvious in the wrist. Human wrists are flexible, but they still have natural limits. A human wrist does not suddenly rotate 180 or 360 degrees at high speed. If a humanoid robot does that, even if it is mechanically useful, people immediately feel that something is wrong. Not because they are analyzing the mechanism, but because their body already knows that movement is not normal. The same is true for fingers — human grasping has order: hand approaches, palm adjusts, fingers prepare, thumb and fingers gradually close. But many robot hands close all fingers at once, like a clamp. The action may work, but it does not feel human.</p>
+      <p class="paper-p">Zaraki et al. (2017) also support this point. They showed that in human–robot interaction, people do not only watch whether the robot completes the action. They also continuously read posture, gesture, direction, distance, and movement as social signals. So once a robot is built in human form, its movement is no longer only mechanical. It is already social.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Problem 3 — Motion Continuity</h2>
+      <p class="paper-p">A lot of robot movement feels wrong not because the robot fails, but because the movement is not continuous. It starts too suddenly, stops too suddenly, changes speed too abruptly, or different joints move out of sync. Human motion perception depends on continuity. Humans naturally connect what they saw one moment ago with what they see the next moment. They automatically judge whether it is the same object and the same continuous action. So when movement is broken, people immediately feel it.</p>
+      <p class="paper-p">This is also why humans can understand movement from just a few points of light, and why humans can even read intention from moving triangles and dots. Humans are extremely sensitive to motion patterns and naturally assign continuity and intention to movement. So when robot movement is not continuous, people do not see one smooth action. They see broken steps: shoulder moves, pause, elbow moves, pause, wrist turns, fingers close. It feels less like a body and more like a program running step by step.</p>
+      <p class="paper-p">From an engineering view, the robot may still complete the task. But from a human view, the movement feels unnatural, uncomfortable, and harder to trust.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Conclusion — The Matching Principle</h2>
+      <p class="paper-p">When humanoid robotics make people feel strange, sometimes it is not because they are not advanced enough, not flexible enough, or not human-like enough. The key problem is often much simpler: they move the wrong way. They may look human, but the material does not feel human. They may look human, but the movement does not feel human. They may complete the action, but the movement logic, speed, coordination, and continuity do not match what humans are familiar with.</p>
+      <p class="paper-p">So the key is not only whether the robot can move, and not only whether it can complete the task. If a robot is meant to interact with humans, especially as a humanoid robot, then movement must match human perception. That is the core point of this whole paper. The key is matching. Not only function, but matching. Not only movement, but movement that matches how humans naturally see, predict, and understand motion.</p>
+      <span class="paper-sub">References</span>
+      <p class="paper-ref">Lu, Z.-L., &amp; Sperling, G. (2001). Three-systems theory of human visual motion perception: Review and update. Journal of the Optical Society of America A, 18(9), 2331–2370.</p>
+      <p class="paper-ref">Poliakoff, E., O'Kane, S., Carefoot, O., Kyberd, P., &amp; Gowen, E. (2018). Investigating the uncanny valley for prosthetic hands. Prosthetics and Orthotics International, 42(1), 21–27.</p>
+      <p class="paper-ref">Wu, J., Du, X., Liu, Y., Tang, W., &amp; Xue, C. (2024). How the degree of anthropomorphism of human-like robots affects users' perceptual and emotional processing: Evidence from an EEG study. Sensors, 24(15), 4809.</p>
+      <p class="paper-ref">Zaraki, A., et al. (2017). Design and evaluation of a unique social perception system for human–robot interaction. IEEE Transactions on Cognitive and Developmental Systems, 9(4), 341–355.</p>
+    </div>
+    </div>
+  </div>
+  <footer><div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div><span class="ft-r">Engineering the Human Experience</span></footer>
+</div>
+
+<!-- AI VISION ASSIST SMART GLASSES -->
+<div id="ai-glasses" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Build</p>
+      <h1 class="dh-title">AI Vision Assist<br>Smart Glasses</h1>
+      <p class="dh-desc">A Raspberry Pi-based smart glasses prototype combining ultrasonic sensors for obstacle detection with a camera and the ChatGPT API for object recognition and text reading — guiding visually impaired users through spoken feedback.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Oct – Nov 2025</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Wearable · Accessibility Tech</p></div>
+        <div><p class="dm-k">Tools</p><p class="dm-v">Raspberry Pi · ChatGPT API</p></div>
+        <div><p class="dm-k">Institution</p><p class="dm-v">ASU · Course Project</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/glasses-front.jpg" alt="AI Vision Assist Smart Glasses" width="650" height="430" loading="lazy"></div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Photography — click to expand</span>
+    <div class="photo-grid pg-2">
+      <div class="pc tall"><img src="assets/glasses-front.jpg" alt="Front view of smart glasses" class="lightbox-trigger" width="650" height="430" loading="lazy"><div class="pc-cap">Camera + dual ultrasonic array</div></div>
+      <div class="pc tall"><img src="assets/glasses-rig.jpg" alt="Side view of sensor rig" class="lightbox-trigger" width="650" height="415" loading="lazy"><div class="pc-cap">Sensor rig + touch switch</div></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">How It Works</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">01</div><p class="st">Obstacle Detection</p><p class="sd">Dual ultrasonic sensors continuously scan the space ahead, warning the user of objects in their way and identifying the direction of obstruction.</p></div>
+      <div class="step"><div class="sn">02</div><p class="st">Scene Capture</p><p class="sd">A touch switch triggers the onboard camera to capture the forward view for object recognition or text reading.</p></div>
+      <div class="step"><div class="sn">03</div><p class="st">ChatGPT Vision Processing</p><p class="sd">The captured image is sent to the ChatGPT API, which identifies objects and reads visible text in the scene.</p></div>
+      <div class="step"><div class="sn">04</div><p class="st">Audio Feedback</p><p class="sd">Results are translated into spoken prompts, delivered hands-free so the user never has to look at a screen.</p></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Obstacle Sensing</span><span class="sv">Dual ultrasonic sensors — range + direction</span></div>
+      <div class="sr"><span class="sk2">Vision</span><span class="sv">USB camera + ChatGPT API for recognition &amp; text reading</span></div>
+      <div class="sr"><span class="sk2">Controller</span><span class="sv">Raspberry Pi</span></div>
+      <div class="sr"><span class="sk2">Input</span><span class="sv">Touch switch — on-demand scene capture</span></div>
+      <div class="sr"><span class="sk2">Output</span><span class="sv">Audio-only, hands-free spoken feedback</span></div>
+      <div class="sr"><span class="sk2">Form Factor</span><span class="sv">Mounted on a standard glasses frame</span></div>
+      <div class="sr"><span class="sk2">Design Goal</span><span class="sv">Sleek, portable, low-maintenance</span></div>
+    </div>
+  </div>
+  <div class="dsec">
+    <span class="dsec-lbl">Design Intent</span>
+    <p class="tl-text" style="max-width:580px">Every design decision traced back to the same question: what does a visually impaired user actually need in the moment of walking through unfamiliar space? That meant favoring audio over any visual interface, keeping the device hands-free and low-maintenance, and making sure feedback told the user not just <em>that</em> something was ahead, but <em>where</em> — direction, not just alarm.</p>
+  </div>
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL: Architecture Design Portfolio -->
+<div id="arch-hughug" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Architecture — Concept Photography & Form Study</p>
+      <h1 class="dh-title">Hug Hug</h1>
+      <p class="dh-desc">Do you like hugs? There's nothing a hug can't solve — when you hug, it's like falling into a sponge, surrounded by warmth and softness. A hug is more than an action: it's all the time driving the movement of the matter around it, some of which you can see, much more is unseen. Do you realize that when you hug, people are painting with invisible particles that are otherwise disorganized or moving around them?</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Jun – Jul 2023</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Studio Design · Personal Work</p></div>
+        <div><p class="dm-k">Materials</p><p class="dm-v">3D Pen · Wire · Lamp</p></div>
+        <div><p class="dm-k">Size</p><p class="dm-v">35 × 20 × 18 cm</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/arch-hughug-1.jpg" alt="Hug Hug final model" width="1525" height="571" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Concept Photography — Painting With Invisible Particles</span>
+    <p class="tl-text" style="max-width:580px">Before any model-making, the embrace itself was the study: three long-exposure sequences, each dressed in fabric and tracked frame-to-frame with colored motion points standing in for the "invisible particles" a hug sets moving. The three sequences — a parent and child, two men, two girls — became the raw material the final form was abstracted from.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:820px"><img src="assets/arch-hughug-motion-mother.jpg" alt="Motion study, the hug of mother and daughter" class="lightbox-trigger" width="1600" height="479" loading="lazy"><div class="pc-cap">The hug of mother and daughter</div></div>
+      <div class="pc" style="max-width:820px"><img src="assets/arch-hughug-motion-men.jpg" alt="Motion study, the hug between men" class="lightbox-trigger" width="1600" height="499" loading="lazy"><div class="pc-cap">The hug between men</div></div>
+      <div class="pc" style="max-width:820px"><img src="assets/arch-hughug-motion-girls.jpg" alt="Motion study, the hug between girls" class="lightbox-trigger" width="1600" height="438" loading="lazy"><div class="pc-cap">The hug between girls</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Form-Finding — From Line to Surface</span>
+    <p class="tl-text" style="max-width:580px">Two lines form a plane; a group of lines forms a three-dimensional space. Each of the three motion studies was reduced to its own group of lines, studied in front, right, top, and perspective view, then the three groups were transformed to different angles and spliced together — a literal construction of the "invisible particle" motion into a single woven surface.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:760px;aspect-ratio:1600/1598"><img src="assets/arch-hughug-process-matrix.jpg" alt="Form-finding line study, front/right/top/perspective" class="lightbox-trigger" width="1600" height="1598" loading="lazy"><div class="pc-cap">Line study — front / right / top / perspective</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Final Model — click to expand</span>
+    <div class="photo-grid pg-2">
+      <div class="pc"><img src="assets/arch-hughug-1.jpg" alt="Hug Hug final model, front view" class="lightbox-trigger" width="1525" height="571" loading="lazy"><div class="pc-cap">Front view — embrace figures</div></div>
+      <div class="pc"><img src="assets/arch-hughug-2.jpg" alt="Hug Hug final model, full length" class="lightbox-trigger" width="1525" height="568" loading="lazy"><div class="pc-cap">Full length — wire + printed skin</div></div>
+      <div class="pc"><img src="assets/arch-hughug-3.jpg" alt="Hug Hug detail, canopy over figures" class="lightbox-trigger" width="795" height="581" loading="lazy"><div class="pc-cap">Detail — canopy over seated figures</div></div>
+      <div class="pc"><img src="assets/arch-hughug-4.jpg" alt="Hug Hug detail, woven texture" class="lightbox-trigger" width="793" height="578" loading="lazy"><div class="pc-cap">Detail — woven texture close-up</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Material</span><span class="sv">3D printing pen, wire, lamp, temperature-variable printing material, model figures</span></div>
+      <div class="sr"><span class="sk2">Size</span><span class="sv">35 × 20 × 18 cm</span></div>
+      <div class="sr"><span class="sk2">Subjects modeled</span><span class="sv">The hug of mother and daughter · the hug between men · the hug between girls</span></div>
+      <div class="sr"><span class="sk2">Technique</span><span class="sv">Freehand 3D-pen extrusion over a wire armature</span></div>
+      <div class="sr"><span class="sk2">Duration</span><span class="sv">Jun 2023 – Jul 2023</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL -->
+<div id="arch-cityvilla" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Architecture — Housing</p>
+      <h1 class="dh-title">City Villa</h1>
+      <p class="dh-desc">With the population rising, usable land is limited and apartments still dominate the market — yet most people yearn for a villa. This project asks: what if the villa didn't have to move to the suburbs? Individual house-units interlock vertically in the city center, each keeping its own courtyard, so the roof of one home becomes the private terrace of the next.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Jul – Sep 2023</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Studio Design · Personal Work</p></div>
+        <div><p class="dm-k">Site</p><p class="dm-v">Shanghai City Center</p></div>
+        <div><p class="dm-k">Structure</p><p class="dm-v">Frame + Stacked Courtyard Units</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/arch-cityvilla-3.jpg" alt="City Villa sited within the Shanghai skyline" width="1800" height="1275" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Research — Villa vs. Apartment</span>
+    <p class="tl-text" style="max-width:580px">From Shanghai's architectural history, the value of individual space keeps shrinking — population growth has made land tight and prices high, while traditional courtyard housing shows private space can still coexist within a shared block. Comparing a river apartment (¥6–14M for 100–200m², near the financial center) against a suburban villa (250–300m², cheaper per square meter but far from the center) found the real gap isn't size — it's control over space, and what that space signals.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:900px;aspect-ratio:1600/454"><img src="assets/arch-cityvilla-comparison.jpg" alt="Comparison chart, villa vs apartment across five factors" class="lightbox-trigger" width="1600" height="454" loading="lazy"><div class="pc-cap">Comparison — living space, price, facilities, distance, status</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Hypothesis — Circulation Threaded Through Stacked Massing</span>
+    <p class="tl-text" style="max-width:580px">Before any unit-by-unit derivation, the working hypothesis: a single ribbon of circulation could thread vertically through a loose stack of house-shaped volumes, so that going home is itself a route through shared and private space rather than a single elevator ride.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:420px;aspect-ratio:842/900"><img src="assets/arch-cityvilla-1.jpg" alt="City Villa early hypothesis diagram, circulation ribbons through massing" class="lightbox-trigger" width="842" height="900" loading="lazy"><div class="pc-cap">Early hypothesis — circulation ribbons through massing</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Model Derivation — From Body to Building</span>
+    <p class="tl-text" style="max-width:580px">Each resident type — single young man, single young lady, senior citizen, family — starts as a human silhouette, which is progressively abstracted through five steps into an orthogonal unit block. Those unit blocks are then combined and further combined into the stacked massing, with a roof reappearing as a courtyard, terrace, or piano room at each combination stage.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:520px;aspect-ratio:1000/1286"><img src="assets/arch-cityvilla-model-derivation.jpg" alt="Model derivation, from human silhouette to unit block to combined massing" class="lightbox-trigger" width="1000" height="1286" loading="lazy"><div class="pc-cap">Silhouette → unit → combination, four resident types</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Global Morphological Derivation</span>
+    <p class="tl-text" style="max-width:580px">At the scale of the whole building, the same combined units are threaded by a single continuous streamline of circulation, and reorganized so the roof of each unit serves as another unit's courtyard — the two diagrams below read as one move: a path first, a building second.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:480px;aspect-ratio:900/1414"><img src="assets/arch-cityvilla-global-derivation.jpg" alt="Global morphological derivation, streamline and roof-as-courtyard diagrams" class="lightbox-trigger" width="900" height="1414" loading="lazy"><div class="pc-cap">Streamline (left) · the roof serves as another courtyard (right)</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Disassembly — Frame, Roof, Circulation</span>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:400px;aspect-ratio:700/1617"><img src="assets/arch-cityvilla-disassembly.jpg" alt="Disassembly analysis diagram, profile of section 1 and 2" class="lightbox-trigger" width="700" height="1617" loading="lazy"><div class="pc-cap">Profile of section 1 & 2 — programmed floor plans</div></div>
+    </div>
+    <div class="spec-table" style="margin-top:1.5rem">
+      <div class="sr"><span class="sk2">Frame structure</span><span class="sv">Provides a safer living environment for the stacked units</span></div>
+      <div class="sr"><span class="sk2">Roof</span><span class="sv">The roof of one house becomes a private courtyard for another, or a shared passageway</span></div>
+      <div class="sr"><span class="sk2">Platforms</span><span class="sv">Small traffic-route areas serving sidewalks and lift access</span></div>
+      <div class="sr"><span class="sk2">Effect drawings</span><span class="sv">Massing studied across sunrise, morning, afternoon, sunset, and evening light</span></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Massing & Site Studies — click to expand</span>
+    <div class="photo-grid pg-2">
+      <div class="pc"><img src="assets/arch-cityvilla-2.jpg" alt="City Villa site model against skyline" class="lightbox-trigger" width="2083" height="468" loading="lazy"><div class="pc-cap">Site model, program highlighted</div></div>
+      <div class="pc"><img src="assets/arch-cityvilla-3.jpg" alt="City Villa rendered within financial district" class="lightbox-trigger" width="1800" height="1275" loading="lazy"><div class="pc-cap">Rendered within the financial district</div></div>
+      <div class="pc"><img src="assets/arch-cityvilla-4.jpg" alt="City Villa program diagram" class="lightbox-trigger" width="1432" height="2221" loading="lazy"><div class="pc-cap">Program diagram — unit types in plan</div></div>
+      <div class="pc"><img src="assets/arch-cityvilla-5.jpg" alt="City Villa parti diagram" class="lightbox-trigger" width="1001" height="1514" loading="lazy"><div class="pc-cap">Parti — circulation over stacked massing</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL -->
+<div id="arch-restaurant" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Architecture — Hospitality</p>
+      <h1 class="dh-title">Mind Healing<br>Restaurant Design</h1>
+      <p class="dh-desc">Continuous work cycles quietly break people down — low efficiency, poor focus, a long recovery period. This restaurant is designed as a shelter for students caught in exactly that state: through sound, cold, wind, and light, it redirects attention away from mental fatigue and toward nature, so people can get efficient relaxation in a short amount of time.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Oct – Dec 2023</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Studio Design · Personal Work</p></div>
+        <div><p class="dm-k">Structure</p><p class="dm-v">Undulating Shell Roof, Glass Perimeter</p></div>
+        <div><p class="dm-k">Program</p><p class="dm-v">Two-Level Dining + Terrace</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/arch-restaurant-1.jpg" alt="Mind Healing Restaurant, night render" width="1800" height="1695" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Research — Vitality Under Continuous Work</span>
+    <p class="tl-text" style="max-width:580px">On a regular schedule, people stay fully energized — a normal vitality curve rises and falls with rest. Long, uninterrupted work produces a different curve: low efficiency, impaired thinking, and a long repair period afterward. The bottleneck isn't sleep, it's information processing capacity — so the question becomes whether a designed space can reshape that curve directly.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:900px;aspect-ratio:1600/374"><img src="assets/arch-restaurant-research-banner.jpg" alt="Research illustration banner" class="lightbox-trigger" width="1600" height="374" loading="lazy"><div class="pc-cap">Research</div></div>
+      <div class="pc" style="max-width:900px;aspect-ratio:1600/446"><img src="assets/arch-restaurant-vitality-curves.jpg" alt="Vitality curves, regular rhythm vs continuous work vs space-adjusted" class="lightbox-trigger" width="1600" height="446" loading="lazy"><div class="pc-cap">Regular rhythm · space-adjusted curve · continuous-work breakdown</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Mind Map</span>
+    <p class="tl-text" style="max-width:580px">Long-term continuous work splits into two failure modes: low efficiency in the process (not feeling well, lack of thinking ability) and a long repair period after work (severely impaired energy, sleep taking up too much time) — both rooted in the same fundamental element, information processing capacity. Repairing it means reducing the brain's involuntary thinking and relaxing muscle tension; promoting it means stimulating logical-reasoning areas — both in response to students who are demanding of themselves under heavy schoolwork pressure.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:820px;aspect-ratio:1600/709"><img src="assets/arch-restaurant-mindmap.jpg" alt="Mind map, long-term continuous work and repair/promote pathways" class="lightbox-trigger" width="1600" height="709" loading="lazy"><div class="pc-cap">Long-term continuous work → repair / promote</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Analysis of Mechanism & Solution</span>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:100%;aspect-ratio:1800/570"><img src="assets/arch-restaurant-5.jpg" alt="Analysis of mechanism and solution storyboard" class="lightbox-trigger" width="1800" height="570" loading="lazy"><div class="pc-cap">Region A / B / C — mechanism storyboard</div></div>
+    </div>
+    <div class="step-grid" style="margin-top:1.5rem">
+      <div class="step"><div class="sn">A</div><p class="st">Entrance → Ordering</p><p class="sd">Footstep sound carries through to Region B, producing effects that stimulate bone tremors and neuronal movement.</p></div>
+      <div class="step"><div class="sn">B</div><p class="st">Ordering → Pickup</p><p class="sd">Cold sensory stimulation from alternating jets promotes neuronal activity while terraced dining keeps the mind distracted but active.</p></div>
+      <div class="step"><div class="sn">C</div><p class="st">Dining & Exit</p><p class="sd">A shell-form structure and glass exterior connect interior to exterior; the terrace offers natural air-cooling and a view of the stars.</p></div>
+      <div class="step"><div class="sn">→</div><p class="st">Result</p><p class="sd">Sound, wind, light, and cold guide attention away from learning fatigue and toward nature — efficient relaxation in a short window of time.</p></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Renders — click to expand</span>
+    <div class="photo-grid pg-2">
+      <div class="pc"><img src="assets/arch-restaurant-1.jpg" alt="Restaurant exterior night render" class="lightbox-trigger" width="1800" height="1695" loading="lazy"><div class="pc-cap">Exterior — night render, undulating roof</div></div>
+      <div class="pc"><img src="assets/arch-restaurant-2.jpg" alt="Restaurant terrace interior" class="lightbox-trigger" width="1146" height="714" loading="lazy"><div class="pc-cap">Terrace level, interior dining view</div></div>
+      <div class="pc"><img src="assets/arch-restaurant-3.jpg" alt="Restaurant model, railing overlook" class="lightbox-trigger" width="1213" height="790" loading="lazy"><div class="pc-cap">Upper terrace — photographed model</div></div>
+      <div class="pc"><img src="assets/arch-restaurant-4.jpg" alt="Restaurant terrace at sunset" class="lightbox-trigger" width="1147" height="736" loading="lazy"><div class="pc-cap">Terrace view at sunset</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Program</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Level 1</span><span class="sv">Entrance, ordering area, ground-floor dining</span></div>
+      <div class="sr"><span class="sk2">Level 2</span><span class="sv">Skylight terrace, additional dining, overlook to Level 1</span></div>
+      <div class="sr"><span class="sk2">Roof</span><span class="sv">Undulating shell form over a glass perimeter wall</span></div>
+      <div class="sr"><span class="sk2">Terrace</span><span class="sv">Natural air-cooling, open to the night sky</span></div>
+      <div class="sr"><span class="sk2">Duration</span><span class="sv">Oct 2023 – Dec 2023</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL -->
+<div id="arch-fear" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Architecture — Installation</p>
+      <h1 class="dh-title">Deep Fear<br>Inspires Space</h1>
+      <p class="dh-desc">Built on the idea of virtual and real focus in photography: treat an assumed center in the space as the real focus, and the visitor as the virtual one. Reducing the visitor's sense of belonging creates the unknown — and asks whether they could fight it, and get something new from doing so.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Jan – Feb 2024</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Studio Design · Personal Work</p></div>
+        <div><p class="dm-k">Material</p><p class="dm-v">Black Cardboard · Glue · Red Yarn</p></div>
+        <div><p class="dm-k">Method</p><p class="dm-v">Photography Analysis → Manual Model</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/arch-fear-1.jpg" alt="Deep Fear Inspires Space, red-lit render" width="1146" height="683" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Photography Analysis</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">01</div><p class="st">Virtual vs. Real Focus</p><p class="sd">The real focus is the assumed center of the frame; the visitor becomes a virtual focus, off to the side, uncertain of where they stand.</p></div>
+      <div class="step"><div class="sn">02</div><p class="st">Before / After</p><p class="sd">Before entering, the space reads as one complete, huge, unknown building. After entering, that unknown collapses — so the design has to work to preserve the fear.</p></div>
+      <div class="step"><div class="sn">03</div><p class="st">Color Extraction</p><p class="sd">Extracting color from two reference photographs showed that a small amount of bright color inside a large field of dark color triggers a sense of the unknown.</p></div>
+      <div class="step"><div class="sn">04</div><p class="st">Domain Line</p><p class="sd">A short, sharply transitional space compresses the experience of crossing from known to unknown into just a few seconds.</p></div>
+    </div>
+    <div class="photo-grid pg-2" style="margin-top:1.5rem">
+      <div class="pc"><img src="assets/arch-fear-3.jpg" alt="Reference photography, lone figure approaching a building at night" class="lightbox-trigger" width="1225" height="544" loading="lazy"><div class="pc-cap">Photography — reference image, real focus</div></div>
+      <div class="pc"><img src="assets/arch-fear-analysis.jpg" alt="Analysis image, figure beside draped curtains in a dim hallway" class="lightbox-trigger" width="954" height="430" loading="lazy"><div class="pc-cap">Analysis — figure as virtual focus</div></div>
+    </div>
+    <div class="photo-grid pg-full" style="margin-top:1.5rem">
+      <div class="pc" style="max-width:820px;aspect-ratio:1400/340"><img src="assets/arch-fear-focus-reject.jpg" alt="Focus and reject comparison, 3D grid analysis of the reference photographs" class="lightbox-trigger" width="1400" height="340" loading="lazy"><div class="pc-cap">Focus (kept) vs. reject — 3D grid analysis of the two photographs</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Form Evolution</span>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:640px;aspect-ratio:1273/865"><img src="assets/arch-fear-4.jpg" alt="Deep Fear form evolution sequence, nine-step grid" class="lightbox-trigger" width="1273" height="865" loading="lazy"><div class="pc-cap">From cylinder to unresolved geometry — nine steps</div></div>
+    </div>
+    <p class="tl-text" style="max-width:580px;margin-top:1rem">From a plain cylindrical volume, a sequence of cuts and folds pulls the form toward something unresolved — the final geometry deliberately withholds a single readable shape.</p>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">The Process of Making Manual Models</span>
+    <p class="tl-text" style="max-width:580px">Twelve iterations, read in a snaking path: a single scored sheet of cardboard is rolled and pinned into a rough gesture, then refined pass by pass — red yarn appears midway through as a tension system stitched across the folds, tightening with every subsequent version until it reads as structure rather than decoration.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:1000px;aspect-ratio:1800/713"><img src="assets/arch-fear-model-process.jpg" alt="The process of making manual models, twelve-step build sequence" class="lightbox-trigger" width="1800" height="713" loading="lazy"><div class="pc-cap">Twelve-step build sequence, cardboard + red yarn</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Final Model — click to expand</span>
+    <div class="photo-grid pg-3">
+      <div class="pc"><img src="assets/arch-fear-1.jpg" alt="Deep Fear final model, red-lit render" class="lightbox-trigger" width="1146" height="683" loading="lazy"><div class="pc-cap">Main effect drawing of entrance</div></div>
+      <div class="pc"><img src="assets/arch-fear-2.jpg" alt="Deep Fear final model, black cardboard" class="lightbox-trigger" width="1146" height="566" loading="lazy"><div class="pc-cap">Top view — black cardboard, red yarn</div></div>
+      <div class="pc"><img src="assets/arch-fear-5.jpg" alt="Deep Fear final model, export view" class="lightbox-trigger" width="1200" height="634" loading="lazy"><div class="pc-cap">Export</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Material</span><span class="sv">Black cardboard, glue, red yarn</span></div>
+      <div class="sr"><span class="sk2">Technique</span><span class="sv">Hand-built manual model, photography-based color and focus analysis</span></div>
+      <div class="sr"><span class="sk2">Views documented</span><span class="sv">Entrance effect drawing, export, top view</span></div>
+      <div class="sr"><span class="sk2">Duration</span><span class="sv">Jan 2024 – Feb 2024</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL -->
+<div id="studio-work" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Personal Work · 2023</p>
+      <h1 class="dh-title">Studio &<br>Visual Work</h1>
+      <p class="dh-desc">Two pieces of visual craft made outside any studio brief — editorial poster design and digital illustration — the same composition and storytelling instincts that carry into the architecture work.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">2023</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Personal Work</p></div>
+        <div><p class="dm-k">Skill</p><p class="dm-v">Layout & Typography</p></div>
+        <div><p class="dm-k">Skill</p><p class="dm-v">Digital Illustration</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/other-poster.jpg" alt="Architectural Structural Aesthetics, poster design" width="1200" height="1552" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Graphic Design — Editorial & Poster Layout</span>
+    <p class="tl-text" style="max-width:580px">A poster study built around Norman Foster's line, "Structure is the most powerful and expressive element in architecture" — pairing a red structural-line diagram with a black-and-white photograph of the DJL Sky City Headquarters, practicing type hierarchy, image collage, and high-contrast composition.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="aspect-ratio:1200/1552"><img src="assets/other-poster.jpg" alt="Architectural Structural Aesthetics, poster design" class="lightbox-trigger" width="1200" height="1552" loading="lazy"><div class="pc-cap">Architectural Structural Aesthetics — poster design study</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Digital Illustration — Visual Storytelling</span>
+    <p class="tl-text" style="max-width:580px">"The Little Girl and the Strange House" — four illustrated vignettes, each pairing a small wandering figure with a distinct architectural fantasy: a Tianjin market hall, a monochrome stair, a Gaudí-esque mosaic path, and a layered archway — practicing digital rendering, color, and narrative composition.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="aspect-ratio:981/1290"><img src="assets/other-illustration-collage.jpg" alt="The Little Girl and the Strange House, computer creative painting" class="lightbox-trigger" width="981" height="1290" loading="lazy"><div class="pc-cap">The Little Girl and the Strange House — computer creative painting · 2023.8 · 210×297mm ea.</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" id="lbClose" onclick="event.stopPropagation();closeLightbox()">×</button>
+  <img class="lb-img" id="lbImg" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
