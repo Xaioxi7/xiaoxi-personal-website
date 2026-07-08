@@ -633,6 +633,12 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
   .hero-right{height:50vw}
   .hero-left{padding:3rem 1.5rem 3rem}
   .work,.contact-wrap,.dsec,.about-content,.timeline-wrap{padding:3rem 1.5rem}
+  .work-head{flex-wrap:wrap;row-gap:0.8rem}
+  .work-head-r{width:100%;justify-content:space-between;gap:0.8rem}
+  .filter-pills{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .filter-pills::-webkit-scrollbar{display:none}
+  .fpill{flex-shrink:0}
+  .work-count{white-space:nowrap}
   .proj-card,.dh,.about-split,.contact-wrap{grid-template-columns:1fr}
   .proj-info{border-left:none;border-top:1px solid var(--border)}
   .photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}

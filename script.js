@@ -86,8 +86,16 @@ window.addEventListener('popstate', e => {
   }, 260);
 });
 
-// Set initial history state so back works from the first page too
-history.replaceState({ page: 'home' }, '', '#home');
+// Honor a deep link already in the URL (e.g. shared link to #av-research)
+// instead of always resetting to home, while still seeding history state
+// so back/forward works from the first page too.
+(function initialRoute() {
+  const requestedId = (location.hash || '#home').slice(1);
+  const target = document.getElementById(requestedId);
+  const id = (target && target.classList.contains('page')) ? requestedId : 'home';
+  if (id !== 'home') _show(id);
+  history.replaceState({ page: id }, '', '#' + id);
+})();
 
 function goContact() {
   if (currentPage !== 'home') {
