@@ -447,6 +447,9 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
 .dh-l:only-child{grid-column:1/-1;border-right:none}
 .dsec{padding:3.5rem 3rem;border-bottom:1px solid var(--border)}
 .dsec-lbl{font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.8rem;display:block}
+.dsec-src{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.04em;color:var(--muted);margin:-1.2rem 0 1.2rem}
+.dsec-src a{color:var(--blue);text-decoration:none;cursor:none}
+.dsec-src a:hover{text-decoration:underline}
 .photo-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:250px 250px;gap:3px}
 .photo-grid.pg-2{grid-template-columns:1fr 1fr}
 .photo-grid.pg-3{grid-template-columns:1fr 1fr 1fr;grid-template-rows:280px}
