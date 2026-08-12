@@ -312,6 +312,16 @@ document.querySelectorAll('.proj-card').forEach(card => {
   });
 });
 
+// ── HOVER-TO-PLAY CARD VIDEO PREVIEWS ────────────────────────────────────────
+document.querySelectorAll('.proj-img video.card-video').forEach(video => {
+  const card = video.closest('.proj-card');
+  // Force the browser to paint a frame as a thumbnail (preload="metadata" alone won't do it)
+  video.addEventListener('loadedmetadata', () => { video.currentTime = 1; }, { once: true });
+  card.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
+  card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 1; });
+  card.addEventListener('touchstart', () => { video.play().catch(() => {}); }, { passive: true });
+});
+
 // ── MAGNETIC NAV LINKS ────────────────────────────────────────────────────────
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('mousemove', e => {
