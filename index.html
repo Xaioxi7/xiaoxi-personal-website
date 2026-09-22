@@ -118,7 +118,7 @@
           <button class="fpill" data-filter="architecture">Architecture</button>
           <button class="fpill" data-filter="studio">Studio</button>
         </div>
-        <span class="work-count" id="workCount">07 projects</span>
+        <span class="work-count" id="workCount">08 projects</span>
       </div>
     </div>
     <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('robotic');return false">
@@ -133,6 +133,25 @@
             <span class="ptag">Arduino</span>
             <span class="ptag">3D Printing</span>
             <span class="ptag">Wire-Driven</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Self-Serve Ice Cream Machine UX -->
+    <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('gseice-icecream');return false">
+      <div class="proj-img"><img src="assets/gseice-card-icecream.jpg" alt="Self-Serve Ice Cream Machine interaction flow" width="900" height="506" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Industry Internship · GSEICE · Summer 2025</span>
+        <div>
+          <h3 class="proj-title">Self-Serve Ice Cream<br>Machine — UX Design</h3>
+          <p class="proj-desc">A full touchscreen interaction flow for a self-service ice cream vending machine — every screen from idle carousel to dispensing, across both a machine-payment and an external-payment configuration, plus the fault and edge cases customers who skip the sequence run into.</p>
+          <div class="proj-tags">
+            <span class="ptag">Interaction Design</span>
+            <span class="ptag">User Flow Mapping</span>
+            <span class="ptag">Touchscreen UI</span>
+            <span class="ptag">Figma</span>
           </div>
         </div>
         <span class="proj-arrow">View Project →</span>
@@ -1181,6 +1200,90 @@
     <span class="dsec-lbl">Design Intent</span>
     <p class="tl-text" style="max-width:580px">Every design decision traced back to the same question: what does a visually impaired user actually need in the moment of walking through unfamiliar space? That meant favoring audio over any visual interface, keeping the device hands-free and low-maintenance, and making sure feedback told the user not just <em>that</em> something was ahead, but <em>where</em> — direction, not just alarm.</p>
   </div>
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL: GSEICE Interaction Design -->
+<div id="gseice-icecream" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Industry Internship — Interaction Design</p>
+      <h1 class="dh-title">Self-Serve Ice Cream<br>Machine — UX Design</h1>
+      <p class="dh-desc">During a summer internship at GSEICE, I designed the full touchscreen interaction flow for a self-service ice cream vending machine — mapping every screen a customer sees from the idle welcome carousel through container detection, payment, cooling, and dispensing, along with the fault states and edge cases an unattended machine has to handle on its own.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">May – Aug 2025</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Industry Internship · GSEICE</p></div>
+        <div><p class="dm-k">Tools</p><p class="dm-v">Figma · Adobe Photoshop</p></div>
+        <div><p class="dm-k">Deliverable</p><p class="dm-v">End-to-End Screen Flow</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/gseice-hero-icecream-dark.jpg" alt="Self-Serve Ice Cream Machine, Step 1–3 screen sequence" width="1600" height="837" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Interaction Flow — Six-Step Journey — click to expand</span>
+    <p class="tl-text" style="max-width:580px">The full experience breaks into six stages — Welcome Carousel, Touch to Start, Container Detection, Price &amp; Payment, Cooling &amp; Prep, and Complete &amp; Dispense — each one triggered by a specific customer action (touching the screen, placing a cup, scanning to pay) and each with its own set of on-screen prompts and recovery states.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="aspect-ratio:677/2200"><img src="assets/gseice-flow-overview.jpg" alt="Six-step interaction decomposition, welcome carousel to dispensing" class="lightbox-trigger" width="677" height="2200" loading="lazy"><div class="pc-cap">Six-step decomposition — from welcome carousel to dispensing</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">When People Don't Follow the Expected Sequence</span>
+    <p class="tl-text" style="max-width:580px">The six-step journey above splits into two halves — Steps 1–3 (placement &amp; recognition) and Steps 4–6 (payment &amp; collection) — but real customers rarely move through it in a clean line. Six recurring scenarios drove the recovery-state design:</p>
+    <div class="step-grid step-grid-3">
+      <div class="step"><div class="sn">A</div><p class="st">Already placed</p><p class="sd">A touch wakes the screen and triggers a scan, so a cup placed early is not missed.</p></div>
+      <div class="step"><div class="sn">B</div><p class="st">Not quite centred</p><p class="sd">Show how to reposition the cup. Keep dispensing blocked until it is aligned.</p></div>
+      <div class="step"><div class="sn">C</div><p class="st">Someone else's cup</p><p class="sd">Wait for the previous cup to be removed before accepting another order.</p></div>
+      <div class="step"><div class="sn">D</div><p class="st">A change of mind</p><p class="sd">Before payment, let users swap containers. Scan again to update the product and price.</p></div>
+      <div class="step"><div class="sn">E</div><p class="st">An unexplained wait</p><p class="sd">Tell users whether the machine is cooling or dispensing, and show its progress.</p></div>
+      <div class="step"><div class="sn">F</div><p class="st">A fault that needs help</p><p class="sd">Stop new purchases when service is unavailable and give customers a way to contact staff.</p></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Final Interaction Flow — Machine Payment — click to expand</span>
+    <p class="tl-text" style="max-width:580px">Recognize the cup or cone, show its price, then confirm payment — production starts only after payment succeeds. An admin and a user branch off the same idle state, camera-based container detection returns one of three results (correct, corrected, or fault), and a scan-to-pay screen — supporting Quick Pay, WeChat Pay, and Alipay — gates dispensing, with dedicated recovery screens for a failed scan or a misplaced container.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:100%;aspect-ratio:2600/1004"><img src="assets/gseice-flow-payment.jpg" alt="Complete interaction flow diagram, machine payment configuration" class="lightbox-trigger" width="2600" height="1004" loading="lazy"><div class="pc-cap">Complete interaction flow — machine payment</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Final Interaction Flow — External Payment — click to expand</span>
+    <p class="tl-text" style="max-width:580px">A second configuration moves payment to the counter: staff take payment and hand over a cup or cone, so there's no second payment at the machine. The machine only needs to check the container before it starts production — container detection leads straight into cooling and dispensing, with the same fault and out-of-stock recovery screens as the machine-payment version.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:100%;aspect-ratio:2600/1004"><img src="assets/gseice-flow-nopayment.jpg" alt="Complete interaction flow diagram, external payment configuration" class="lightbox-trigger" width="2600" height="1004" loading="lazy"><div class="pc-cap">Complete interaction flow — external payment</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Edge Cases &amp; System States</span>
+    <div class="step-grid">
+      <div class="step"><div class="sn">A</div><p class="st">Container Detection</p><p class="sd">A camera checks the placed container against three outcomes — correct, corrected, or fault — and prompts the user to reposition or replace it before the flow continues.</p></div>
+      <div class="step"><div class="sn">B</div><p class="st">Fault Notice</p><p class="sd">If the machine hits an internal fault mid-cycle, the user sees a dedicated apology screen while the admin panel receives the detailed error for a quick response.</p></div>
+      <div class="step"><div class="sn">C</div><p class="st">Out of Stock</p><p class="sd">A separate notice screen catches the case where an ingredient or cup supply runs out before dispensing begins.</p></div>
+      <div class="step"><div class="sn">D</div><p class="st">Cooling Notice</p><p class="sd">If the mixture hasn't reached its set temperature yet, a waiting animation holds the user in place instead of dispensing early.</p></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Configurations</span><span class="sv">Machine payment · External payment</span></div>
+      <div class="sr"><span class="sk2">Container Types</span><span class="sv">Cone · Paper cup, detected automatically</span></div>
+      <div class="sr"><span class="sk2">Payment Methods</span><span class="sv">Quick Pay · WeChat Pay · Alipay</span></div>
+      <div class="sr"><span class="sk2">System States</span><span class="sv">Normal standby · Abnormal standby (fault / out of stock / cooling)</span></div>
+      <div class="sr"><span class="sk2">Company</span><span class="sv">GSEICE</span></div>
+      <div class="sr"><span class="sk2">Tools</span><span class="sv">Figma, Adobe Photoshop</span></div>
+      <div class="sr"><span class="sk2">Duration</span><span class="sv">May 2025 – Aug 2025</span></div>
+    </div>
+  </div>
+
   <footer>
     <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
     <span class="ft-r">Engineering the Human Experience</span>
