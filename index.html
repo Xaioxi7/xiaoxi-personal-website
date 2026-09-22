@@ -114,25 +114,26 @@
         <div class="filter-pills">
           <button class="fpill active" data-filter="all">All</button>
           <button class="fpill" data-filter="research">Research</button>
-          <button class="fpill" data-filter="engineering">Engineering</button>
+          <button class="fpill" data-filter="interaction">Interaction</button>
           <button class="fpill" data-filter="architecture">Architecture</button>
-          <button class="fpill" data-filter="studio">Studio</button>
+          <button class="fpill" data-filter="design">Design</button>
         </div>
-        <span class="work-count" id="workCount">08 projects</span>
+        <span class="work-count" id="workCount">15 projects</span>
       </div>
     </div>
-    <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('robotic');return false">
-      <div class="proj-img"><img src="assets/robot-wide.jpg" alt="Robotic Instrument" width="1200" height="800" loading="lazy"></div>
+    <!-- Honeywell-Sponsored: Preventing On-Duty Medical Events -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('honeywell-medical');return false">
+      <div class="proj-img"><img src="assets/honeywell-card.jpg" alt="Honeywell-Sponsored Project, emotional journey map overview" width="900" height="506" loading="lazy"></div>
       <div class="proj-info">
-        <span class="proj-num">Class Project · AME 494</span>
+        <span class="proj-num">Honeywell-Sponsored · Team Project · Ongoing</span>
         <div>
-          <h3 class="proj-title">Wire-Driven<br>Robotic Instrument</h3>
-          <p class="proj-desc">A five-finger mechanical hand that plucks guitar strings — 3D-printed joints, fishing line, and servo control tuned to the pentatonic scale.</p>
+          <h3 class="proj-title">Preventing<br>On-Duty Medical Events</h3>
+          <p class="proj-desc">Led customer discovery across four high-risk professions — pilots, firefighters, ER nurses, and ER physicians — to find how to catch fatigue and stress warning signs before they become a safety incident.</p>
           <div class="proj-tags">
-            <span class="ptag">Mechanical Design</span>
-            <span class="ptag">Arduino</span>
-            <span class="ptag">3D Printing</span>
-            <span class="ptag">Wire-Driven</span>
+            <span class="ptag">Customer Discovery</span>
+            <span class="ptag">Interview Research</span>
+            <span class="ptag">Journey Mapping</span>
+            <span class="ptag">Qualitative Coding</span>
           </div>
         </div>
         <span class="proj-arrow">View Project →</span>
@@ -140,7 +141,7 @@
     </a>
 
     <!-- Self-Serve Ice Cream Machine UX -->
-    <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('gseice-icecream');return false">
+    <a class="proj-card" data-category="interaction" href="#" onclick="transitionTo('gseice-icecream');return false">
       <div class="proj-img"><img src="assets/gseice-card-icecream.jpg" alt="Self-Serve Ice Cream Machine interaction flow" width="900" height="506" loading="lazy"></div>
       <div class="proj-info">
         <span class="proj-num">Industry Internship · GSEICE · Summer 2025</span>
@@ -229,52 +230,73 @@
       </div>
     </a>
 
-    <!-- Pilot Physiological Monitoring -->
-    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('pilot-monitoring');return false">
+    <!-- AI Vision Assist Smart Glasses -->
+    <a class="proj-card" data-category="interaction" href="#" onclick="transitionTo('ai-glasses');return false">
+      <div class="proj-img"><img src="assets/glasses-front.jpg" alt="AI Vision Assist Smart Glasses" width="650" height="430" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Class Project · Accessibility Tech</span>
+        <div>
+          <h3 class="proj-title">AI Vision Assist<br>Smart Glasses</h3>
+          <p class="proj-desc">A Raspberry Pi-based wearable pairing ultrasonic obstacle detection with a camera and the ChatGPT API — translating the world into spoken guidance for visually impaired users.</p>
+          <div class="proj-tags">
+            <span class="ptag">Raspberry Pi</span>
+            <span class="ptag">ChatGPT API</span>
+            <span class="ptag">Ultrasonic Sensing</span>
+            <span class="ptag">Accessibility</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Project →</span>
+      </div>
+    </a>
+
+    <!-- Humanoid Robot Perception -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('robot-perception');return false">
       <div class="proj-abs proj-abs--paper">
         <div class="paper-doc-wrap"><div class="paper-doc-inner">
-          <h1>Familiarization Assignment: Honeywell Lecture Report</h1>
-          <p class="pdoc-meta">HSE 225 — Arizona State University</p>
+          <h1>How Humans Perceive Humanoid Robot Movement</h1>
+          <p class="pdoc-meta">HSE 323 — Arizona State University</p>
           <hr>
-          <h2>Major Challenges Encountered</h2>
-          <p>Aircraft already have a lot of data. They collect information about aircraft systems, flight conditions, life support, and more. And the aircraft itself is already partly automated. But compared to all of that, there is much less data about the pilot. That is the core problem this project is trying to solve. Because the pilot's physical condition, breathing, heart rate, cognitive state, and workload all directly affect their decisions, and their decisions affect the entire flight. So, the question is: how do we make the pilot's own condition something that can also be seen, measured, and understood?</p>
-          <p>The team built a wearable biosensing garment, essentially a smart shirt or sports bra with embedded sensors that can measure ECG, heart rate, breathing, breathing depth, and movement. But getting there was not simple. They ran into three major challenges along the way.</p>
-          <h2>Challenge 1: Would it be part of the workflow?</h2>
-          <p>The first thing the team did was not run an experiment. The first thing they did was ask pilots whether they would be willing to wear the device. Would it interfere with the harness, the G-suit, the parachute, or the life support system? Who would manage the data? Who would hand out the device and download the data afterward? This matters because a product cannot exist on its own. It always must work together with real people, real tasks, and real environments. If it does not fit into the actual workflow, then even if the experiment works perfectly, it will still be very hard to use in the real world. That is why this step came first.</p>
-          <h2>Challenge 2: Does It Actually Measure Accurately?</h2>
-          <p>The second challenge was whether the device could collect reliable data. Just because a shirt has sensors does not mean the data is correct. Pilots are not sitting still. They are in high-G conditions, thermal chambers, centrifuges, and real flight environments. So, the team compared the data from the wearable against standard medical sensors — traditional ECG and breathing monitors — to see how well they matched. The overall results were good. But some sensors performed less reliably in certain conditions. That is an important finding, because it shows that not every instrument produces accurate data in every situation, and proving that the data is trustworthy is itself a major challenge.</p>
-          <h2>Challenge 3: Can the Data Actually Tell Us Something?</h2>
-          <p>The third challenge was whether this data could tell us if something was wrong with the pilot. The team did not start by immediately trying to detect danger. Instead, they first defined what different breathing patterns look like — what is normal breathing, what is shallow breathing, what is hyperventilation, and what is breath holding. Only after building that standard did they use it to interpret pilot state. This is an important logic. You cannot define the result first and then force the data to match it. You need a standard first, and then you use that standard to understand what the data is saying.</p>
-          <h2>HSI Pillars Covered</h2>
-          <h3>Human Factors Engineering</h3>
-          <p>The whole project is built around whether the device fits how pilots work. Not just whether it collects data, but whether it can exist inside the pilot's real environment without getting in the way. That is human factors engineering — does it fit the human, not just the task.</p>
-          <h3>Training</h3>
-          <p>Pilots need to learn how to wear it, maintain it, and understand what the alerts mean. That is a real training requirement.</p>
-          <h3>Health Hazards</h3>
-          <p>The point of this project is to monitor the pilot's physical condition — like breathing, heart rate, signs of hypoxia or fatigue — and catch a problem before it affects the flight. So, system safety and health hazard monitoring are basically what the shirt is for.</p>
-          <h3>Human Requirements</h3>
-          <p>First, it must be comfortable and not interfere with existing gear. Pilots already have a harness, G-suit, oxygen system. If this shirt causes any conflict with those, it simply will not get used.</p>
-          <p>Second, the whole data process needs to fit into the existing workflow. Who gives out the device, who downloads it afterward — if that is unclear or adds too many steps, it will not work in practice.</p>
-          <p>And the most important one: the pilot still must be the one making decisions. Right now, this system can send an alert, but it cannot tell you exactly what is wrong or what to do. The final call stays with the human.</p>
-          <h2>How This Relates to HSI Practices</h2>
-          <p>What I think is most important about this lecture is not just what the team built. It is how they approached building it.</p>
-          <p>They did not start with technology. They started with the people. Before they ran any experiments, they asked whether pilots would use the device and whether it could fit into the real environment. That is the most important step, and it is also the step that a lot of projects skip. A product cannot just work in a lab. It must work in the real world, with real people, in real conditions.</p>
-          <p>Then the next step was proving whether the product is useful, not just technically, but from the human side. Data is not automatically valuable. Just because a shirt can collect physiological signals does not mean those signals are telling us something real. The team had to validate the data against medical-grade sensors and prove the readings were reliable under real flight conditions.</p>
-          <p>And then the most important logic of all — if you want to use data to explain human state, you cannot define the result first and then force the data to match. You need to build a standard first — define what different signals mean — and then use that standard to interpret the data. That is what the team did when they defined different breathing patterns before trying to assess pilot condition. It is human centered. And that is why I think this project is one of the clearest examples of HSI in practice.</p>
+          <p>When people look at robotics, especially humanoid robotics, they very easily take "more human-like" as a sign of success. If it looks more human, people often think it is more advanced, more successful, or simply better designed. But the original point, or the real point, of robotics is not to look human. The point of robotics is to complete tasks and, more importantly, to serve humans.</p>
+          <p>No matter if it is in living scenarios, companion robotics, service robotics, or industrial scenarios, the core is the same: robots are interacting with humans. So the key is not only movement, and it is not only function. The key is interaction. And once the key becomes interaction, then the key becomes understanding, prediction, and trust. People need to understand what the robot is doing, predict what it will do next, and decide whether they can trust it.</p>
+          <p>That is why robotics design, especially humanoid robotics design, always pays attention to user experience, human factors, and human perception. Because for robotics, moving is not enough. A robot can move, but that does not mean people understand it. A robot can complete an action, but that does not mean people trust it.</p>
+          <p>And this is also why humanoid robotics keeps trying to become more human-like. Even though uncanny valley was already proposed a long time ago, people are still trying to design robots that look more and more human. The reason is simple. Humans are most familiar with themselves. You may not be able to describe exactly how each part of the body moves, or what the exact movement limit is, but when you see movement, you immediately know whether it feels human or not.</p>
+          <p>But robots are still machines. Their systems are built for function, and their systems are fundamentally different from humans. Robots are electrically driven. Humans are biologically driven. Humans move with muscles, joints, tendons, and body coordination. Robots move with motors, actuators, controllers, and mechanical constraints. So even if a robot looks human, it still cannot move exactly like a human. And this creates the problem. When something looks human, people expect it to move like a human.</p>
+          <p>And this problem shows up especially clearly in robot arms and hands. Humans use their arms and hands constantly, and humans also watch arms and hands constantly. Upper-limb movement is visually present all the time. People spend a lot of time watching hands — hands reaching, turning, pointing, touching, holding, and grasping. So people are extremely familiar with hand and arm movement, including trajectory, speed, timing, and gesture. That is why even a very small unusual thing — like a trajectory that is too straight, movement that is too stiff, or motion that starts too suddenly — can immediately feel wrong.</p>
+          <h2>How Humans Understand Movement</h2>
+          <p>When people see something move, they immediately begin to judge what it is, whether it is alive, what it is trying to do, and whether it will affect them. So human perception of movement is not passive observation. It is a very active and very sensitive judgment system.</p>
+          <p>Humans are naturally very sensitive to movement because movement itself carries meaning. Humans do not only observe movement. Humans naturally try to interpret movement as intention. Even simple motion can be read as chasing, avoiding, hesitating, approaching, or threatening. This is important because it means robot movement is never just motion. Once something moves in front of a person, that movement is already being interpreted.</p>
+          <p>This is also why biological motion is so important. Humans are extremely sensitive to biological motion. Even if people only see a few moving points in darkness, they can still tell whether it is a person walking, running, reaching, or turning. This shows that humans do not need full form to understand movement. Humans can read movement patterns directly.</p>
+          <h2>Problem 1: The Body Part Looks Human, But Does Not Feel Human</h2>
+          <p>The first problem is when a robotic body part looks human, but does not feel human. For example, it has a palm, five fingers, finger joints, and maybe even skin-colored soft material. It looks like a hand. But when people get closer, they notice the surface is too smooth, too shiny, too cold, too hard, or too rubber-like.</p>
+          <p>This is what Poliakoff et al. (2018) discussed in their mismatch hypothesis. They showed that when an artificial body part gives some cues that look human, but other cues do not match human expectation, people can feel uneasy. It is not exactly fear. It is more like something feels wrong. And this is also why a fully mechanical industrial arm usually does not create the same reaction. It is clearly a machine. People do not expect it to feel human.</p>
+          <h2>Problem 2: Looks Human, But Does Not Move Human</h2>
+          <p>The second problem is more obvious. It already gives people the expectation that it is human-like, but when it moves, it does not move like a human.</p>
+          <p>Wu et al. (2024) showed exactly this point. More anthropomorphic robots can attract more attention, but they can also create more discomfort and uncanny feeling when their appearance and behavior do not match. A human does not simply raise an arm in a straight constant-speed line. Before movement starts, there is usually preparation. The eyes move first. The head may slightly turn. The shoulder adjusts. Then the shoulder joint leads the upper arm, the elbow follows to extend or bend, the wrist adjusts orientation, and the fingers prepare for the target. Human movement is not one joint moving. It is coordinated movement.</p>
+          <p>But many humanoid robots do not move like this. They start directly. The arm rises in a straight line at constant speed. There is no preparation, no natural coordination, and no gradual transition. So people do not feel like they are watching a human-like arm move. They feel like they are watching a machine execute a command.</p>
+          <h2>Problem 3: Movement Is Not Continuous</h2>
+          <p>The last problem is continuity. A lot of robot movement feels wrong not because the robot fails, but because the movement is not continuous. It starts too suddenly, stops too suddenly, changes speed too abruptly, or different joints move out of sync.</p>
+          <p>Human motion perception depends on continuity. Humans naturally connect what they saw one moment ago with what they see the next moment. So when movement is broken, people immediately feel it. From an engineering view, the robot may still complete the task. But from a human view, the movement feels unnatural, uncomfortable, and harder to trust.</p>
+          <h2>Conclusion</h2>
+          <p>When humanoid robotics make people feel strange, sometimes it is not because they are not advanced enough, not flexible enough, or not human-like enough. The key problem is often much simpler: they move the wrong way. The key is not only whether the robot can move, and not only whether it can complete the task. If a robot is meant to interact with humans, then movement must match human perception. Not only function, but matching. Not only movement, but movement that matches how humans naturally see, predict, and understand motion.</p>
+          <h2>References</h2>
+          <p class="pdoc-ref">Lu, Z.-L., &amp; Sperling, G. (2001). Three-systems theory of human visual motion perception: Review and update. Journal of the Optical Society of America A, 18(9), 2331–2370.</p>
+          <p class="pdoc-ref">Poliakoff, E., O'Kane, S., Carefoot, O., Kyberd, P., &amp; Gowen, E. (2018). Investigating the uncanny valley for prosthetic hands. Prosthetics and Orthotics International, 42(1), 21–27.</p>
+          <p class="pdoc-ref">Wu, J., Du, X., Liu, Y., Tang, W., &amp; Xue, C. (2024). How the degree of anthropomorphism of human-like robots affects users' perceptual and emotional processing: Evidence from an EEG study. Sensors, 24(15), 4809.</p>
+          <p class="pdoc-ref">Zaraki, A., et al. (2017). Design and evaluation of a unique social perception system for human–robot interaction. IEEE Transactions on Cognitive and Developmental Systems, 9(4), 341–355.</p>
         </div></div>
         <div class="paper-scroll-cap"></div>
         <div class="paper-frame-hint">scroll to read</div>
       </div>
       <div class="proj-info">
-        <span class="proj-num">Class Paper · HSE 225</span>
+        <span class="proj-num">Class Paper · HSE 323</span>
         <div>
-          <h3 class="proj-title">Pilot Physiological<br>Monitoring</h3>
-          <p class="proj-desc">Analysis of a Honeywell biosensing garment for military pilots — evaluating ECG, heart rate, and breathing data accuracy under high-G conditions and workflow integration challenges.</p>
+          <h3 class="proj-title">Humanoid Robot<br>Perception</h3>
+          <p class="proj-desc">Research paper examining why some robot upper-limb movements feel natural while others feel uncanny — exploring trust, predictability, and the gap between biological and mechanical motion.</p>
           <div class="proj-tags">
-            <span class="ptag">Biosensing</span>
-            <span class="ptag">ECG</span>
-            <span class="ptag">Aviation Safety</span>
-            <span class="ptag">HSI</span>
+            <span class="ptag">HRI</span>
+            <span class="ptag">Uncanny Valley</span>
+            <span class="ptag">Trust</span>
+            <span class="ptag">Motion Perception</span>
           </div>
         </div>
         <span class="proj-arrow">Research →</span>
@@ -352,111 +374,150 @@
       </div>
     </a>
 
-    <!-- Humanoid Robot Perception -->
-    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('robot-perception');return false">
+    <!-- Pilot Physiological Monitoring -->
+    <a class="proj-card" data-category="research" href="#" onclick="transitionTo('pilot-monitoring');return false">
       <div class="proj-abs proj-abs--paper">
         <div class="paper-doc-wrap"><div class="paper-doc-inner">
-          <h1>How Humans Perceive Humanoid Robot Movement</h1>
-          <p class="pdoc-meta">HSE 323 — Arizona State University</p>
+          <h1>Familiarization Assignment: Honeywell Lecture Report</h1>
+          <p class="pdoc-meta">HSE 225 — Arizona State University</p>
           <hr>
-          <p>When people look at robotics, especially humanoid robotics, they very easily take "more human-like" as a sign of success. If it looks more human, people often think it is more advanced, more successful, or simply better designed. But the original point, or the real point, of robotics is not to look human. The point of robotics is to complete tasks and, more importantly, to serve humans.</p>
-          <p>No matter if it is in living scenarios, companion robotics, service robotics, or industrial scenarios, the core is the same: robots are interacting with humans. So the key is not only movement, and it is not only function. The key is interaction. And once the key becomes interaction, then the key becomes understanding, prediction, and trust. People need to understand what the robot is doing, predict what it will do next, and decide whether they can trust it.</p>
-          <p>That is why robotics design, especially humanoid robotics design, always pays attention to user experience, human factors, and human perception. Because for robotics, moving is not enough. A robot can move, but that does not mean people understand it. A robot can complete an action, but that does not mean people trust it.</p>
-          <p>And this is also why humanoid robotics keeps trying to become more human-like. Even though uncanny valley was already proposed a long time ago, people are still trying to design robots that look more and more human. The reason is simple. Humans are most familiar with themselves. You may not be able to describe exactly how each part of the body moves, or what the exact movement limit is, but when you see movement, you immediately know whether it feels human or not.</p>
-          <p>But robots are still machines. Their systems are built for function, and their systems are fundamentally different from humans. Robots are electrically driven. Humans are biologically driven. Humans move with muscles, joints, tendons, and body coordination. Robots move with motors, actuators, controllers, and mechanical constraints. So even if a robot looks human, it still cannot move exactly like a human. And this creates the problem. When something looks human, people expect it to move like a human.</p>
-          <p>And this problem shows up especially clearly in robot arms and hands. Humans use their arms and hands constantly, and humans also watch arms and hands constantly. Upper-limb movement is visually present all the time. People spend a lot of time watching hands — hands reaching, turning, pointing, touching, holding, and grasping. So people are extremely familiar with hand and arm movement, including trajectory, speed, timing, and gesture. That is why even a very small unusual thing — like a trajectory that is too straight, movement that is too stiff, or motion that starts too suddenly — can immediately feel wrong.</p>
-          <h2>How Humans Understand Movement</h2>
-          <p>When people see something move, they immediately begin to judge what it is, whether it is alive, what it is trying to do, and whether it will affect them. So human perception of movement is not passive observation. It is a very active and very sensitive judgment system.</p>
-          <p>Humans are naturally very sensitive to movement because movement itself carries meaning. Humans do not only observe movement. Humans naturally try to interpret movement as intention. Even simple motion can be read as chasing, avoiding, hesitating, approaching, or threatening. This is important because it means robot movement is never just motion. Once something moves in front of a person, that movement is already being interpreted.</p>
-          <p>This is also why biological motion is so important. Humans are extremely sensitive to biological motion. Even if people only see a few moving points in darkness, they can still tell whether it is a person walking, running, reaching, or turning. This shows that humans do not need full form to understand movement. Humans can read movement patterns directly.</p>
-          <h2>Problem 1: The Body Part Looks Human, But Does Not Feel Human</h2>
-          <p>The first problem is when a robotic body part looks human, but does not feel human. For example, it has a palm, five fingers, finger joints, and maybe even skin-colored soft material. It looks like a hand. But when people get closer, they notice the surface is too smooth, too shiny, too cold, too hard, or too rubber-like.</p>
-          <p>This is what Poliakoff et al. (2018) discussed in their mismatch hypothesis. They showed that when an artificial body part gives some cues that look human, but other cues do not match human expectation, people can feel uneasy. It is not exactly fear. It is more like something feels wrong. And this is also why a fully mechanical industrial arm usually does not create the same reaction. It is clearly a machine. People do not expect it to feel human.</p>
-          <h2>Problem 2: Looks Human, But Does Not Move Human</h2>
-          <p>The second problem is more obvious. It already gives people the expectation that it is human-like, but when it moves, it does not move like a human.</p>
-          <p>Wu et al. (2024) showed exactly this point. More anthropomorphic robots can attract more attention, but they can also create more discomfort and uncanny feeling when their appearance and behavior do not match. A human does not simply raise an arm in a straight constant-speed line. Before movement starts, there is usually preparation. The eyes move first. The head may slightly turn. The shoulder adjusts. Then the shoulder joint leads the upper arm, the elbow follows to extend or bend, the wrist adjusts orientation, and the fingers prepare for the target. Human movement is not one joint moving. It is coordinated movement.</p>
-          <p>But many humanoid robots do not move like this. They start directly. The arm rises in a straight line at constant speed. There is no preparation, no natural coordination, and no gradual transition. So people do not feel like they are watching a human-like arm move. They feel like they are watching a machine execute a command.</p>
-          <h2>Problem 3: Movement Is Not Continuous</h2>
-          <p>The last problem is continuity. A lot of robot movement feels wrong not because the robot fails, but because the movement is not continuous. It starts too suddenly, stops too suddenly, changes speed too abruptly, or different joints move out of sync.</p>
-          <p>Human motion perception depends on continuity. Humans naturally connect what they saw one moment ago with what they see the next moment. So when movement is broken, people immediately feel it. From an engineering view, the robot may still complete the task. But from a human view, the movement feels unnatural, uncomfortable, and harder to trust.</p>
-          <h2>Conclusion</h2>
-          <p>When humanoid robotics make people feel strange, sometimes it is not because they are not advanced enough, not flexible enough, or not human-like enough. The key problem is often much simpler: they move the wrong way. The key is not only whether the robot can move, and not only whether it can complete the task. If a robot is meant to interact with humans, then movement must match human perception. Not only function, but matching. Not only movement, but movement that matches how humans naturally see, predict, and understand motion.</p>
-          <h2>References</h2>
-          <p class="pdoc-ref">Lu, Z.-L., &amp; Sperling, G. (2001). Three-systems theory of human visual motion perception: Review and update. Journal of the Optical Society of America A, 18(9), 2331–2370.</p>
-          <p class="pdoc-ref">Poliakoff, E., O'Kane, S., Carefoot, O., Kyberd, P., &amp; Gowen, E. (2018). Investigating the uncanny valley for prosthetic hands. Prosthetics and Orthotics International, 42(1), 21–27.</p>
-          <p class="pdoc-ref">Wu, J., Du, X., Liu, Y., Tang, W., &amp; Xue, C. (2024). How the degree of anthropomorphism of human-like robots affects users' perceptual and emotional processing: Evidence from an EEG study. Sensors, 24(15), 4809.</p>
-          <p class="pdoc-ref">Zaraki, A., et al. (2017). Design and evaluation of a unique social perception system for human–robot interaction. IEEE Transactions on Cognitive and Developmental Systems, 9(4), 341–355.</p>
+          <h2>Major Challenges Encountered</h2>
+          <p>Aircraft already have a lot of data. They collect information about aircraft systems, flight conditions, life support, and more. And the aircraft itself is already partly automated. But compared to all of that, there is much less data about the pilot. That is the core problem this project is trying to solve. Because the pilot's physical condition, breathing, heart rate, cognitive state, and workload all directly affect their decisions, and their decisions affect the entire flight. So, the question is: how do we make the pilot's own condition something that can also be seen, measured, and understood?</p>
+          <p>The team built a wearable biosensing garment, essentially a smart shirt or sports bra with embedded sensors that can measure ECG, heart rate, breathing, breathing depth, and movement. But getting there was not simple. They ran into three major challenges along the way.</p>
+          <h2>Challenge 1: Would it be part of the workflow?</h2>
+          <p>The first thing the team did was not run an experiment. The first thing they did was ask pilots whether they would be willing to wear the device. Would it interfere with the harness, the G-suit, the parachute, or the life support system? Who would manage the data? Who would hand out the device and download the data afterward? This matters because a product cannot exist on its own. It always must work together with real people, real tasks, and real environments. If it does not fit into the actual workflow, then even if the experiment works perfectly, it will still be very hard to use in the real world. That is why this step came first.</p>
+          <h2>Challenge 2: Does It Actually Measure Accurately?</h2>
+          <p>The second challenge was whether the device could collect reliable data. Just because a shirt has sensors does not mean the data is correct. Pilots are not sitting still. They are in high-G conditions, thermal chambers, centrifuges, and real flight environments. So, the team compared the data from the wearable against standard medical sensors — traditional ECG and breathing monitors — to see how well they matched. The overall results were good. But some sensors performed less reliably in certain conditions. That is an important finding, because it shows that not every instrument produces accurate data in every situation, and proving that the data is trustworthy is itself a major challenge.</p>
+          <h2>Challenge 3: Can the Data Actually Tell Us Something?</h2>
+          <p>The third challenge was whether this data could tell us if something was wrong with the pilot. The team did not start by immediately trying to detect danger. Instead, they first defined what different breathing patterns look like — what is normal breathing, what is shallow breathing, what is hyperventilation, and what is breath holding. Only after building that standard did they use it to interpret pilot state. This is an important logic. You cannot define the result first and then force the data to match it. You need a standard first, and then you use that standard to understand what the data is saying.</p>
+          <h2>HSI Pillars Covered</h2>
+          <h3>Human Factors Engineering</h3>
+          <p>The whole project is built around whether the device fits how pilots work. Not just whether it collects data, but whether it can exist inside the pilot's real environment without getting in the way. That is human factors engineering — does it fit the human, not just the task.</p>
+          <h3>Training</h3>
+          <p>Pilots need to learn how to wear it, maintain it, and understand what the alerts mean. That is a real training requirement.</p>
+          <h3>Health Hazards</h3>
+          <p>The point of this project is to monitor the pilot's physical condition — like breathing, heart rate, signs of hypoxia or fatigue — and catch a problem before it affects the flight. So, system safety and health hazard monitoring are basically what the shirt is for.</p>
+          <h3>Human Requirements</h3>
+          <p>First, it must be comfortable and not interfere with existing gear. Pilots already have a harness, G-suit, oxygen system. If this shirt causes any conflict with those, it simply will not get used.</p>
+          <p>Second, the whole data process needs to fit into the existing workflow. Who gives out the device, who downloads it afterward — if that is unclear or adds too many steps, it will not work in practice.</p>
+          <p>And the most important one: the pilot still must be the one making decisions. Right now, this system can send an alert, but it cannot tell you exactly what is wrong or what to do. The final call stays with the human.</p>
+          <h2>How This Relates to HSI Practices</h2>
+          <p>What I think is most important about this lecture is not just what the team built. It is how they approached building it.</p>
+          <p>They did not start with technology. They started with the people. Before they ran any experiments, they asked whether pilots would use the device and whether it could fit into the real environment. That is the most important step, and it is also the step that a lot of projects skip. A product cannot just work in a lab. It must work in the real world, with real people, in real conditions.</p>
+          <p>Then the next step was proving whether the product is useful, not just technically, but from the human side. Data is not automatically valuable. Just because a shirt can collect physiological signals does not mean those signals are telling us something real. The team had to validate the data against medical-grade sensors and prove the readings were reliable under real flight conditions.</p>
+          <p>And then the most important logic of all — if you want to use data to explain human state, you cannot define the result first and then force the data to match. You need to build a standard first — define what different signals mean — and then use that standard to interpret the data. That is what the team did when they defined different breathing patterns before trying to assess pilot condition. It is human centered. And that is why I think this project is one of the clearest examples of HSI in practice.</p>
         </div></div>
         <div class="paper-scroll-cap"></div>
         <div class="paper-frame-hint">scroll to read</div>
       </div>
       <div class="proj-info">
-        <span class="proj-num">Class Paper · HSE 323</span>
+        <span class="proj-num">Class Paper · HSE 225</span>
         <div>
-          <h3 class="proj-title">Humanoid Robot<br>Perception</h3>
-          <p class="proj-desc">Research paper examining why some robot upper-limb movements feel natural while others feel uncanny — exploring trust, predictability, and the gap between biological and mechanical motion.</p>
+          <h3 class="proj-title">Pilot Physiological<br>Monitoring</h3>
+          <p class="proj-desc">Analysis of a Honeywell biosensing garment for military pilots — evaluating ECG, heart rate, and breathing data accuracy under high-G conditions and workflow integration challenges.</p>
           <div class="proj-tags">
-            <span class="ptag">HRI</span>
-            <span class="ptag">Uncanny Valley</span>
-            <span class="ptag">Trust</span>
-            <span class="ptag">Motion Perception</span>
+            <span class="ptag">Biosensing</span>
+            <span class="ptag">ECG</span>
+            <span class="ptag">Aviation Safety</span>
+            <span class="ptag">HSI</span>
           </div>
         </div>
         <span class="proj-arrow">Research →</span>
       </div>
     </a>
 
-    <!-- AI Vision Assist Smart Glasses -->
-    <a class="proj-card" data-category="engineering" href="#" onclick="transitionTo('ai-glasses');return false">
-      <div class="proj-img"><img src="assets/glasses-front.jpg" alt="AI Vision Assist Smart Glasses" width="650" height="430" loading="lazy"></div>
+    <!-- GSEICE Brand & Visual Communication -->
+    <a class="proj-card" data-category="design" href="#" onclick="transitionTo('gseice-brand');return false">
+      <div class="proj-img"><img src="assets/gseice-logo-smartoo.jpg" alt="GSEICE brand identity and environmental graphics" width="800" height="534" loading="lazy"></div>
       <div class="proj-info">
-        <span class="proj-num">Class Project · Accessibility Tech</span>
+        <span class="proj-num">Industry Internship · GSEICE · Summer 2025</span>
         <div>
-          <h3 class="proj-title">AI Vision Assist<br>Smart Glasses</h3>
-          <p class="proj-desc">A Raspberry Pi-based wearable pairing ultrasonic obstacle detection with a camera and the ChatGPT API — translating the world into spoken guidance for visually impaired users.</p>
+          <h3 class="proj-title">GSEICE Brand &<br>Visual Communication</h3>
+          <p class="proj-desc">Logo design for two GSEICE product brands, an exhibition invitation for the Guangzhou Hotel Equipment and Supply Exhibition, and a bilingual environmental graphic wrapping the company's office wall.</p>
           <div class="proj-tags">
-            <span class="ptag">Raspberry Pi</span>
-            <span class="ptag">ChatGPT API</span>
-            <span class="ptag">Ultrasonic Sensing</span>
-            <span class="ptag">Accessibility</span>
+            <span class="ptag">Logo Design</span>
+            <span class="ptag">Brand Identity</span>
+            <span class="ptag">Environmental Graphics</span>
+            <span class="ptag">Adobe Photoshop</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Work →</span>
+      </div>
+    </a>
+
+    <!-- Wire-Driven Robotic Instrument -->
+    <a class="proj-card" data-category="interaction" href="#" onclick="transitionTo('robotic');return false">
+      <div class="proj-img"><img src="assets/robot-wide.jpg" alt="Robotic Instrument" width="1200" height="800" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Class Project · AME 494</span>
+        <div>
+          <h3 class="proj-title">Wire-Driven<br>Robotic Instrument</h3>
+          <p class="proj-desc">A five-finger mechanical hand that plucks guitar strings — 3D-printed joints, fishing line, and servo control tuned to the pentatonic scale.</p>
+          <div class="proj-tags">
+            <span class="ptag">Mechanical Design</span>
+            <span class="ptag">Arduino</span>
+            <span class="ptag">3D Printing</span>
+            <span class="ptag">Wire-Driven</span>
           </div>
         </div>
         <span class="proj-arrow">View Project →</span>
       </div>
     </a>
 
-    <!-- Hug Hug -->
-    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-hughug');return false">
-      <div class="proj-img"><img src="assets/arch-hughug-1.jpg" alt="Hug Hug" width="1525" height="571" loading="lazy"></div>
+    <!-- Behind Architecture -->
+    <a class="proj-card" data-category="design" href="#" onclick="transitionTo('behind-architecture');return false">
+      <div class="proj-img">
+        <video class="card-video" src="assets/digl-final-video.mp4" muted loop playsinline preload="metadata"></video>
+        <span class="play-badge">Watch</span>
+      </div>
       <div class="proj-info">
-        <span class="proj-num">Personal Work · Jun – Jul 2023</span>
+        <span class="proj-num">Class Project · DIGL 130</span>
         <div>
-          <h3 class="proj-title">Hug Hug</h3>
-          <p class="proj-desc">A sculptural study of the embrace — translating the invisible particle-motion of a hug into a woven 3D-printing-pen and wire structure built from spliced, multi-angle line groups.</p>
+          <h3 class="proj-title">Behind<br>Architecture</h3>
+          <p class="proj-desc">By showcasing the architectural modeling process, this video shows how I approach architectural design — the final piece is a presentation video for a villa.</p>
           <div class="proj-tags">
-            <span class="ptag">Form-Finding</span>
-            <span class="ptag">3D Printing Pen</span>
-            <span class="ptag">Wire Structure</span>
-            <span class="ptag">Model-Making</span>
+            <span class="ptag">Video Editing</span>
+            <span class="ptag">Motion Graphics</span>
+            <span class="ptag">Storytelling</span>
+            <span class="ptag">Revit</span>
           </div>
         </div>
-        <span class="proj-arrow">View Project →</span>
+        <span class="proj-arrow">Watch Film →</span>
       </div>
     </a>
 
-    <!-- City Villa -->
-    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-cityvilla');return false">
-      <div class="proj-img"><img src="assets/arch-cityvilla-3.jpg" alt="City Villa" width="1800" height="1275" loading="lazy"></div>
+    <!-- Studio & Visual Work -->
+    <a class="proj-card" data-category="design" href="#" onclick="transitionTo('studio-work');return false">
+      <div class="proj-img"><img src="assets/other-illustration-collage.jpg" alt="Studio & Visual Work" width="981" height="1290" loading="lazy"></div>
       <div class="proj-info">
-        <span class="proj-num">Personal Work · Jul – Sep 2023</span>
+        <span class="proj-num">Personal Work · 2023–2024</span>
         <div>
-          <h3 class="proj-title">City Villa</h3>
-          <p class="proj-desc">A speculative high-rise stacking private villa units — each keeping its own courtyard — vertically into the city center, so residents don't have to trade urban life for suburban land.</p>
+          <h3 class="proj-title">Studio &<br>Visual Work</h3>
+          <p class="proj-desc">Poster design, digital illustration, concept photography, and diagrammatic drawing made alongside and outside studio briefs — the same composition and storytelling instincts behind the architecture work.</p>
           <div class="proj-tags">
-            <span class="ptag">Housing Research</span>
-            <span class="ptag">Massing</span>
+            <span class="ptag">Graphic Design</span>
+            <span class="ptag">Poster Layout</span>
+            <span class="ptag">Digital Illustration</span>
+            <span class="ptag">Concept Photography</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View Work →</span>
+      </div>
+    </a>
+
+    <!-- Deep Fear Inspires Space -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-fear');return false">
+      <div class="proj-img"><img src="assets/arch-fear-1.jpg" alt="Deep Fear Inspires Space" width="1146" height="683" loading="lazy"></div>
+      <div class="proj-info">
+        <span class="proj-num">Personal Work · Jan – Feb 2024</span>
+        <div>
+          <h3 class="proj-title">Deep Fear<br>Inspires Space</h3>
+          <p class="proj-desc">An experiential installation built on virtual-focus photography theory — a black-cardboard, red-yarn model that strips away the visitor's sense of belonging to manufacture the unknown.</p>
+          <div class="proj-tags">
+            <span class="ptag">Photography Analysis</span>
             <span class="ptag">Model-Making</span>
-            <span class="ptag">Rendering</span>
+            <span class="ptag">Spatial Narrative</span>
+            <span class="ptag">Installation</span>
           </div>
         </div>
         <span class="proj-arrow">View Project →</span>
@@ -482,63 +543,41 @@
       </div>
     </a>
 
-    <!-- Deep Fear Inspires Space -->
-    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-fear');return false">
-      <div class="proj-img"><img src="assets/arch-fear-1.jpg" alt="Deep Fear Inspires Space" width="1146" height="683" loading="lazy"></div>
+    <!-- City Villa -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-cityvilla');return false">
+      <div class="proj-img"><img src="assets/arch-cityvilla-3.jpg" alt="City Villa" width="1800" height="1275" loading="lazy"></div>
       <div class="proj-info">
-        <span class="proj-num">Personal Work · Jan – Feb 2024</span>
+        <span class="proj-num">Personal Work · Jul – Sep 2023</span>
         <div>
-          <h3 class="proj-title">Deep Fear<br>Inspires Space</h3>
-          <p class="proj-desc">An experiential installation built on virtual-focus photography theory — a black-cardboard, red-yarn model that strips away the visitor's sense of belonging to manufacture the unknown.</p>
+          <h3 class="proj-title">City Villa</h3>
+          <p class="proj-desc">A speculative high-rise stacking private villa units — each keeping its own courtyard — vertically into the city center, so residents don't have to trade urban life for suburban land.</p>
           <div class="proj-tags">
-            <span class="ptag">Photography Analysis</span>
+            <span class="ptag">Housing Research</span>
+            <span class="ptag">Massing</span>
             <span class="ptag">Model-Making</span>
-            <span class="ptag">Spatial Narrative</span>
-            <span class="ptag">Installation</span>
+            <span class="ptag">Rendering</span>
           </div>
         </div>
         <span class="proj-arrow">View Project →</span>
       </div>
     </a>
 
-    <!-- Behind Architecture -->
-    <a class="proj-card" data-category="studio" href="#" onclick="transitionTo('behind-architecture');return false">
-      <div class="proj-img">
-        <video class="card-video" src="assets/digl-final-video.mp4" muted loop playsinline preload="metadata"></video>
-        <span class="play-badge">Watch</span>
-      </div>
+    <!-- Hug Hug -->
+    <a class="proj-card" data-category="architecture" href="#" onclick="transitionTo('arch-hughug');return false">
+      <div class="proj-img"><img src="assets/arch-hughug-1.jpg" alt="Hug Hug" width="1525" height="571" loading="lazy"></div>
       <div class="proj-info">
-        <span class="proj-num">Class Project · DIGL 130</span>
+        <span class="proj-num">Personal Work · Jun – Jul 2023</span>
         <div>
-          <h3 class="proj-title">Behind<br>Architecture</h3>
-          <p class="proj-desc">By showcasing the architectural modeling process, this video shows how I approach architectural design — the final piece is a presentation video for a villa.</p>
+          <h3 class="proj-title">Hug Hug</h3>
+          <p class="proj-desc">A sculptural study of the embrace — translating the invisible particle-motion of a hug into a woven 3D-printing-pen and wire structure built from spliced, multi-angle line groups.</p>
           <div class="proj-tags">
-            <span class="ptag">Video Editing</span>
-            <span class="ptag">Motion Graphics</span>
-            <span class="ptag">Storytelling</span>
-            <span class="ptag">Revit</span>
+            <span class="ptag">Form-Finding</span>
+            <span class="ptag">3D Printing Pen</span>
+            <span class="ptag">Wire Structure</span>
+            <span class="ptag">Model-Making</span>
           </div>
         </div>
-        <span class="proj-arrow">Watch Film →</span>
-      </div>
-    </a>
-
-    <!-- Studio & Visual Work -->
-    <a class="proj-card" data-category="studio" href="#" onclick="transitionTo('studio-work');return false">
-      <div class="proj-img"><img src="assets/other-illustration-collage.jpg" alt="Studio & Visual Work" width="981" height="1290" loading="lazy"></div>
-      <div class="proj-info">
-        <span class="proj-num">Personal Work · 2023–2024</span>
-        <div>
-          <h3 class="proj-title">Studio &<br>Visual Work</h3>
-          <p class="proj-desc">Poster design, digital illustration, concept photography, and diagrammatic drawing made alongside and outside studio briefs — the same composition and storytelling instincts behind the architecture work.</p>
-          <div class="proj-tags">
-            <span class="ptag">Graphic Design</span>
-            <span class="ptag">Poster Layout</span>
-            <span class="ptag">Digital Illustration</span>
-            <span class="ptag">Concept Photography</span>
-          </div>
-        </div>
-        <span class="proj-arrow">View Work →</span>
+        <span class="proj-arrow">View Project →</span>
       </div>
     </a>
 
@@ -575,6 +614,92 @@
       <div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div>
       <span class="ft-n">Xiaoxi Wang</span>
     </div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL: Honeywell-Sponsored Research -->
+<div id="honeywell-medical" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Honeywell-Sponsored — UX Research</p>
+      <h1 class="dh-title">Preventing<br>On-Duty Medical Events</h1>
+      <p class="dh-desc">An ongoing Honeywell-sponsored project on catching fatigue and stress before they turn into an on-duty medical event. I led customer discovery across four high-risk roles: pilots, firefighters, ER nurses, and ER physicians.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">Fall 2026 · Ongoing</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Honeywell-Sponsored · Team Project</p></div>
+        <div><p class="dm-k">My Role</p><p class="dm-v">Customer Discovery Lead</p></div>
+        <div><p class="dm-k">Tools</p><p class="dm-v">Miro/FigJam · Dovetail · Figma</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/honeywell-journey-overall.jpg" alt="Emotional journey map, cross-role overview" class="lightbox-trigger" width="2400" height="1648" loading="lazy"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Process — Ongoing</span>
+    <div class="flow-timeline">
+      <div class="flow-step">
+        <div class="flow-node">01</div>
+        <p class="flow-title">Desk Research</p>
+        <p class="flow-desc">Reviewed occupational stress literature in aviation, firefighting, and EMS to frame the interview questions.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">02</div>
+        <p class="flow-title">Interview Question Design</p>
+        <p class="flow-desc">Designed 12 questions with built-in follow-ups, each mapped to one of 8 assumptions from the desk research.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">03</div>
+        <p class="flow-title">Interviews &amp; Coding</p>
+        <p class="flow-desc">Ran 10 interviews, then coded the transcripts for recurring patterns and pain points.</p>
+      </div>
+      <div class="flow-step is-current">
+        <div class="flow-node">04</div>
+        <p class="flow-title">Journey Mapping</p>
+        <p class="flow-desc">Mapped energy level and pain points by role, then compared the three maps and found two mechanisms: call-volume-driven fatigue in ER and firefighting, and concealment — hiding your real state — running across all three roles.</p>
+        <span class="flow-badge">Just Completed</span>
+        <div class="synth-compare">
+          <div class="synth-col synth-col-roles">
+            <div class="pc" style="aspect-ratio:2600/577"><img src="assets/honeywell-journey-pilots.jpg" alt="Emotional journey map, pilots" class="lightbox-trigger" width="2600" height="577" loading="lazy"><div class="pc-cap">Pilots — lowest at takeoff &amp; landing</div></div>
+            <div class="pc" style="aspect-ratio:2600/1050"><img src="assets/honeywell-journey-er.jpg" alt="Emotional journey map, ER nurses and physicians" class="lightbox-trigger" width="2600" height="1050" loading="lazy"><div class="pc-cap">ER — charting hurts more than the peak</div></div>
+            <div class="pc" style="aspect-ratio:2600/744"><img src="assets/honeywell-journey-firefighter.jpg" alt="Emotional journey map, firefighters" class="lightbox-trigger" width="2600" height="744" loading="lazy"><div class="pc-cap">Firefighters — "rest" is the real low point</div></div>
+          </div>
+          <div class="synth-arrow-h">
+            <svg class="synth-merge-icon" viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 8 C 34 8, 34 30, 46 30" stroke="rgba(107,140,186,0.35)" stroke-width="1.5"/>
+              <path d="M2 30 L 46 30" stroke="rgba(107,140,186,0.35)" stroke-width="1.5"/>
+              <path d="M2 52 C 34 52, 34 30, 46 30" stroke="rgba(107,140,186,0.35)" stroke-width="1.5"/>
+              <path d="M46 30 L 78 30" stroke="#6b8cba" stroke-width="1.8"/>
+              <path d="M70 22 L 78 30 L 70 38" stroke="#6b8cba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <p class="synth-arrow-note">Finding patterns and connections across these three roles</p>
+          </div>
+          <div class="synth-col synth-col-overall">
+            <div class="pc" style="aspect-ratio:2400/1648"><img src="assets/honeywell-journey-overall.jpg" alt="Emotional journey map, cross-role overview" class="lightbox-trigger" width="2400" height="1648" loading="lazy"><div class="pc-cap">Cross-role synthesis, built from the three maps</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-ongoing">
+        <span class="flow-live-dot"></span>
+        <span class="flow-ongoing-text">Project Ongoing</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Skills</span><span class="sv">Customer Discovery · Interview Design · Qualitative Coding · Journey Mapping</span></div>
+      <div class="sr"><span class="sk2">Methods</span><span class="sv">Semi-Structured Interviews · Open Coding · Cross-Role Comparison</span></div>
+      <div class="sr"><span class="sk2">Tools</span><span class="sv">Miro/FigJam · Dovetail · Figma</span></div>
+      <div class="sr"><span class="sk2">Sponsor</span><span class="sv">Honeywell</span></div>
+      <div class="sr"><span class="sk2">Status</span><span class="sv">Ongoing — Fall 2026</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
     <span class="ft-r">Engineering the Human Experience</span>
   </footer>
 </div>
@@ -809,6 +934,65 @@
       <div class="sr"><span class="sk2">GSR</span><span class="sv">Shimmer GSR+ — electrodermal activity</span></div>
       <div class="sr"><span class="sk2">ECG</span><span class="sv">Shimmer ECG — heart rate + HRV</span></div>
       <div class="sr"><span class="sk2">Analysis</span><span class="sv">ANOVA · Linear Regression</span></div>
+    </div>
+  </div>
+  <div class="paper-outer">
+    <div class="paper-header">
+      <span class="paper-eyebrow">Research Proposal — BELIV Lab</span>
+      <h2 class="paper-title">Match and Mismatch Between<br>Perceived Safety and System Assessment</h2>
+      <div class="paper-meta">
+        <span>Lab · BELIV Lab</span>
+        <span>Institution · Arizona State University</span>
+        <span>Type · Research Proposal</span>
+        <span>Focus · Autonomous Driving Trust</span>
+      </div>
+    </div>
+    <div class="paper-body">
+    <div class="paper-sec">
+      <h2 class="paper-h">1. Research Question and Hypotheses</h2>
+      <p class="paper-p">What factors drive matches and mismatches between human perceived safety and autonomous vehicle safety assessments, and what insights can these alignments and gaps provide for AV system design?</p>
+      <p class="paper-p"><strong>Hypothesis 1.</strong> When a real safety hazard exists, humans can accurately perceive and judge the risk, while the autonomous vehicle system may fail to detect it. Humans may identify risks through specific environmental cues, visual information, or contextual reasoning that the current system may not capture.</p>
+      <p class="paper-p"><strong>Hypothesis 2.</strong> When a real safety hazard exists, the autonomous system can correctly identify the risk, but humans may fail to perceive it, misjudge it, or experience attention blind spots. This situation may result from limitations in human perception or may be caused by insufficient or unclear information delivery through vehicles' HMI.</p>
+      <p class="paper-p"><strong>Hypothesis 3.</strong> When no actual safety hazard exists, humans can correctly judge the situation as safe, while the system may falsely detect a risk. Humans may rule out false dangers by integrating comprehensive contextual information, which the system may learn from to reduce false alarms and unnecessary disturbance to users.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">2. Literature Review</h2>
+      <p class="paper-p">From an engineering perspective, existing research has proposed different safety evaluation methods for autonomous driving. Wishart et al. (2025) proposed a scenario-level evaluation method based on dynamic driving tasks, allowing the system to generate quantifiable safety metrics across different driving scenarios. Wishart et al. (2023) further proposed a safety case framework for automated vehicles from the perspectives of system design and scenario-based testing. Together, these studies provide an important engineering baseline for evaluating autonomous driving safety.</p>
+      <p class="paper-p">From a human perspective, existing research shows that users' risk perception and trust in autonomous driving systems can be examined through behavioral responses, physiological signals, and multimodal data. He et al. (2022) showed that human judgments of traffic risk can be predicted through visual features. Based on this, in addition to traditional interviews and surveys, multimodal methods such as eye-tracking, electrodermal activity, real-time voice responses, and button-based feedback recording (Deng et al., 2024) can help researchers better understand user states and cognitive load.</p>
+      <p class="paper-p">A key issue in autonomous driving research is that engineering safety does not always align with passengers' perceived safety. Current autonomous systems mainly rely on objective indicators such as following distance, speed, acceleration, and obstacle detection, but these measures may not fully reflect passengers' subjective experience and physiological responses during the ride. As Endsley (2017) pointed out, even as systems become increasingly automated, humans cannot simply be removed; instead, they take on the roles of supervisors, monitors, and interveners.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">3. Research Plan and Methods</h2>
+      <p class="paper-p">This study uses driving simulation experiments to collect data on safety judgments made by human passengers and autonomous vehicle (AV) systems in the same scenarios.</p>
+      <span class="paper-sub">3.1 Engineering Safety Assessment</span>
+      <p class="paper-p">Based on existing engineering safety assessment methods, autonomous driving scenarios will be used to analyze system safety. For each scenario, the AV system will generate safety assessment results, and objective indicators such as following distance, relative speed, obstacle detection, and overall vehicle condition will be recorded.</p>
+      <span class="paper-sub">3.2 Passenger Subjective Experience and Multimodal Data Collection</span>
+      <p class="paper-p">While participants experience the ride as passengers, multimodal data will be collected. Eye-tracking will record visual attention, gaze shifts, and pupil changes. A skin conductance device will capture changes in tension levels. The experiment will also be video recorded to document behavioral responses and facial expressions. Some participants will use a real-time feedback button to indicate when they feel unsafe.</p>
+      <span class="paper-sub">3.3 Scenario Alignment and Matching Analysis</span>
+      <p class="paper-p">After data collection, physiological signals, behavioral observations, and subjective feedback will be aligned with the vehicle's safety assessment outputs and actual driving events. Matching and mismatching patterns among system judgments, passenger perceptions, and real driving conditions will then be examined.</p>
+      <span class="paper-sub">3.4 Mismatch Analysis and Integrated Evaluation Approach</span>
+      <p class="paper-p">Based on the alignment results, this study will further examine the causes of matching and mismatching cases. It will explore which scenario characteristics, system behaviors, or passenger response patterns are more likely to lead to agreement or disagreement between system assessment and human perception.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">4. Fulton Research Theme</h2>
+      <p class="paper-p">This study belongs to the Data research theme within the Fulton Schools. This study integrates multimodal data and system outputs to explore how these data can be analyzed and utilized to understand differences between users and systems. This study reflects the application of data-driven approaches in intelligent systems and human factors engineering.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Timeline &amp; Budget</h2>
+      <p class="paper-p">Week 1–3 — literature review and equipment learning. Week 4–7 — experiment design and pilot study. Week 8–10 — data collection. Week 11–12 — data analysis. Week 13–14 — result organization. Week 15 — final report.</p>
+      <p class="paper-p">Experimental equipment and materials: $250 &nbsp;·&nbsp; Participant compensation: $80 &nbsp;·&nbsp; Other materials: $70 &nbsp;·&nbsp; <strong>Total: $400</strong>.</p>
+    </div>
+    <div class="paper-sec">
+      <h2 class="paper-h">Personal Statement</h2>
+      <p class="paper-p">I am currently pursuing a degree in Human Systems Engineering at Arizona State University, where I have developed a strong interest in automotive driving, autonomous systems, and human-computer interaction. I have always believed that human factors and technology should not be separated but should work together. No matter how advanced a product is, it is ultimately designed for people. Therefore, how people understand a system, how they feel about it, and whether they trust it are all essential.</p>
+      <p class="paper-p">My interest in autonomous driving comes from its close connection to everyday life. Transportation affects almost everyone, and driving is a high-frequency activity for most people. Autonomous driving has the potential to change how people live, but not everyone fully accepts or uses it yet. I believe one important reason is that engineering safety alone is not enough. Even if a system performs well according to technical standards, users may still feel uncertain or uncomfortable if they do not understand it.</p>
+      <span class="paper-sub">References</span>
+      <p class="paper-ref">Wishart et al. (2025). Dynamic driving task assessment scores for scenarios navigated by an OEM ADS-equipped vehicle. SAE Technical Paper.</p>
+      <p class="paper-ref">Wishart et al. (2023). A proposed safety case framework for automated vehicles. IEEE International Automated Vehicle Validation Conference.</p>
+      <p class="paper-ref">He, X., et al. (2022). Modeling perceived risk and trust in automated driving. Transportation Research Part F.</p>
+      <p class="paper-ref">Deng, Z., et al. (2024). Voice-based detection of trust in human–automation interaction. International Journal of Human-Computer Studies.</p>
+      <p class="paper-ref">Endsley, M. R. (2017). From here to autonomy. Human Factors, 59(1), 5–27.</p>
+    </div>
     </div>
   </div>
   <footer><div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div><span class="ft-r">Engineering the Human Experience</span></footer>
@@ -1527,18 +1711,13 @@
 
   <div class="dsec">
     <span class="dsec-lbl">Photography Analysis</span>
-    <div class="step-grid">
-      <div class="step"><div class="sn">01</div><p class="st">Virtual vs. Real Focus</p><p class="sd">The real focus is the assumed center of the frame; the visitor becomes a virtual focus, off to the side, uncertain of where they stand.</p></div>
-      <div class="step"><div class="sn">02</div><p class="st">Before / After</p><p class="sd">Before entering, the space reads as one complete, huge, unknown building. After entering, that unknown collapses — so the design has to work to preserve the fear.</p></div>
-      <div class="step"><div class="sn">03</div><p class="st">Color Extraction</p><p class="sd">Extracting color from two reference photographs showed that a small amount of bright color inside a large field of dark color triggers a sense of the unknown.</p></div>
-      <div class="step"><div class="sn">04</div><p class="st">Domain Line</p><p class="sd">A short, sharply transitional space compresses the experience of crossing from known to unknown into just a few seconds.</p></div>
+    <div class="photo-grid pg-2" style="grid-template-rows:auto">
+      <div class="pc" style="aspect-ratio:1225/544"><img src="assets/arch-fear-3.jpg" alt="Reference photography, lone figure approaching a building at night" class="lightbox-trigger" width="1225" height="544" loading="lazy"><div class="pc-cap">Photography — reference image, real focus</div></div>
+      <div class="pc" style="aspect-ratio:954/427"><img src="assets/arch-fear-analysis.jpg" alt="Analysis image, figure beside draped curtains in a dim hallway" class="lightbox-trigger" width="954" height="427" loading="lazy"><div class="pc-cap">Analysis — figure as virtual focus</div></div>
     </div>
-    <div class="photo-grid pg-2" style="margin-top:1.5rem">
-      <div class="pc"><img src="assets/arch-fear-3.jpg" alt="Reference photography, lone figure approaching a building at night" class="lightbox-trigger" width="1225" height="544" loading="lazy"><div class="pc-cap">Photography — reference image, real focus</div></div>
-      <div class="pc"><img src="assets/arch-fear-analysis.jpg" alt="Analysis image, figure beside draped curtains in a dim hallway" class="lightbox-trigger" width="954" height="430" loading="lazy"><div class="pc-cap">Analysis — figure as virtual focus</div></div>
-    </div>
-    <div class="photo-grid pg-full" style="margin-top:1.5rem">
-      <div class="pc" style="max-width:820px;aspect-ratio:1400/340"><img src="assets/arch-fear-focus-reject.jpg" alt="Focus and reject comparison, 3D grid analysis of the reference photographs" class="lightbox-trigger" width="1400" height="340" loading="lazy"><div class="pc-cap">Focus (kept) vs. reject — 3D grid analysis of the two photographs</div></div>
+    <p class="tl-text" style="max-width:580px;margin-top:2.5rem">Reducing the two photographs above to a coarse 3D color grid makes the pattern explicit: a concentrated dark field around one small bright accent reads as focus (left); the same brightness scattered toward the edge reads as reject (right).</p>
+    <div class="photo-grid pg-full" style="margin-top:1rem">
+      <div class="pc" style="width:100%;max-width:none;aspect-ratio:1400/311"><img src="assets/arch-fear-focus-reject.jpg" alt="Focus and reject comparison, 3D grid analysis of the reference photographs" class="lightbox-trigger" width="1400" height="311" loading="lazy"><div class="pc-cap">Focus (kept) vs. reject — 3D grid analysis of the two photographs</div></div>
     </div>
   </div>
 
@@ -1729,7 +1908,68 @@
     <p class="tl-text" style="max-width:580px">Two photographs, read purely for composition: each pushes its real subject dead-center and sharp while a pale, soft-edged figure drifts off to the side, competing for the same frame. Indoors, a single band of warm light cuts between two heavy drapes, the only saturated color in an otherwise blue-black hallway. Reduced to swatches, both frames resolve to the same formula — a wide field of near-black, one cool accent, one warm accent, the same balance later carried into the red yarn against black cardboard of the final model. In both, the crossing from outside to in happens inside a sliver of space no wider than a doorway.</p>
     <div class="photo-grid pg-full" style="margin-top:1.5rem">
       <div class="pc" style="max-width:820px;aspect-ratio:1225/544"><img src="assets/arch-fear-3.jpg" alt="Reference photography, lone figure approaching a building at night" class="lightbox-trigger" width="1225" height="544" loading="lazy"><div class="pc-cap">Photography — reference image, real focus</div></div>
-      <div class="pc" style="max-width:820px;aspect-ratio:954/430"><img src="assets/arch-fear-analysis.jpg" alt="Analysis image, figure beside draped curtains in a dim hallway" class="lightbox-trigger" width="954" height="430" loading="lazy"><div class="pc-cap">Analysis — figure as virtual focus</div></div>
+      <div class="pc" style="max-width:820px;aspect-ratio:954/427"><img src="assets/arch-fear-analysis.jpg" alt="Analysis image, figure beside draped curtains in a dim hallway" class="lightbox-trigger" width="954" height="427" loading="lazy"><div class="pc-cap">Analysis — figure as virtual focus</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-l"><div class="ft-logo"><img src="assets/logo.png" alt="XW" width="491" height="491" loading="lazy"></div><span class="ft-n">Xiaoxi Wang</span></div>
+    <span class="ft-r">Engineering the Human Experience</span>
+  </footer>
+</div>
+
+<!-- PROJECT DETAIL: GSEICE Brand & Visual Communication -->
+<div id="gseice-brand" class="page">
+  <div class="back"><a href="#" onclick="transitionTo('home');return false">← Back to Work</a></div>
+  <div class="dh">
+    <div class="dh-l">
+      <p class="dh-eyebrow">Project · Industry Internship — Brand &amp; Visual Design</p>
+      <h1 class="dh-title">GSEICE Brand &<br>Visual Communication</h1>
+      <p class="dh-desc">Alongside interaction design work, I designed brand and environmental graphics for GSEICE — two product logos, an exhibition invitation, and a bilingual office wall graphic — covering the range of visual communication a manufacturing company needs beyond the product itself.</p>
+      <div class="dh-meta">
+        <div><p class="dm-k">Duration</p><p class="dm-v">May – Aug 2025</p></div>
+        <div><p class="dm-k">Type</p><p class="dm-v">Industry Internship · GSEICE</p></div>
+        <div><p class="dm-k">Tools</p><p class="dm-v">Figma · Adobe Photoshop</p></div>
+        <div><p class="dm-k">Deliverables</p><p class="dm-v">Logo · Poster · Environmental Graphic</p></div>
+      </div>
+    </div>
+    <div class="dh-r"><img src="assets/gseice-logo-smartoo.jpg" alt="smartoo logo design" width="800" height="534" loading="lazy" style="object-fit:contain;background:var(--bg)"></div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Logo Design — MQ &amp; smartoo — click to expand</span>
+    <p class="tl-text" style="max-width:580px">Two marks for two GSEICE product lines: MQ (茂青电气 / Maoqing Electric) pairs a monogram of the two initials with a continuous ribbon looping through both letters, rendered in a green gradient; smartoo takes a bolder, industrial wordmark in navy, anchored by a light-blue bracket built for packaging and signage use.</p>
+    <div class="photo-grid pg-2">
+      <div class="pc tall"><img src="assets/gseice-logo-mq.jpg" alt="MQ, Maoqing Electric logo design" class="lightbox-trigger" width="800" height="800" loading="lazy"><div class="pc-cap">MQ / Maoqing Electric — monogram + ribbon motif</div></div>
+      <div class="pc tall"><img src="assets/gseice-logo-smartoo.jpg" alt="smartoo logo design" class="lightbox-trigger" width="800" height="534" loading="lazy"><div class="pc-cap">smartoo — wordmark + bracket motif</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Exhibition Collateral — click to expand</span>
+    <p class="tl-text" style="max-width:580px">An invitation for the 31st Guangzhou Hotel Equipment and Supply Exhibition — laying out the show dates, hall and booth number, and contact information beneath the MQ / Maoqing Electric identity, for the company's booth at the Canton Fair Complex.</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="aspect-ratio:558/1000"><img src="assets/gseice-poster-exhibition.jpg" alt="31st Guangzhou Hotel Equipment and Supply Exhibition, invitation poster" class="lightbox-trigger" width="558" height="1000" loading="lazy"><div class="pc-cap">31st Guangzhou Hotel Equipment &amp; Supply Exhibition — invitation, Dec 2025</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Environmental Graphics — Office Culture Wall — click to expand</span>
+    <p class="tl-text" style="max-width:580px">A bilingual wall graphic for the GSEICE office — six vertical panels pairing a Chinese company motto with its English translation, each one broken by a contour line and paired with a minimal silhouette (a climber, a cyclist) instead of a literal illustration of the words.</p>
+    <div class="photo-grid pg-2">
+      <div class="pc"><img src="assets/gseice-wall-culture-1.jpg" alt="GSEICE office culture wall, full view" class="lightbox-trigger" width="1707" height="1280" loading="lazy"><div class="pc-cap">Office culture wall — full view</div></div>
+      <div class="pc"><img src="assets/gseice-wall-culture-2.jpg" alt="GSEICE office culture wall, alternate angle" class="lightbox-trigger" width="1702" height="1276" loading="lazy"><div class="pc-cap">Office culture wall — alternate angle</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Specifications</span>
+    <div class="spec-table">
+      <div class="sr"><span class="sk2">Deliverables</span><span class="sv">2 product logos · 1 exhibition poster · 1 environmental graphic</span></div>
+      <div class="sr"><span class="sk2">Brands</span><span class="sv">MQ / Maoqing Electric · smartoo</span></div>
+      <div class="sr"><span class="sk2">Company</span><span class="sv">GSEICE</span></div>
+      <div class="sr"><span class="sk2">Tools</span><span class="sv">Figma, Adobe Photoshop</span></div>
+      <div class="sr"><span class="sk2">Duration</span><span class="sv">May 2025 – Aug 2025</span></div>
     </div>
   </div>
 

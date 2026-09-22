@@ -499,6 +499,76 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
 .step:hover .sn{color:var(--blue-line)}
 .st{font-size:0.9rem;font-weight:400;margin-bottom:0.5rem}
 .sd{font-size:0.88rem;line-height:1.65;color:var(--body);font-weight:300}
+
+/* FLOW TIMELINE — ongoing multi-stage process, vertical so artifacts can sit inside each step */
+.flow-timeline{display:flex;flex-direction:column;padding-top:0.5rem}
+.flow-step{position:relative;padding:0 0 2.6rem 2.5rem}
+.flow-step:last-child{padding-bottom:0}
+.flow-node{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Mono',monospace;font-size:0.8rem;
+  border:1px solid var(--blue-line);color:var(--blue);
+  background:var(--bg);position:absolute;left:0;top:0;z-index:2;
+}
+.flow-step::after{
+  content:'';position:absolute;top:40px;left:19px;bottom:0;
+  width:1px;background:var(--blue-line);z-index:1;
+}
+.flow-step:last-child::after{display:none}
+.flow-step.is-current .flow-node{
+  border-color:var(--blue);color:var(--white);background:var(--blue-dim);
+  animation:flowPulse 2s ease-in-out infinite;
+}
+.flow-step.is-current::after{background-image:repeating-linear-gradient(180deg,var(--blue-line) 0 6px,transparent 6px 12px);background-color:transparent}
+.flow-step.is-upcoming .flow-node{color:var(--muted);border-color:var(--border2)}
+.flow-step.is-upcoming .flow-title{color:var(--body)}
+.flow-step.is-upcoming::after{background-image:repeating-linear-gradient(180deg,var(--border2) 0 6px,transparent 6px 12px);background-color:transparent}
+.flow-title{font-size:0.95rem;font-weight:400;margin-bottom:0.5rem;color:var(--white)}
+.flow-desc{font-size:0.88rem;line-height:1.65;color:var(--body);font-weight:300;max-width:560px}
+.flow-badge{
+  display:inline-block;margin-top:0.7rem;padding:0.22rem 0.65rem;
+  font-family:'DM Mono',monospace;font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--blue);border:1px solid var(--blue-line);border-radius:20px;
+}
+.flow-badge.is-muted{color:var(--muted);border-color:var(--border2)}
+.flow-step .photo-grid{margin-top:1.6rem}
+.synth-compare{display:flex;align-items:center;gap:1rem;margin-top:1.6rem}
+.synth-col{display:flex;flex-direction:column;gap:0.8rem;min-width:0}
+.synth-col .pc{width:100%}
+.synth-col-roles{flex:0 1 483px;max-width:483px}
+.synth-col-overall{flex:0 1 713px;max-width:713px}
+.synth-arrow-h{flex:0 1 260px;display:flex;flex-direction:column;align-items:center;gap:0.9rem;padding:0 0.5rem;text-align:center}
+.synth-merge-icon{width:80px;height:auto;flex-shrink:0}
+.synth-arrow-note{font-size:0.68rem;line-height:1.5;color:var(--muted);max-width:320px;white-space:nowrap}
+@media (max-width:900px){
+  .synth-compare{flex-direction:column}
+  .synth-merge-icon{width:60px;transform:rotate(90deg)}
+  .synth-arrow-note{white-space:normal;max-width:260px}
+  .synth-col-roles,.synth-col-overall{width:100%;max-width:620px}
+}
+@keyframes flowPulse{0%,100%{box-shadow:0 0 0 0 rgba(107,140,186,0.35)}50%{box-shadow:0 0 0 6px rgba(107,140,186,0)}}
+.flow-ongoing{position:relative;padding:0.6rem 0 3.5rem 2.5rem;display:flex;align-items:center;gap:0.7rem}
+.flow-ongoing::before{
+  content:'';position:absolute;left:19px;top:0;bottom:0;width:1px;
+  background:linear-gradient(180deg,var(--blue-line),transparent);
+}
+.flow-ongoing-text{
+  font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--blue);font-weight:600;
+}
+.flow-live-dot{
+  position:relative;width:9px;height:9px;border-radius:50%;background:var(--blue);flex-shrink:0;
+}
+.flow-live-dot::after{
+  content:'';position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--blue);
+  animation:flowLivePulse 1.8s ease-out infinite;
+}
+@keyframes flowLivePulse{
+  0%{transform:scale(0.6);opacity:0.9}
+  100%{transform:scale(1.8);opacity:0}
+}
+
 .penta-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1.5rem}
 .pn{background:var(--bg);padding:1.5rem 1rem;text-align:center;transition:background 0.2s}
 .pn:hover{background:var(--surface)}
