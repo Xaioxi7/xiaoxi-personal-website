@@ -1405,21 +1405,33 @@
         <div><p class="dm-k">Deliverable</p><p class="dm-v">End-to-End Screen Flow</p></div>
       </div>
     </div>
-    <div class="dh-r"><img src="assets/gseice-hero-icecream-dark.jpg" alt="Self-Serve Ice Cream Machine, Step 1–3 screen sequence" width="1600" height="837" loading="lazy"></div>
+    <div class="dh-r"><img src="assets/gseice-pdf-hero.jpg" alt="Self-Serve Ice Cream Machine, annotated product photo — UI touchscreen, proximity sensor, camera, height-adjustable cup holder" width="1300" height="1356" loading="lazy" style="object-fit:contain;background:var(--bg)"></div>
   </div>
 
   <div class="dsec">
-    <span class="dsec-lbl">Interaction Flow — Six-Step Journey — click to expand</span>
-    <p class="tl-text" style="max-width:580px">The full experience breaks into six stages — Welcome Carousel, Touch to Start, Container Detection, Price &amp; Payment, Cooling &amp; Prep, and Complete &amp; Dispense — each one triggered by a specific customer action (touching the screen, placing a cup, scanning to pay) and each with its own set of on-screen prompts and recovery states.</p>
+    <span class="dsec-lbl">The Design Challenge</span>
+    <p class="tl-text" style="max-width:580px">One machine needs to support different containers, two service models, and users who do not always follow the same sequence. Type and size connect each cup or cone to the right portion and price — from there, the same recognition system branches into two service models.</p>
+    <div class="photo-grid pg-2" style="grid-template-rows:auto">
+      <div class="pc"><img src="assets/gseice-pdf-machine-payment-scene.jpg" alt="Machine payment — self-service kiosk with card and QR payment, mall setting" class="lightbox-trigger" width="752" height="416" loading="lazy"><div class="pc-cap">01 — Machine payment: customers pick up a cup or cone and pay on the touchscreen</div></div>
+      <div class="pc"><img src="assets/gseice-pdf-external-payment-scene.jpg" alt="External payment — staff handing a customer a cone at a retail counter" class="lightbox-trigger" width="752" height="416" loading="lazy"><div class="pc-cap">02 — External payment: staff take payment at the counter and hand over a cup or cone, no second payment</div></div>
+    </div>
+  </div>
+
+  <div class="dsec">
+    <span class="dsec-lbl">Interaction Decomposition — Six-Step Journey — click to expand</span>
+    <p class="tl-text" style="max-width:580px">The full experience breaks into six stages, split into two halves — Steps 1–3 (placement &amp; recognition) and Steps 4–6 (payment &amp; collection) — from the idle welcome carousel through container detection, price &amp; payment, cooling &amp; prep, and complete &amp; dispense, each with its own set of on-screen prompts and recovery states.</p>
     <div class="photo-grid pg-full">
-      <div class="pc" style="aspect-ratio:677/2200"><img src="assets/gseice-flow-overview.jpg" alt="Six-step interaction decomposition, welcome carousel to dispensing" class="lightbox-trigger" width="677" height="2200" loading="lazy"><div class="pc-cap">Six-step decomposition — from welcome carousel to dispensing</div></div>
+      <div class="pc" style="max-width:900px;aspect-ratio:1186/1118"><img src="assets/gseice-pdf-decomposition.jpg" alt="Six-step interaction decomposition, placement and recognition (1-3), payment and collection (4-6)" class="lightbox-trigger" width="1186" height="1118" loading="lazy"><div class="pc-cap">Steps 1–3 placement &amp; recognition · Steps 4–6 payment &amp; collection</div></div>
     </div>
   </div>
 
   <div class="dsec">
     <span class="dsec-lbl">When People Don't Follow the Expected Sequence</span>
-    <p class="tl-text" style="max-width:580px">The six-step journey above splits into two halves — Steps 1–3 (placement &amp; recognition) and Steps 4–6 (payment &amp; collection) — but real customers rarely move through it in a clean line. Six recurring scenarios drove the recovery-state design:</p>
-    <div class="step-grid step-grid-3">
+    <p class="tl-text" style="max-width:580px">The six-step journey above assumes a clean line, but real customers rarely move through it that way. Six recurring scenarios drove the recovery-state design:</p>
+    <div class="photo-grid pg-full">
+      <div class="pc" style="max-width:820px;aspect-ratio:983/1052"><img src="assets/gseice-pdf-scenarios-af.jpg" alt="Six illustrated customer scenarios: already placed, not centred, someone else's cup, change of mind, unexplained wait, fault that needs help" class="lightbox-trigger" width="983" height="1052" loading="lazy"><div class="pc-cap">A–F — customer scenarios that drove the recovery-state design</div></div>
+    </div>
+    <div class="step-grid step-grid-3" style="margin-top:1.5rem">
       <div class="step"><div class="sn">A</div><p class="st">Already placed</p><p class="sd">A touch wakes the screen and triggers a scan, so a cup placed early is not missed.</p></div>
       <div class="step"><div class="sn">B</div><p class="st">Not quite centred</p><p class="sd">Show how to reposition the cup. Keep dispensing blocked until it is aligned.</p></div>
       <div class="step"><div class="sn">C</div><p class="st">Someone else's cup</p><p class="sd">Wait for the previous cup to be removed before accepting another order.</p></div>
@@ -1433,7 +1445,7 @@
     <span class="dsec-lbl">Final Interaction Flow — Machine Payment — click to expand</span>
     <p class="tl-text" style="max-width:580px">Recognize the cup or cone, show its price, then confirm payment — production starts only after payment succeeds. An admin and a user branch off the same idle state, camera-based container detection returns one of three results (correct, corrected, or fault), and a scan-to-pay screen — supporting Quick Pay, WeChat Pay, and Alipay — gates dispensing, with dedicated recovery screens for a failed scan or a misplaced container.</p>
     <div class="photo-grid pg-full">
-      <div class="pc" style="max-width:100%;aspect-ratio:2600/1004"><img src="assets/gseice-flow-payment.jpg" alt="Complete interaction flow diagram, machine payment configuration" class="lightbox-trigger" width="2600" height="1004" loading="lazy"><div class="pc-cap">Complete interaction flow — machine payment</div></div>
+      <div class="pc" style="max-width:100%;aspect-ratio:1846/668"><img src="assets/gseice-pdf-flow-machine.jpg" alt="Complete interaction flow diagram, machine payment configuration" class="lightbox-trigger" width="1846" height="668" loading="lazy"><div class="pc-cap">Complete interaction flow — machine payment</div></div>
     </div>
   </div>
 
@@ -1441,7 +1453,7 @@
     <span class="dsec-lbl">Final Interaction Flow — External Payment — click to expand</span>
     <p class="tl-text" style="max-width:580px">A second configuration moves payment to the counter: staff take payment and hand over a cup or cone, so there's no second payment at the machine. The machine only needs to check the container before it starts production — container detection leads straight into cooling and dispensing, with the same fault and out-of-stock recovery screens as the machine-payment version.</p>
     <div class="photo-grid pg-full">
-      <div class="pc" style="max-width:100%;aspect-ratio:2600/1004"><img src="assets/gseice-flow-nopayment.jpg" alt="Complete interaction flow diagram, external payment configuration" class="lightbox-trigger" width="2600" height="1004" loading="lazy"><div class="pc-cap">Complete interaction flow — external payment</div></div>
+      <div class="pc" style="max-width:100%;aspect-ratio:1846/668"><img src="assets/gseice-pdf-flow-external.jpg" alt="Complete interaction flow diagram, external payment configuration" class="lightbox-trigger" width="1846" height="668" loading="lazy"><div class="pc-cap">Complete interaction flow — external payment</div></div>
     </div>
   </div>
 
