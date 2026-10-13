@@ -19,8 +19,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Outfit:wght@200;300;400;500&amp;family=DM+Mono:wght@300;400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="academic.css">
 </head>
 <body>
 
@@ -81,36 +82,51 @@
 
 <!-- HOME -->
 <div id="home" class="page active">
-  <section class="hero">
-    <div class="scan-line"></div>
-    <div class="scan-line-r"></div>
-
-    <div class="hero-main">
-      <div class="hero-left">
-        <div class="hero-name-wrap">
-          <img src="assets/name3.svg" alt="Xiaoxi Wang" class="name-large">
-          <div class="hero-typing-wrap">
-            <span class="hero-typing-pre">Specializing in </span><span class="hero-typing" id="heroTyping"></span><span class="typing-cursor">|</span>
-          </div>
-          <a class="hero-portfolio-btn" href="assets/Xiaoxi_Wang_Design_Portfolio.pdf" target="_blank">View Full Portfolio PDF &nbsp;↗</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <section class="ac-hero">
+    <div class="ac-hero-inner">
+      <img src="assets/portrait.jpg" alt="Portrait of Xiaoxi Wang" class="ac-portrait" width="900" height="1140">
+      <div class="ac-intro">
+        <h1 class="ac-name">Xiaoxi Wang</h1>
+        <p class="ac-role">Human Factors &middot; HCI &middot; User Research</p>
+        <p class="ac-affil">Arizona State University</p>
+        <p class="ac-bio">I am a <strong>Human Systems Engineering (Human Factors / HCI)</strong> student at Arizona State University with experience in UX research, human factors, and product development, and a research focus on <strong>human factors in AI and autonomous systems</strong>. At the <strong>BELIV Lab</strong>, I work on driver distraction research with eye tracking, EDA, and a driving simulator, and authored a FURI proposal on Driver Monitoring System (DMS) warnings. I currently lead customer discovery on a <strong>Honeywell-sponsored project</strong> on preventing on-duty medical events among pilots and first responders.</p>
+        <p class="ac-interests"><span class="ac-k">Focus areas</span> Human factors &middot; Human&ndash;computer interaction &middot; User research &middot; Robotics &amp; autonomous systems &middot; Product management</p>
+        <p class="ac-links">
+          <a href="assets/Xiaoxi_Wang_Design_Portfolio.pdf" target="_blank">Portfolio (PDF)</a>
+          <a href="#" onclick="openTranscript();return false">Transcript</a>
+          <a href="mailto:XiaoxiW7@outlook.com">Email</a>
+          <a href="https://www.linkedin.com/in/xiaoxi-wang-2566583a0/" target="_blank">LinkedIn</a>
+          <a href="#" onclick="transitionTo('about');return false">About &amp; Experience</a>
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="hero-strip">
-      <div class="ticker-inner">
-        <span><span class="dot">◆</span>Human Factors Engineering&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>HCI Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>UX Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Robotic Systems&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Physiological Sensing&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Autonomous Vehicles&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span><span class="dot">◆</span>Human Factors Engineering&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>HCI Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>UX Research&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Robotic Systems&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Physiological Sensing&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot">◆</span>Autonomous Vehicles&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <section class="ac-pubs" id="pubs-sec">
+    <h2 class="ac-sec-h">Publications &amp; Submissions</h2>
+    <div class="pub">
+      <img src="assets/asee-study-design.svg" alt="Planned study design: prior knowledge check, random assignment to full-text reading or AI conversational learning, self-report, then comprehension test" class="pub-thumb lightbox-trigger" width="960" height="600" loading="lazy">
+      <div class="pub-body">
+        <p class="pub-title">WIP: Comparing Actual and Perceived Learning Efficiency of AI-Mediated Conversational Learning and Full-Text Reading Among Undergraduate Engineering Students</p>
+        <p class="pub-authors"><strong>Xiaoxi Wang</strong>, Xingchen Xu</p>
+        <p class="pub-venue"><em>2027 American Society for Engineering Education (ASEE) Annual Conference &amp; Exposition</em> &middot; Work-in-progress paper <span class="pub-status">Submitted</span></p>
+        <p class="pub-desc">A planned randomized study testing whether learning with an AI assistant is actually more efficient than full-text reading, and whether students can judge that efficiency accurately.</p>
+      </div>
+    </div>
+    <div class="pub">
+      <img src="assets/mars-needs-pyramid.jpg" alt="Proposed ordering of residential psychological needs on Earth and Mars" class="pub-thumb lightbox-trigger" width="1440" height="1041" loading="lazy">
+      <div class="pub-body">
+        <p class="pub-title">A Human Factors Needs Pyramid for Staged Mars Habitat Development</p>
+        <p class="pub-authors"><strong>Xiaoxi Wang</strong></p>
+        <p class="pub-venue"><em>AIAA ASCEND 2027: Accelerating Space Commerce, Exploration, and New Discovery</em> &middot; Extended abstract <span class="pub-status">Submitted</span></p>
+        <p class="pub-desc">Based on a structured review of 5,100+ Scopus records, proposes a Mars-specific hierarchy of psychological needs, from security and sleep to identity and growth, and mapping each need to three stages of habitat development.</p>
       </div>
     </div>
   </section>
 
   <section class="work" id="work-sec">
     <div class="work-head">
-      <span class="work-label">Selected Work</span>
+      <span class="work-label">Research &amp; Projects</span>
       <div class="work-head-r">
         <div class="filter-pills">
           <button class="fpill active" data-filter="all">All</button>
@@ -128,7 +144,7 @@
       <div class="proj-info">
         <span class="proj-num">Honeywell-Sponsored · Team Project · Ongoing</span>
         <div>
-          <h3 class="proj-title">Preventing<br>On-Duty Medical Events</h3>
+          <h3 class="proj-title">Preventing On-Duty Medical Events</h3>
           <p class="proj-desc">Led customer discovery across four high-risk professions — pilots, firefighters, ER nurses, and ER physicians — to find how to catch fatigue and stress warning signs before they become a safety incident.</p>
           <div class="proj-tags">
             <span class="ptag">Customer Discovery</span>
@@ -147,7 +163,7 @@
       <div class="proj-info">
         <span class="proj-num">Industry Internship · GSEICE · Summer 2025</span>
         <div>
-          <h3 class="proj-title">Self-Serve Ice Cream<br>Machine — Interaction Design</h3>
+          <h3 class="proj-title">Self-Serve Ice Cream Machine — Interaction Design</h3>
           <p class="proj-desc">A full touchscreen interaction flow for a self-service ice cream vending machine — every screen from idle carousel to dispensing, across both a machine-payment and an external-payment configuration, plus the fault and edge cases customers who skip the sequence run into.</p>
           <div class="proj-tags">
             <span class="ptag">Interaction Design</span>
@@ -219,7 +235,7 @@
       <div class="proj-info">
         <span class="proj-num">Research Proposal</span>
         <div>
-          <h3 class="proj-title">Autonomous Driving<br>HCI Research</h3>
+          <h3 class="proj-title">Autonomous Driving HCI Research</h3>
           <p class="proj-desc">Driver distraction research at BELIV Lab — eye tracking and EDA synced with a driving simulator, plus a FURI proposal on whether DMS warnings reduce drivers' unprompted gaze returns.</p>
           <div class="proj-tags">
             <span class="ptag">Eye Tracking</span>
@@ -237,7 +253,7 @@
       <div class="proj-info">
         <span class="proj-num">Class Project · Accessibility Tech</span>
         <div>
-          <h3 class="proj-title">AI Vision Assist<br>Smart Glasses</h3>
+          <h3 class="proj-title">AI Vision Assist Smart Glasses</h3>
           <p class="proj-desc">A Raspberry Pi-based wearable pairing ultrasonic obstacle detection with a camera and the ChatGPT API — translating the world into spoken guidance for visually impaired users.</p>
           <div class="proj-tags">
             <span class="ptag">Raspberry Pi</span>
@@ -291,7 +307,7 @@
       <div class="proj-info">
         <span class="proj-num">Class Paper · HSE 323</span>
         <div>
-          <h3 class="proj-title">Humanoid Robot<br>Perception</h3>
+          <h3 class="proj-title">Humanoid Robot Perception</h3>
           <p class="proj-desc">Research paper examining why some robot upper-limb movements feel natural while others feel uncanny — exploring trust, predictability, and the gap between biological and mechanical motion.</p>
           <div class="proj-tags">
             <span class="ptag">HRI</span>
@@ -362,7 +378,7 @@
       <div class="proj-info">
         <span class="proj-num">Class Paper · HSE 225</span>
         <div>
-          <h3 class="proj-title">Oura Ring —<br>HSI Evaluation</h3>
+          <h3 class="proj-title">Oura Ring — HSI Evaluation</h3>
           <p class="proj-desc">Full Human Systems Integration analysis of the Oura Ring across four product generations — evaluating 50+ health metrics, user demographics, military applications, and sensor architecture.</p>
           <div class="proj-tags">
             <span class="ptag">HSI</span>
@@ -414,7 +430,7 @@
       <div class="proj-info">
         <span class="proj-num">Class Paper · HSE 225</span>
         <div>
-          <h3 class="proj-title">Pilot Physiological<br>Monitoring</h3>
+          <h3 class="proj-title">Pilot Physiological Monitoring</h3>
           <p class="proj-desc">Analysis of a Honeywell biosensing garment for military pilots — evaluating ECG, heart rate, and breathing data accuracy under high-G conditions and workflow integration challenges.</p>
           <div class="proj-tags">
             <span class="ptag">Biosensing</span>
@@ -433,7 +449,7 @@
       <div class="proj-info">
         <span class="proj-num">Class Project · AME 494</span>
         <div>
-          <h3 class="proj-title">Wire-Driven<br>Robotic Instrument</h3>
+          <h3 class="proj-title">Wire-Driven Robotic Instrument</h3>
           <p class="proj-desc">A five-finger mechanical hand that plucks guitar strings — 3D-printed joints, fishing line, and servo control tuned to the pentatonic scale. Iterated joint geometry to raise string-control success above 95%.</p>
           <div class="proj-tags">
             <span class="ptag">Mechanical Design</span>
@@ -455,7 +471,7 @@
       <div class="proj-info">
         <span class="proj-num">Class Project · DIGL 130</span>
         <div>
-          <h3 class="proj-title">Behind<br>Architecture</h3>
+          <h3 class="proj-title">Behind Architecture</h3>
           <p class="proj-desc">By showcasing the architectural modeling process, this video shows how I approach architectural design — the final piece is a presentation video for a villa.</p>
           <div class="proj-tags">
             <span class="ptag">Video Editing</span>
@@ -474,7 +490,7 @@
       <div class="proj-info">
         <span class="proj-num">Personal Work · 2023–2024</span>
         <div>
-          <h3 class="proj-title">Studio &amp;<br>Visual Work</h3>
+          <h3 class="proj-title">Studio &amp; Visual Work</h3>
           <p class="proj-desc">Poster design, digital illustration, concept photography, and diagrammatic drawing made alongside and outside studio briefs — the same composition and storytelling instincts behind the architecture work.</p>
           <div class="proj-tags">
             <span class="ptag">Graphic Design</span>
@@ -493,7 +509,7 @@
       <div class="proj-info">
         <span class="proj-num">Personal Work · Jan – Feb 2024</span>
         <div>
-          <h3 class="proj-title">Deep Fear<br>Inspires Space</h3>
+          <h3 class="proj-title">Deep Fear Inspires Space</h3>
           <p class="proj-desc">An experiential installation built on virtual-focus photography theory — a black-cardboard, red-yarn model that strips away the visitor's sense of belonging to manufacture the unknown.</p>
           <div class="proj-tags">
             <span class="ptag">Photography Analysis</span>
@@ -512,7 +528,7 @@
       <div class="proj-info">
         <span class="proj-num">Personal Work · Oct – Dec 2023</span>
         <div>
-          <h3 class="proj-title">Mind Healing<br>Restaurant Design</h3>
+          <h3 class="proj-title">Mind Healing Restaurant Design</h3>
           <p class="proj-desc">A recovery space for students in continuous work cycles — an undulating roof and a choreography of sound, cold, and light designed to redirect mental fatigue toward rest.</p>
           <div class="proj-tags">
             <span class="ptag">Research-Driven Design</span>
@@ -575,8 +591,8 @@
 
   <section class="contact-wrap" id="contact-sec">
     <div>
-      <h2 class="contact-h">Let's<br><em>connect.</em></h2>
-      <p class="contact-p">Open to internships in Human Factors, HCI Research, UX Research, and robotics-adjacent roles. Based in Phoenix, AZ.</p>
+      <h2 class="contact-h">Contact</h2>
+      <p class="contact-p">Open to research positions and industry roles in human factors, HCI, user research, robotics and autonomous systems, and product management. Based in Phoenix, AZ.</p>
     </div>
     <div class="c-links">
       <a href="mailto:XiaoxiW7@outlook.com" class="c-link" data-copy="XiaoxiW7@outlook.com">
@@ -606,7 +622,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Honeywell-Sponsored — UX Research</p>
-      <h1 class="dh-title">Preventing<br>On-Duty Medical Events</h1>
+      <h1 class="dh-title">Preventing On-Duty Medical Events</h1>
       <p class="dh-desc">An ongoing Honeywell-sponsored project on catching fatigue and stress before they turn into an on-duty medical event. I led customer discovery across four high-risk roles: pilots, firefighters, ER nurses, and ER physicians.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">Fall 2026 · Ongoing</p></div>
@@ -648,11 +664,11 @@
           </div>
           <div class="synth-arrow-h">
             <svg class="synth-merge-icon" viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M2 8 C 34 8, 34 30, 46 30" stroke="rgba(107,140,186,0.35)" stroke-width="1.5"/>
-              <path d="M2 30 L 46 30" stroke="rgba(107,140,186,0.35)" stroke-width="1.5"/>
-              <path d="M2 52 C 34 52, 34 30, 46 30" stroke="rgba(107,140,186,0.35)" stroke-width="1.5"/>
-              <path d="M46 30 L 78 30" stroke="#6b8cba" stroke-width="1.8"/>
-              <path d="M70 22 L 78 30 L 70 38" stroke="#6b8cba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M2 8 C 34 8, 34 30, 46 30" stroke="rgba(74,85,96,0.35)" stroke-width="1.5"/>
+              <path d="M2 30 L 46 30" stroke="rgba(74,85,96,0.35)" stroke-width="1.5"/>
+              <path d="M2 52 C 34 52, 34 30, 46 30" stroke="rgba(74,85,96,0.35)" stroke-width="1.5"/>
+              <path d="M46 30 L 78 30" stroke="#4a5560" stroke-width="1.8"/>
+              <path d="M70 22 L 78 30 L 70 38" stroke="#4a5560" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             </svg>
             <p class="synth-arrow-note">Finding patterns and connections across these three roles</p>
           </div>
@@ -804,7 +820,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Build</p>
-      <h1 class="dh-title">Wire-Driven<br>Robotic Instrument</h1>
+      <h1 class="dh-title">Wire-Driven Robotic Instrument</h1>
       <p class="dh-desc">A five-finger wire-driven mechanical hand that plucks guitar strings. Each finger has two articulated joints controlled by an independent servo via fishing line.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">Jan – Apr</p></div>
@@ -871,7 +887,7 @@
     </div>
     <div class="about-content">
       <span class="at-tag">About</span>
-      <h1 class="at-h">Human Factors<br>&amp; HCI &middot;<br><em>Builder</em></h1>
+      <h1 class="at-h">Human Factors &amp; HCI &middot; <em>Builder</em></h1>
       <p class="at-p">I'm a <strong>Human Systems Engineering (Human Factors / Human-Computer Interaction) student</strong> with a background spanning architecture, UX, and hands-on prototyping.</p>
       <p class="at-p">At the <strong>BELIV Lab at ASU</strong>, I work on driver distraction research — eye tracking and EDA with a driving simulator — and authored a FURI proposal on Driver Monitoring System warnings.</p>
       <div class="sk-sec">
@@ -1031,7 +1047,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · HCI Research</p>
-      <h1 class="dh-title">Autonomous Driving<br>HCI Research</h1>
+      <h1 class="dh-title">Autonomous Driving HCI Research</h1>
       <p class="dh-desc">At BELIV Lab, I work on driver distraction research for an Arizona Transportation Institute project supporting ADOT, using eye tracking and electrodermal activity (EDA) with a driving simulator. Faculty mentor: Dr. Junfeng Zhao.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Lab</p><p class="dm-v">BELIV Lab · ASU</p></div>
@@ -1127,7 +1143,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Research Analysis</p>
-      <h1 class="dh-title">Pilot Physiological<br>Monitoring</h1>
+      <h1 class="dh-title">Pilot Physiological Monitoring</h1>
       <p class="dh-desc">Analysis of a Honeywell wearable biosensing garment designed for military pilots — a smart shirt embedding ECG, heart rate, and breathing sensors to monitor pilot state during flight.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Course</p><p class="dm-v">HSE 225 · ASU</p></div>
@@ -1216,7 +1232,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · HSI Evaluation</p>
-      <h1 class="dh-title">Oura Ring —<br>HSI Evaluation</h1>
+      <h1 class="dh-title">Oura Ring — HSI Evaluation</h1>
       <p class="dh-desc">A full Human Systems Integration requirements analysis of the Oura Ring smart health monitor — tracing four product generations, user demographics, 50+ tracked metrics, and military deployment at scale.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Course</p><p class="dm-v">HSE 225 · ASU</p></div>
@@ -1361,7 +1377,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Research Paper</p>
-      <h1 class="dh-title">Humanoid Robot<br>Perception</h1>
+      <h1 class="dh-title">Humanoid Robot Perception</h1>
       <p class="dh-desc">A research paper examining why some humanoid robot upper-limb movements feel natural while others feel uncanny — and what that means for the design of robots that work alongside humans.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Course</p><p class="dm-v">HSE 225 · ASU</p></div>
@@ -1464,7 +1480,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Build</p>
-      <h1 class="dh-title">AI Vision Assist<br>Smart Glasses</h1>
+      <h1 class="dh-title">AI Vision Assist Smart Glasses</h1>
       <p class="dh-desc">A Raspberry Pi-based smart glasses prototype combining ultrasonic sensors for obstacle detection with a camera and the ChatGPT API for object recognition and text reading — guiding visually impaired users through spoken feedback.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">Oct – Nov 2025</p></div>
@@ -1519,7 +1535,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Industry Internship — Interaction Design</p>
-      <h1 class="dh-title">Self-Serve Ice Cream<br>Machine — Interaction Design</h1>
+      <h1 class="dh-title">Self-Serve Ice Cream Machine — Interaction Design</h1>
       <p class="dh-desc">During a summer internship at GSEICE, I designed the full touchscreen interaction flow for a self-service ice cream vending machine — mapping every screen a customer sees from the idle welcome carousel through container detection, payment, cooling, and dispensing, along with the fault states and edge cases an unattended machine has to handle on its own.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">May – Aug 2025</p></div>
@@ -1757,7 +1773,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Architecture — Hospitality</p>
-      <h1 class="dh-title">Mind Healing<br>Restaurant Design</h1>
+      <h1 class="dh-title">Mind Healing Restaurant Design</h1>
       <p class="dh-desc">Continuous work cycles quietly break people down — low efficiency, poor focus, a long recovery period. This restaurant is designed as a shelter for students caught in exactly that state: through sound, cold, wind, and light, it redirects attention away from mental fatigue and toward nature, so people can get efficient relaxation in a short amount of time.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">Oct – Dec 2023</p></div>
@@ -1832,7 +1848,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Project · Architecture — Installation</p>
-      <h1 class="dh-title">Deep Fear<br>Inspires Space</h1>
+      <h1 class="dh-title">Deep Fear Inspires Space</h1>
       <p class="dh-desc">Built on the idea of virtual and real focus in photography: treat an assumed center in the space as the real focus, and the visitor as the virtual one. Reducing the visitor's sense of belonging creates the unknown — and asks whether they could fight it, and get something new from doing so.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">Jan – Feb 2024</p></div>
@@ -1987,7 +2003,7 @@
   <div class="dh">
     <div class="dh-l">
       <p class="dh-eyebrow">Personal Work · 2023–2024</p>
-      <h1 class="dh-title">Studio &amp;<br>Visual Work</h1>
+      <h1 class="dh-title">Studio &amp; Visual Work</h1>
       <p class="dh-desc">Visual craft made alongside and outside studio briefs — editorial poster design, digital illustration, concept photography, and diagrammatic drawing — the same composition and storytelling instincts that carry into the architecture work.</p>
       <div class="dh-meta">
         <div><p class="dm-k">Duration</p><p class="dm-v">2023 – 2025</p></div>
