@@ -544,6 +544,7 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
 }
 .flow-badge.is-muted{color:var(--muted);border-color:var(--border2)}
 .flow-step .photo-grid{margin-top:1.6rem}
+.flow-fig{margin-top:1.2rem;max-width:1220px}
 .synth-compare{display:flex;align-items:center;gap:1rem;margin-top:1.6rem}
 .synth-col{display:flex;flex-direction:column;gap:0.8rem;min-width:0}
 .synth-col .pc{width:100%}
@@ -557,6 +558,55 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
   .synth-merge-icon{width:60px;transform:rotate(90deg)}
   .synth-arrow-note{white-space:normal;max-width:260px}
   .synth-col-roles,.synth-col-overall{width:100%;max-width:620px}
+}
+/* Business model canvas — classic 9-block layout */
+.bmc{
+  display:grid;grid-template-columns:repeat(10,minmax(0,1fr));
+  gap:1px;background:var(--border2);border:1px solid var(--border2);
+  margin-top:1.6rem;max-width:1220px;
+}
+.bmc-cell{background:var(--surface);padding:1.1rem 1rem 1.2rem;min-width:0}
+.bmc-kp{grid-column:1/3;grid-row:1/3}
+.bmc-ka{grid-column:3/5;grid-row:1}
+.bmc-kr{grid-column:3/5;grid-row:2}
+.bmc-vp{grid-column:5/7;grid-row:1/3;background:linear-gradient(180deg,rgba(107,140,186,0.1),var(--surface))}
+.bmc-cr{grid-column:7/9;grid-row:1}
+.bmc-ch{grid-column:7/9;grid-row:2}
+.bmc-cs{grid-column:9/11;grid-row:1/3}
+.bmc-cost{grid-column:1/6;grid-row:3}
+.bmc-rev{grid-column:6/11;grid-row:3}
+.bmc-h{
+  font-family:'DM Mono',monospace;font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:0.8rem;
+}
+.bmc-sub{
+  font-family:'DM Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;
+  color:var(--muted);margin:0.8rem 0 0.35rem;
+}
+.bmc-h + .bmc-sub{margin-top:0}
+.bmc ul{list-style:none}
+.bmc li{
+  position:relative;padding-left:0.75rem;margin-bottom:0.45rem;
+  font-size:0.74rem;line-height:1.5;color:var(--body);font-weight:300;
+}
+.bmc li::before{content:'';position:absolute;left:0;top:0.62em;width:3px;height:3px;border-radius:50%;background:var(--blue-line)}
+.bmc-vp li{color:var(--white)}
+.bmc-cols{columns:2;column-gap:1.5rem}
+.bmc-cols li{break-inside:avoid}
+.bmc-tag{
+  display:inline-block;margin-left:0.3rem;padding:0.05rem 0.4rem;
+  font-family:'DM Mono',monospace;font-size:0.45rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--blue);border:1px solid var(--blue-line);border-radius:20px;vertical-align:middle;
+}
+@media (max-width:1100px){
+  .bmc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bmc-cell{grid-column:auto;grid-row:auto}
+  .bmc-vp,.bmc-cs,.bmc-cost,.bmc-rev{grid-column:1/-1}
+  .bmc-vp{order:-1}
+}
+@media (max-width:600px){
+  .bmc{grid-template-columns:minmax(0,1fr)}
+  .bmc-cols{columns:1}
 }
 @keyframes flowPulse{0%,100%{box-shadow:0 0 0 0 rgba(107,140,186,0.35)}50%{box-shadow:0 0 0 6px rgba(107,140,186,0)}}
 .flow-ongoing{position:relative;padding:0.6rem 0 3.5rem 2.5rem;display:flex;align-items:center;gap:0.7rem}
