@@ -322,6 +322,21 @@ document.querySelectorAll('.proj-img video.card-video').forEach(video => {
   card.addEventListener('touchstart', () => { video.play().catch(() => {}); }, { passive: true });
 });
 
+// ── SYNCED TRIPTYCH (left wall · floor · right wall) ─────────────────────────
+document.querySelectorAll('.triptych').forEach(group => {
+  const vids = [...group.querySelectorAll('video')];
+  let finished = 0;
+  const playAll = () => vids.forEach(v => { v.currentTime = 0; v.play().catch(() => {}); });
+  vids.forEach(v => v.addEventListener('ended', () => {
+    if (++finished < vids.length) return;
+    finished = 0;
+    playAll();
+  }));
+  Promise.all(vids.map(v => new Promise(res => {
+    if (v.readyState >= 3) res(); else v.addEventListener('canplay', res, { once: true });
+  }))).then(playAll);
+});
+
 // ── MAGNETIC NAV LINKS ────────────────────────────────────────────────────────
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('mousemove', e => {
