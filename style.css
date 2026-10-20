@@ -817,6 +817,11 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
 .film-page .tri-wall video{aspect-ratio:1578/1080}
 .film-page .tri-floor video{aspect-ratio:1/1}
 .film-page .tri-panel figcaption{position:absolute;left:0.5rem;bottom:0.45rem;font-family:'Inter',system-ui,sans-serif;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+/* curved room: two walls + round floor, baked into one synced video */
+.film-page .render-room{margin:0 0 2.75rem}
+.film-page .render-room-media{aspect-ratio:8/5;background:#000;overflow:hidden}
+.film-page .render-room-media video{width:100%;height:100%;display:block;object-fit:cover}
+.film-page .render-room figcaption{max-width:640px}
 .film-page .render-solo{max-width:760px;margin-bottom:2.75rem}
 .film-page .step-grid.sg-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:700px){.film-page .step-grid.sg-3{grid-template-columns:1fr}}
