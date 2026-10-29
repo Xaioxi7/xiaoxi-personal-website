@@ -792,6 +792,12 @@ footer{padding:1.8rem 3rem;display:flex;justify-content:space-between;align-item
 .film-page .render-media{aspect-ratio:1578/1080;background:#000;border:1px solid var(--border);overflow:hidden}
 .film-page .render-media video{width:100%;height:100%;object-fit:contain;display:block;cursor:auto}
 .film-page .render figcaption{font-size:0.85rem;line-height:1.6;color:var(--muted);margin-top:0.6rem}
+.robot-videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.robot-vid{margin:0}
+.robot-vid-main{grid-column:1/-1}
+.robot-vid video{width:100%;aspect-ratio:16/9;display:block;background:#000;border:1px solid var(--border);cursor:auto}
+.robot-vid figcaption{font-size:0.85rem;line-height:1.6;color:var(--muted);margin-top:0.6rem}
+@media(max-width:700px){.robot-videos{grid-template-columns:1fr}}
 .film-page .render figcaption strong{color:var(--body);font-weight:600}
 @media(max-width:700px){.film-page .render-grid{grid-template-columns:1fr}}
 /* award highlights */
